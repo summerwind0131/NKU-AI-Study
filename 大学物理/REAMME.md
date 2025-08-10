@@ -21,6 +21,7 @@
 ### 电磁学
 1.  油管上的Lectures by Walter Lewin. They will make you ♥ Physics.，老教授讲课带着做实验，非常直观清楚，而且很有意思，对于学习拓展和兴趣培养都有很大的帮助。
 2.  可汗学院的讲解视频: 针对特定问题给出细致的解释
+3.  youtube: Alexander (fufaev.org),他的系列：Baiscs of Electromagenetism、Basic Maths for Physics、Advance Maths for Physicists都非常好
 ### 力学
   MIT 8.01SC Classical Mechanics, Fall 2016   视频很简短3-5分钟一个，体系完整，讲授清晰，非常适合平时理解概念和期末救命（如果你某个概念忘了的话）
 ## 考核难度及考核方式
