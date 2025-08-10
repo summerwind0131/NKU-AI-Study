@@ -10,7 +10,7 @@ ljt老师的《自动化与智能科学概论》
 无
 
 ## 考核方式/难度
-每周写一篇小论文，期末写一篇大论文（要手写版！）
+每周写一篇小论文，期末写一篇大论文（下图是开学初的要求，期末报告在学期末的时候改成了现场上交手写版）
 <img width="1924" height="1074" alt="image" src="https://github.com/user-attachments/assets/d856dd02-9aa3-435f-b30a-c2de497ec6bd" />
 
 ## 学习方法
