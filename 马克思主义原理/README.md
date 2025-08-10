@@ -1,8 +1,5 @@
 # 马克思主义基本原理
 一定要避开往届反映巨雷的老师，哪怕修别的学院的马原或者下学期再修，巨雷的老师用一届一届的评价反映“巨雷”的含金量，甚至出现过前几天出了一遍分又撤回再出了个更低分的情况，原来不是出了分就不能改，只是不能改高而已(笑)
-## 考核方式
-<img width="1039" height="538" alt="image" src="https://github.com/user-attachments/assets/e82aced3-a404-44a8-93d2-6bb7e2c71620" />
-<img width="734" height="492" alt="image" src="https://github.com/user-attachments/assets/f059f789-fe9b-4798-b7f1-c6943ed4a358" />
 ## 如何备考
 - 马原理背的东西很多，而且有点难背，建议提前3-4天每天背一点，不至于考前一天过于绝望
 - 关于背诵策略，我总结了一些我觉得比较好的方法，放在“复习重点与背诵提纲”的文件夹里----fyr
@@ -11,3 +8,6 @@
 - 学习通的习题记得做，超过截止日期没有任何办法
 ## 老师评价
 ny+qz老师，讲课好+带着复习+期末捞人的好老师
+## 考核方式
+<img width="1039" height="538" alt="image" src="https://github.com/user-attachments/assets/e82aced3-a404-44a8-93d2-6bb7e2c71620" />
+<img width="734" height="492" alt="image" src="https://github.com/user-attachments/assets/f059f789-fe9b-4798-b7f1-c6943ed4a358" />
