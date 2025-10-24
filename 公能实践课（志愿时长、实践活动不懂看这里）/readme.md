@@ -17,12 +17,13 @@
 3. 实现方式：可以关注各个学院公众号发的讲座通知，各个学院组织的讲座都可以参加，**记得留签到或者报名记录还有照片**，如果学院没给记上，可以自己在平台上面申报
 4. 具体内容在下图框内
    
-   <img width="296" height="502" alt="image" src="https://github.com/user-attachments/assets/cfe19691-b78e-4b7d-9ebd-8c7c2708735a" />
+   <img width="100" height="400" alt="image" src="https://github.com/user-attachments/assets/cfe19691-b78e-4b7d-9ebd-8c7c2708735a" />
 
 #### 三、实践活动
 学时要求：三年不少于90学时  
 次数要求：不少于6次  
 这个实现方式包罗万象  
+如果你热心为爱发电，社会实践和志愿活动做的特别多，可以带着你的时长去申请志愿服务相关的专项奖学金  
 1.  **社会实践**：  
      1）团体和个人都算，可以上南开社会实践的网站上去找活动，也可以在那个网站上申报个人活动然后自己去做，记得关注南开的各种公众号发布的志愿活动。  
      2）常见的活动有：高中返校宣讲等等  
@@ -41,8 +42,8 @@
 2. 实现方式：每学期开班会会组织的在立公辅学平台上的互评+自评（**一定记得自评!**）  
 3. 具体内容在下图边框  
 
-<img width="328" height="605" alt="image" src="https://github.com/user-attachments/assets/5a1bc7b5-25b1-48bd-9cfc-e71ced6b1fbd" />
+<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/5a1bc7b5-25b1-48bd-9cfc-e71ced6b1fbd" />
 
 ### 成绩认定
-<img width="1320" height="649" alt="image" src="https://github.com/user-attachments/assets/2a335122-adc0-477b-813b-885ecae77c9b" />
+<img width="900" height="450" alt="image" src="https://github.com/user-attachments/assets/2a335122-adc0-477b-813b-885ecae77c9b" />
 
