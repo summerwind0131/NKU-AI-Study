@@ -42,8 +42,8 @@
 2. 实现方式：每学期开班会会组织的在立公辅学平台上的互评+自评（**一定记得自评!**）  
 3. 具体内容在下图边框  
 
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/5a1bc7b5-25b1-48bd-9cfc-e71ced6b1fbd" />
+<img width="100" height="200" alt="image" src="https://github.com/user-attachments/assets/5a1bc7b5-25b1-48bd-9cfc-e71ced6b1fbd" />
 
 ### 成绩认定
-<img width="900" height="450" alt="image" src="https://github.com/user-attachments/assets/2a335122-adc0-477b-813b-885ecae77c9b" />
+<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/2a335122-adc0-477b-813b-885ecae77c9b" />
 
