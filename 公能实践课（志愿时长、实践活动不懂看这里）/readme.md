@@ -4,7 +4,8 @@
 在大一大二大三开展
 大一稀里糊涂，大二会统一讲
 课程内容和进展（完成的学时、活动次数）都可以在立公增能辅学平台上看见
-就是这个网站：https://fuxue.nankai.edu.cn，点击左侧边框可以看见**课业进展**、**课程大纲**，还可以在主题讲座下面申报参与的讲座
+就是这个网站：https://fuxue.nankai.edu.cn 
+点击左侧边框可以看见**课业进展**、**课程大纲**，还可以在主题讲座下面申报参与的讲座
 <img width="1969" height="660" alt="image" src="https://github.com/user-attachments/assets/eac5851b-4c6d-4101-9b4f-f77f5b47ee59" />
 
 以下所有的学时和次数要求仅适用于24级人工智能学院，不同年级可能要求也不太一样
@@ -15,6 +16,7 @@
 2. 次数要求：至少4次
 3. 实现方式：可以关注各个学院公众号发的讲座通知，各个学院组织的讲座都可以参加，**记得留签到或者报名记录还有照片**，如果学院没给记上，可以自己在平台上面申报
 4. 具体内容在下图框内
+   
    <img width="296" height="502" alt="image" src="https://github.com/user-attachments/assets/cfe19691-b78e-4b7d-9ebd-8c7c2708735a" />
 
 #### 三、实践活动
@@ -38,4 +40,5 @@
 1. 学时要求：三年16学时
 2. 实现方式：每学期开班会会组织的在立公辅学平台上的互评+自评（**一定记得自评!**）
 3. 具体内容在下图边框
+
 <img width="328" height="605" alt="image" src="https://github.com/user-attachments/assets/5a1bc7b5-25b1-48bd-9cfc-e71ced6b1fbd" />
