@@ -42,3 +42,7 @@
 3. 具体内容在下图边框  
 
 <img width="328" height="605" alt="image" src="https://github.com/user-attachments/assets/5a1bc7b5-25b1-48bd-9cfc-e71ced6b1fbd" />
+
+### 成绩认定
+<img width="1320" height="649" alt="image" src="https://github.com/user-attachments/assets/2a335122-adc0-477b-813b-885ecae77c9b" />
+
