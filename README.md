@@ -1,11 +1,12 @@
 # 🎓 NKU-AI-Study — 南开大学 AI 学习与生存指南
 
 <p align="center">
-  <img src="[https://raw.githubusercontent.com/summerwind0131/NKU-AI-Study/main/NKU_AI_Study_mascot_Puppy_Eggie.png]" width="120" alt="Our mascot Logo">
+  <img src="https://raw.githubusercontent.com/summerwind0131/NKU-AI-Study/main/NKU_AI_Study_mascot_Puppy_Eggie.jpg" width="200" alt="Our mascot picture">
 </p>
 
+
 <p align="center">
-  <b>从迷茫到笃定：为 NKU 人工智能学院打造的系统学习资源、经验总结与心理调适指南</b>
+  <b>从迷茫到笃定：为 NKU 人工智能学院同学打造的系统学习资源、经验总结与心理调适指南</b>
 </p>
 
 <p align="center">
@@ -71,6 +72,7 @@
 - 高质量学习资料
 - 心理调适经验
 - 大学通识技能文章
+
 你可以：
 
 1. Fork 本仓库  
