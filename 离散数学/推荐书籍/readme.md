@@ -1,4 +1,4 @@
-学校的离散数学学得非常非常浅薄，对数学感兴趣的话推荐基本课外拓展书
+学校的离散数学学得非常非常浅薄，对数学感兴趣的话，可以看一些课外拓展书
 ### 教材相关
 - MIT  - Mathematics for Computer Science
 - Rosen - Discrete Mathematics and its application：课内PPT和教材的参考书籍，很多课后题考试题也是这本书里面的原题，例子很多，生动有趣
