@@ -27,6 +27,7 @@
 - [🧘 心理调节模块](#-心理调节模块)
 - [🤝 如何贡献](#-如何贡献)
 - [📬 联系方式](#-联系方式)
+- [📖 Wiki 本地预览](#-wiki-本地预览)
 
 ---
 ## 📘 仓库简介
@@ -97,6 +98,47 @@
 
 ---
 
+## 📖 Wiki 本地预览
+
+本仓库提供了一个轻量的 MkDocs Wiki，便于按课程浏览资料说明和使用指南。
+
+线上测试版地址：<https://summerwind0131.github.io/NKU-AI-Study/>
+
+> 当前 Wiki 仍处于测试整理阶段，内容和导航会继续调整；请以课程 README、仓库原始资料和当年老师要求为准。
+
+推荐使用启动脚本：
+
+```powershell
+.\scripts\serve-wiki.ps1
+```
+
+如果 `8000` 端口被占用，可以换端口：
+
+```powershell
+.\scripts\serve-wiki.ps1 -Port 8001
+```
+
+如果本机 PowerShell 执行策略拦截脚本，可以使用：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\serve-wiki.ps1
+```
+
+也可以手动运行：
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m mkdocs serve -a 127.0.0.1:8000
+```
+
+构建检查：
+
+```powershell
+.\.venv\Scripts\python.exe -m mkdocs build --strict
+```
+
+---
 ## ⚠ 声明
 1. 本仓库设立的初衷是纯公益以及帮助同学，**任何人不得以任何形式倒卖相关资料！违者必究！不得将本仓库的内容用于任何不法或违规行为，违者后果自负！**
 2. 感谢向本仓库提供个人作业的同学们，也提醒大家在借鉴的同时**不要直接照抄作业！**，**严禁任何学术不端的行为！**

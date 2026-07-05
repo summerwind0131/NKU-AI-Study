@@ -1,0 +1,94 @@
+site_name: NKU-AI-Study Wiki（测试版）
+site_author: summerwind0131
+site_description: 南开大学人工智能学院学习资料、课程经验与生存指南
+site_url: https://summerwind0131.github.io/NKU-AI-Study/
+
+repo_name: summerwind0131/NKU-AI-Study
+repo_url: https://github.com/summerwind0131/NKU-AI-Study
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+  font:
+    text: Roboto Slab
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+nav:
+  - 首页: index.md
+  - 使用指南: usage.md
+  - 课程索引:
+      - 总览: courses/index.md
+      - "中国近现代史纲要": courses/modern-chinese-history.md
+      - "公能实践课（志愿时长、实践活动不懂看这里）": courses/public-service-practice.md
+      - "军事理论": courses/military-theory.md
+      - "升学": courses/further-study.md
+      - "大学物理": courses/college-physics.md
+      - "大学语文": courses/college-chinese.md
+      - "大物实验报告": courses/physics-experiments.md
+      - "学海无涯": courses/study-skills.md
+      - "微分方程与复变函数": courses/differential-equations-complex-functions.md
+      - "思想道德与法治": courses/ideology-morality-law.md
+      - "数据结构": courses/data-structures.md
+      - "机器学习": courses/machine-learning.md
+      - "机器视觉技术": courses/machine-vision.md
+      - "概率论与数理统计": courses/probability-statistics.md
+      - "电路基础": courses/circuit-basics.md
+      - "痴人喃喃": courses/mental-health-notes.md
+      - "离散数学": courses/discrete-math.md
+      - "线性代数": courses/linear-algebra.md
+      - "自动化与智能科学概论": courses/intro-automation-intelligent-science.md
+      - "英语口语与写作": courses/english-speaking-writing.md
+      - "运筹学": courses/operations-research.md
+      - "马克思主义原理": courses/marxism-principles.md
+      - "高等数学A上": courses/calculus-a-1.md
+      - "高等数学A下": courses/calculus-a-2.md
+      - "高级语言程序设计2-1": courses/advanced-programming-2-1.md
+      - "高级语言程序设计2-2": courses/advanced-programming-2-2.md
+  - 模板:
+      - 课程页模板: page-templates/course-template.md
