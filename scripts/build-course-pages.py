@@ -16,7 +16,23 @@ DOCS_DIR = REPO_ROOT / "docs"
 COURSES_DIR = DOCS_DIR / "courses"
 
 GITHUB_ROOT = "https://github.com/summerwind0131/NKU-AI-Study"
-PROTECTED_SLUGS = {"machine-vision"}
+CURATED_SLUGS = {
+    "machine-vision",
+    "linear-algebra",
+    "advanced-programming-2-1",
+    "discrete-math",
+    "calculus-a-1",
+    "calculus-a-2",
+    "probability-statistics",
+}
+PROTECTED_SLUGS = set(CURATED_SLUGS)
+TODO_SLUGS = {
+    "college-physics",
+    "data-structures",
+    "machine-learning",
+    "study-skills",
+    "mental-health-notes",
+}
 LOCAL_INSERT_AFTER = "机器学习"
 LOCAL_EXTRA_COURSE = "机器视觉技术"
 
@@ -469,6 +485,15 @@ def page_link(course: str) -> str:
     return f"[进入页面]({page_name(course)}.md)"
 
 
+def curation_status(course: str, row: CourseRow) -> str:
+    slug = page_name(course)
+    if slug in CURATED_SLUGS:
+        return "精修"
+    if slug in TODO_SLUGS or row.label == "待补充" or row.readme_status in {"missing", "empty", "stub"}:
+        return "待补充"
+    return "自动生成"
+
+
 def generate_index(rows_by_course: dict[str, CourseRow], order: list[str]) -> str:
     lines = [
         "# 课程索引\n\n",
@@ -476,8 +501,8 @@ def generate_index(rows_by_course: dict[str, CourseRow], order: list[str]) -> st
         "    当前 Wiki 仍处于测试整理阶段，页面结构、课程说明和资料链接会继续调整。\n\n",
         "这个页面汇总完整远程镜像中的顶层课程和栏目。Wiki 页面只做资料导航，不搬运原始 PDF、DOCX、PPTX、图片或代码。\n\n",
         "## 全部课程 / 栏目\n\n",
-        "| 课程 / 栏目 | 页面 | 资料完整度 | README 状态 | 文件数 | 主要类型 |\n",
-        "| --- | --- | --- | --- | ---: | --- |\n",
+        "| 课程 / 栏目 | 页面 | 整理状态 | 资料完整度 | README 状态 | 文件数 | 主要类型 |\n",
+        "| --- | --- | --- | --- | --- | ---: | --- |\n",
     ]
     for course in order:
         row = rows_by_course.get(course)
@@ -485,15 +510,15 @@ def generate_index(rows_by_course: dict[str, CourseRow], order: list[str]) -> st
             continue
         ext = row.extensions or "-"
         lines.append(
-            f"| `{course}` | {page_link(course)} | {row.label or '未知'} | {status_cn(row.readme_status)} | {row.file_count or '-'} | {ext} |\n"
+            f"| `{course}` | {page_link(course)} | {curation_status(course, row)} | {row.label or '未知'} | {status_cn(row.readme_status)} | {row.file_count or '-'} | {ext} |\n"
         )
     lines.extend([
         "\n## 推荐先看\n\n",
-        "- 入口较完整的课程可以先看：`线性代数`、`离散数学`、`微分方程与复变函数`、`概率论与数理统计`、`高级语言程序设计2-1`。\n",
-        "- 入口薄弱但资料较多的栏目可以优先补：`大学物理`、`痴人喃喃`、`学海无涯`、`数据结构`。\n",
-        "- 专业课目前已经人工整理：`机器视觉技术`；`机器学习` 仍是轻量入口页。\n",
+        "- 精修示例：`机器视觉技术`、`线性代数`、`高级语言程序设计2-1`、`离散数学`、`高等数学A上`、`高等数学A下`、`概率论与数理统计`。\n",
+        "- 自动生成但入口较完整的课程：`微分方程与复变函数`、`自动化与智能科学概论`、`军事理论`。\n",
+        "- 后续优先补强：`大学物理`、`数据结构`、`学海无涯`、`痴人喃喃`、`机器学习`。\n",
         "\n## 维护说明\n\n",
-        "课程页由 `scripts/build-course-pages.py` 根据 `analysis/course_index.csv`、`analysis/readme_issues.csv` 和 `_remote_nku_ai_study` 生成。`machine-vision.md` 为人工精修页，脚本不会覆盖。\n",
+        "课程页由 `scripts/build-course-pages.py` 根据 `analysis/course_index.csv`、`analysis/readme_issues.csv` 和 `_remote_nku_ai_study` 生成。`整理状态` 为 `精修` 的页面是人工整理页，脚本会跳过这些文件以避免覆盖。\n",
     ])
     return "".join(lines)
 
@@ -515,19 +540,19 @@ def generate_home() -> str:
 
 ## 资料总览
 
-- [课程索引](courses/index.md)：直接进入全部课程和栏目主页，查看完整度、README 状态和资料类型。
+- [课程索引](courses/index.md)：直接进入全部课程和栏目主页，查看整理状态、完整度、README 状态和资料类型。
 - [机器视觉技术](courses/machine-vision.md)：当前人工精修程度最高的专业课页面。
 - [课程页模板](page-templates/course-template.md)：后续手动补课程页时可以沿用的结构。
 
 ## 推荐先看
 
-- 想找资料入口：先看 [课程索引](courses/index.md)，再直接进入具体课程/栏目主页。
-- 想看完整示例：先看 [机器视觉技术](courses/machine-vision.md)。
+- 想看精修样例：先看 [机器视觉技术](courses/machine-vision.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md)。
+- 想补大一基础课：继续看 [离散数学](courses/discrete-math.md)、[高等数学A上](courses/calculus-a-1.md)、[高等数学A下](courses/calculus-a-2.md)、[概率论与数理统计](courses/probability-statistics.md)。
 - 想了解使用边界：先看 [使用指南](usage.md)。
 
 ## 待补充重点
 
-入口薄弱但资料不少的栏目包括 `大学物理`、`数据结构`、`学海无涯`、`痴人喃喃`。这些页面目前以 README 和目录结构为基础，后续适合继续补充学习路线、适用年份和资料说明。
+入口薄弱但资料不少的栏目包括 `大学物理`、`数据结构`、`学海无涯`、`痴人喃喃`、`机器学习`。这些页面目前以 README 和目录结构为基础，后续适合继续补充学习路线、适用年份和资料说明。
 
 ## 本地预览
 

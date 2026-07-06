@@ -2,64 +2,40 @@
 
 ## 课程介绍
 
-> 主要参考：`高等数学A下/README.md`
+> 主要参考：`高等数学A下/README.md` 与仓库顶层目录。Wiki 只做导航和经验整理，不展开 PDF、DOCX、PPTX 内容。
 
-### 课程概览
+高等数学A下主要学习空间解析几何、多元函数微分学、多元函数积分学和级数等内容。根 README 延续了 A 上的判断：考核难度近年上升，关键不在偏题怪题，而在中档题和计算量。
 
-- 学习空间解析几何，多元函数微分学，多元函数积分学，级数等知识，近些年考核难度在不断上升
+A 下的内容更立体，三重积分、曲线曲面积分、级数等模块容易因为概念多而混乱。建议先用课内范围建立框架，再用练习题和往年题训练熟练度。
 
-### 学习书籍
+## 推荐阅读顺序
 
-- 关于课本：南开大学高等数学课本+南开大学高等数学习题课讲义
-- 个人认为南开大学高等数学课本还是可圈可点的，一些数学推导虽然有不太严谨的地方，但在直观性，帮助理解方面还是有一定优势的，此外也更贴合学校老师的授课顺序，也有不少经典的例题 --sfy
-- 此外，南开大学习题课讲义里面也有很多考研习题，天津市大学生数学竞赛题，难度从A-B-C依次递增，是本人比较喜欢的一本书 --sfy
-
-### 推荐网课
-
-- 浙江大学苏德矿《微积分》（大力推荐）
-- MIT的多元微积分（三大公式那里讲得非常精彩）https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/
-- 兆筱小分队-南开直系学长，讲做题讲得挺好的
-
-### 考核难度
-
-- 近些年难度不断增加，应该是给不少同学造成了不小的冲击，并且对于高等数学这样五学分，数学考试的课程来说，稍有不慎就会崩盘，对于大一GPA的影响也是巨大的。
-- 难度的增加主要在于中档题，计算量方面，并没有太多非常难的题，即使有，适量的放弃最后也可以拿下4.0，因此备考重心应该放在中档题的练习，计算题的练习上，老师也明确指出侧重考察学生有没有经过大量的练习
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/README.md)：`高等数学A下/README.md`：先看课程范围、网课建议和备考建议。
+- [练习题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E7%BB%83%E4%B9%A0%E9%A2%98)：`高等数学A下/练习题`：平时刷题和期末训练入口。
+- [南开往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E5%8D%97%E5%BC%80%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`高等数学A下/南开往年真题`：期末前熟悉题型。
+- [高等数学下总结](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%8B%E6%80%BB%E7%BB%93_by%20sfy.pdf)：`高等数学A下/高等数学下总结_by sfy.pdf`：顶层总结资料。
 
 ## 仓库资料与链接
 
-- 原始目录：[高等数学A下/](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B)（`高等数学A下/`）
-- 资料完整度：`较完整`
-- README 状态：`较完整 README`
-- 文件数量：`8`
-- 主要类型：`pdf:5`; `md:3`
-- 已识别内容要素：`课程概览`; `学习建议`; `考核方式`; `推荐资源`
+- 原始目录：[高等数学A下](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B)：`高等数学A下/`
+- [南开往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E5%8D%97%E5%BC%80%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`高等数学A下/南开往年真题`：期末复习入口。
+- [练习题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E7%BB%83%E4%B9%A0%E9%A2%98)：`高等数学A下/练习题`：刷题资料入口。
+- [高等数学下总结_by sfy](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%8B%E6%80%BB%E7%BB%93_by%20sfy.pdf)：`高等数学A下/高等数学下总结_by sfy.pdf`：总结类代表文件。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/README.md)：`高等数学A下/README.md`：课程说明入口。
 
-### 顶层目录
+## 备考 / 作业提醒
 
-- [南开往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E5%8D%97%E5%BC%80%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`高等数学A下/南开往年真题/`
-- [练习题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E7%BB%83%E4%B9%A0%E9%A2%98)：`高等数学A下/练习题/`
-
-### 代表文件
-
-- [高等数学下总结_by sfy.pdf](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%8B%E6%80%BB%E7%BB%93_by%20sfy.pdf)：`高等数学A下/高等数学下总结_by sfy.pdf`
-
-## README 维护提示
-
-- `高等数学A下/南开往年真题/README.md`：简短 README，84 字符
-- `高等数学A下/练习题/README.md`：占位 README，14 字符
-
-## 使用建议
-
-- 先读课程 README 中的课程介绍和学习建议，再按资料目录进入课件、练习题、往年题或作业资料。
-- README 已经包含较多课程说明，适合把它当作本栏目入口。
-- 往年题和回忆题适合熟悉题型，不建议当作唯一复习范围。
-- 涉及作业、答案、报告或论文的资料只适合学习参考，不能直接照抄提交。
+- README 建议不要完全依赖期末速通，计算熟练度和中档题训练仍然是核心。
+- 多元微积分的公式和定理较多，复习时要把几何意义、适用条件和计算步骤放在一起看。
+- MIT 多元微积分、苏德矿微积分、兆筱小分队等资源适合作为课外补充，期末前仍应回到南开当年范围。
+- 往年题和总结资料只用于复习参考，不代表当年试卷范围。
 
 ## 待补充
 
-- 后续可补充适用年份、老师差异和更细的复习路线。
-- 处理 `analysis/readme_issues.csv` 中记录的空、占位或过短 README。
+- 可以继续补充 A 下各模块的重点顺序。
+- 可以补“空间解析几何、多元积分、级数”分专题入口。
+- 还可标注往年真题适用年份。
 
 ## 资料边界
 
-本页只做资料导航和客观说明。PDF、DOCX、PPTX、图片、压缩包等原始资料不在 Wiki 中搬运；涉及作业、答案、实验报告、论文或个人材料的内容仅供学习参考，不得照抄、倒卖或违规使用。不同年份老师要求可能变化，请以当年课程要求为准。
+本页只根据课程 README、目录名和已有分析结果整理导航。仓库中的往年题、作业答案、报告、课件和个人经验仅供学习参考，不得照抄、倒卖或违规提交；不同年份的老师要求可能变化，请以当年课程通知为准。

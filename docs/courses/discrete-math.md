@@ -2,65 +2,42 @@
 
 ## 课程介绍
 
-> 主要参考：`离散数学/README.md`
+> 主要参考：`离散数学/README.md` 与仓库顶层目录。Wiki 只做导航和经验整理，不展开 PDF、DOCX、PPTX 内容。
 
-### 课程概览
+离散数学主要覆盖数理逻辑、集合论、图论、组合计数和抽象代数，是面向计算机和人工智能后续课程的数学基础。根 README 判断课内学习深度不算很大，但内容跨度广，因此更适合按主题逐块建立概念。
 
-- 主要学习内容：数理逻辑、集合论、图论、组合计数、抽象代数
+这门课的资料结构很清楚：PPT、作业答案、往年真题和推荐书籍分别对应课内学习、作业校对、期末复习和拓展阅读。README 也提醒 PPT 里可能存在错误，使用时要保持辨别。
 
-### 学习书籍
+## 推荐阅读顺序
 
-- 课本：
-- 《离散数学》屈婉玲、耿素云（清华大学出版社）
-- 课内用的是清华大学老版教材，红褐色的那个，不是高等教育出版社的那个，但有时候留作业课上习题会用这个教材，当然高等教育出版社那个教材作为补充也可以用
-
-### 推荐网课
-
-- MIT 6.1200J Mathematics for Computer Science, Spring 2024
-- MIT 6.042J Mathematics for Computer Science, Fall 2010
-
-### 考核难度
-
-- 易，就往年题而言老师应该没有为难人
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/README.md)：`离散数学/README.md`：先了解课程范围、教材和推荐网课。
+- [PPT](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/PPT)：`离散数学/PPT`：按课内顺序建立概念，但需注意 README 的错误提醒。
+- [推荐书籍](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D)：`离散数学/推荐书籍`：遇到主题不清楚时作为补充材料。
+- [作业答案](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/%E4%BD%9C%E4%B8%9A%E7%AD%94%E6%A1%88)：`离散数学/作业答案`：完成作业后用于校对思路。
+- [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`离散数学/往年真题`：期末前熟悉题型和考查范围。
 
 ## 仓库资料与链接
 
-- 原始目录：[离散数学/](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6)（`离散数学/`）
-- 资料完整度：`较完整`
-- README 状态：`较完整 README`
-- 文件数量：`44`
-- 主要类型：`pdf:37`; `md:5`; `docx:2`
-- 已识别内容要素：`课程概览`; `学习建议`; `考核方式`; `推荐资源`
+- 原始目录：[离散数学](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6)：`离散数学/`
+- [PPT](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/PPT)：`离散数学/PPT`：课内资料入口。
+- [作业答案](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/%E4%BD%9C%E4%B8%9A%E7%AD%94%E6%A1%88)：`离散数学/作业答案`：作业校对资料。
+- [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`离散数学/往年真题`：期末复习入口。
+- [推荐书籍](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D)：`离散数学/推荐书籍`：补充阅读材料。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/README.md)：`离散数学/README.md`：课程说明入口。
 
-### 顶层目录
+## 备考 / 作业提醒
 
-- [PPT](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/PPT)：`离散数学/PPT/`
-- [作业答案](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/%E4%BD%9C%E4%B8%9A%E7%AD%94%E6%A1%88)：`离散数学/作业答案/`
-- [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`离散数学/往年真题/`
-- [推荐书籍](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D)：`离散数学/推荐书籍/`
-
-### 代表文件
-
-- 当前没有可直接列出的顶层代表文件。
-
-## README 维护提示
-
-- `离散数学/PPT/readme.md`：占位 README，16 字符
-- `离散数学/往年真题/README.md`：占位 README，19 字符
-
-## 使用建议
-
-- 先读课程 README 中的课程介绍和学习建议，再按资料目录进入课件、练习题、往年题或作业资料。
-- README 已经包含较多课程说明，适合把它当作本栏目入口。
-- 复习时先用课件确认本年度讲授范围，再看题目或报告类资料。
-- 往年题和回忆题适合熟悉题型，不建议当作唯一复习范围。
-- 涉及作业、答案、报告或论文的资料只适合学习参考，不能直接照抄提交。
+- README 判断往年题角度的考核相对友好，但不建议只靠背题，应至少掌握逻辑、集合、图论和组合计数的基本方法。
+- PPT 资料需要辩证使用；遇到定义或证明疑惑时，优先对照教材或推荐课程。
+- 作业答案只适合完成后核对，不适合作为直接提交来源。
+- MIT Mathematics for Computer Science 相关课程适合对计算机数学基础有更高要求的同学补充学习。
 
 ## 待补充
 
-- 后续可补充适用年份、老师差异和更细的复习路线。
-- 处理 `analysis/readme_issues.csv` 中记录的空、占位或过短 README。
+- 还可以补充各章节的重点题型和复习优先级。
+- 往年真题目录 README 较短，后续可补适用年份说明。
+- 可以整理一份“逻辑、图论、组合计数”专题复习索引。
 
 ## 资料边界
 
-本页只做资料导航和客观说明。PDF、DOCX、PPTX、图片、压缩包等原始资料不在 Wiki 中搬运；涉及作业、答案、实验报告、论文或个人材料的内容仅供学习参考，不得照抄、倒卖或违规使用。不同年份老师要求可能变化，请以当年课程要求为准。
+本页只根据课程 README、目录名和已有分析结果整理导航。仓库中的往年题、作业答案、报告、课件和个人经验仅供学习参考，不得照抄、倒卖或违规提交；不同年份的老师要求可能变化，请以当年课程通知为准。

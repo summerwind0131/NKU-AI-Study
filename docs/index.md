@@ -14,19 +14,19 @@
 
 ## 资料总览
 
-- [课程索引](courses/index.md)：直接进入全部课程和栏目主页，查看完整度、README 状态和资料类型。
+- [课程索引](courses/index.md)：直接进入全部课程和栏目主页，查看整理状态、完整度、README 状态和资料类型。
 - [机器视觉技术](courses/machine-vision.md)：当前人工精修程度最高的专业课页面。
 - [课程页模板](page-templates/course-template.md)：后续手动补课程页时可以沿用的结构。
 
 ## 推荐先看
 
-- 想找资料入口：先看 [课程索引](courses/index.md)，再直接进入具体课程/栏目主页。
-- 想看完整示例：先看 [机器视觉技术](courses/machine-vision.md)。
+- 想看精修样例：先看 [机器视觉技术](courses/machine-vision.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md)。
+- 想补大一基础课：继续看 [离散数学](courses/discrete-math.md)、[高等数学A上](courses/calculus-a-1.md)、[高等数学A下](courses/calculus-a-2.md)、[概率论与数理统计](courses/probability-statistics.md)。
 - 想了解使用边界：先看 [使用指南](usage.md)。
 
 ## 待补充重点
 
-入口薄弱但资料不少的栏目包括 `大学物理`、`数据结构`、`学海无涯`、`痴人喃喃`。这些页面目前以 README 和目录结构为基础，后续适合继续补充学习路线、适用年份和资料说明。
+入口薄弱但资料不少的栏目包括 `大学物理`、`数据结构`、`学海无涯`、`痴人喃喃`、`机器学习`。这些页面目前以 README 和目录结构为基础，后续适合继续补充学习路线、适用年份和资料说明。
 
 ## 本地预览
 
