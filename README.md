@@ -106,6 +106,8 @@
 
 > 当前 Wiki 仍处于测试整理阶段，内容和导航会继续调整；请以课程 README、仓库原始资料和当年老师要求为准。
 
+首次部署前，请在 GitHub 仓库 `Settings -> Pages -> Build and deployment -> Source` 选择 `GitHub Actions`。
+
 推荐使用启动脚本：
 
 ```powershell
