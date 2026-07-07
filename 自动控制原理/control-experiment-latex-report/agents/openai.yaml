@@ -1,0 +1,4 @@
+interface:
+  display_name: "Control Experiment LaTeX Report"
+  short_description: "Build control experiment LaTeX reports."
+  default_prompt: "Use $control-experiment-latex-report to build a Chinese-numbered control experiment LaTeX report from a DOCX template and PDF guide."
