@@ -62,6 +62,7 @@ plugins:
 nav:
   - 首页: index.md
   - 使用指南: usage.md
+  - 新生路线: freshman-guide.md
   - 课程索引:
       - 总览: courses/index.md
       - "中国近现代史纲要": courses/modern-chinese-history.md

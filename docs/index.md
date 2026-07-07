@@ -9,17 +9,19 @@
 
 - 让新同学快速知道每门课有哪类资料、应该先看什么。
 - 把零散 README、课件、往年题、实验代码和专题资料组织成稳定入口。
-- 记录真实学习体验：哪些内容值得重点复习，哪些资料只适合作参考。
+- 把课程页进一步串成学习路线：从新生入门、数学基础、编程练习到期末查资料。
 - 保留资料边界：不承诺高分，不鼓励照抄，不替代当年老师要求。
 
 ## 资料总览
 
+- [新生路线](freshman-guide.md)：不知道先看什么时，从这里按学习路线进入课程页。
 - [课程索引](courses/index.md)：直接进入全部课程和栏目主页，查看整理状态、完整度、README 状态和资料类型。
 - [机器视觉技术](courses/machine-vision.md)：当前人工精修程度最高的专业课页面。
 - [课程页模板](page-templates/course-template.md)：后续手动补课程页时可以沿用的结构。
 
 ## 推荐先看
 
+- 第一次来：先看 [新生路线](freshman-guide.md)，再按路线进入课程页。
 - 想看精修样例：先看 [机器视觉技术](courses/machine-vision.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md)。
 - 想补大一基础课：继续看 [离散数学](courses/discrete-math.md)、[高等数学A上](courses/calculus-a-1.md)、[高等数学A下](courses/calculus-a-2.md)、[概率论与数理统计](courses/probability-statistics.md)。
 - 想找薄弱入口的资料导航：看 [大学物理](courses/college-physics.md)、[数据结构](courses/data-structures.md)、[机器学习](courses/machine-learning.md)。
@@ -28,7 +30,7 @@
 
 ## 待补充重点
 
-当前已经补强了第一批课程页和第二批入口页。后续可继续补 `中国近现代史纲要`、`升学`、`运筹学` 等入口较薄页面，也可以把 `大学物理`、`数据结构`、`机器学习` 继续向“章节路线”和“适用年份”方向细化。
+当前已经补强了第一批课程页、第二批入口页，并新增了新生路线。后续可继续补 `中国近现代史纲要`、`升学`、`运筹学` 等入口较薄页面，也可以把新生路线扩展成“大一上 / 大一下 / 大二以后”的分年级路线。
 
 ## 本地预览
 

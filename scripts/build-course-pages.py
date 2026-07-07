@@ -538,17 +538,19 @@ def generate_home() -> str:
 
 - 让新同学快速知道每门课有哪类资料、应该先看什么。
 - 把零散 README、课件、往年题、实验代码和专题资料组织成稳定入口。
-- 记录真实学习体验：哪些内容值得重点复习，哪些资料只适合作参考。
+- 把课程页进一步串成学习路线：从新生入门、数学基础、编程练习到期末查资料。
 - 保留资料边界：不承诺高分，不鼓励照抄，不替代当年老师要求。
 
 ## 资料总览
 
+- [新生路线](freshman-guide.md)：不知道先看什么时，从这里按学习路线进入课程页。
 - [课程索引](courses/index.md)：直接进入全部课程和栏目主页，查看整理状态、完整度、README 状态和资料类型。
 - [机器视觉技术](courses/machine-vision.md)：当前人工精修程度最高的专业课页面。
 - [课程页模板](page-templates/course-template.md)：后续手动补课程页时可以沿用的结构。
 
 ## 推荐先看
 
+- 第一次来：先看 [新生路线](freshman-guide.md)，再按路线进入课程页。
 - 想看精修样例：先看 [机器视觉技术](courses/machine-vision.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md)。
 - 想补大一基础课：继续看 [离散数学](courses/discrete-math.md)、[高等数学A上](courses/calculus-a-1.md)、[高等数学A下](courses/calculus-a-2.md)、[概率论与数理统计](courses/probability-statistics.md)。
 - 想找薄弱入口的资料导航：看 [大学物理](courses/college-physics.md)、[数据结构](courses/data-structures.md)、[机器学习](courses/machine-learning.md)。
@@ -557,7 +559,7 @@ def generate_home() -> str:
 
 ## 待补充重点
 
-当前已经补强了第一批课程页和第二批入口页。后续可继续补 `中国近现代史纲要`、`升学`、`运筹学` 等入口较薄页面，也可以把 `大学物理`、`数据结构`、`机器学习` 继续向“章节路线”和“适用年份”方向细化。
+当前已经补强了第一批课程页、第二批入口页，并新增了新生路线。后续可继续补 `中国近现代史纲要`、`升学`、`运筹学` 等入口较薄页面，也可以把新生路线扩展成“大一上 / 大一下 / 大二以后”的分年级路线。
 
 ## 本地预览
 
@@ -592,6 +594,96 @@ python -m venv .venv
 ```powershell
 .\.venv\Scripts\python.exe -m mkdocs build --strict
 ```
+"""
+
+
+def generate_freshman_guide() -> str:
+    return r"""# 新生路线
+
+!!! warning "阅读边界"
+    这页不是官方培养方案，也不替代当年课表、老师要求或学院通知。它只是把当前 Wiki 已经整理过的资料入口串成一条更容易上手的阅读路线。
+
+## 这页适合谁看
+
+- 刚进入南开人工智能学院，想知道仓库资料应该从哪里开始看的同学。
+- 转专业、补课或想补基础的同学。
+- 期末前需要快速定位课件、往年题、实验报告和复习提醒的同学。
+- 想了解学习方法、编程入门、心理/生存资料入口的同学。
+
+如果你只想找某门课的资料，可以直接去 [课程索引](courses/index.md)。如果你还不知道先看哪门课、资料怎么搭配用，可以从本页开始。
+
+## 大一上优先看什么
+
+建议先把基础课和工具入口摸清楚，不要一开始就把所有资料都下载下来堆在本地。
+
+1. [高等数学A上](courses/calculus-a-1.md)：先建立微积分主线，再按课程页里的建议看练习题和往年题。
+2. [线性代数](courses/linear-algebra.md)：尽早形成“方程组、矩阵、行列式、线性空间”的整体观念，后面很多课程都会用到。
+3. [高级语言程序设计2-1](courses/advanced-programming-2-1.md)：把“能写代码”和“能应对课程考核”分开准备，多写练习题，不只背 PPT。
+4. [学海无涯](courses/study-skills.md)：写报告、排版、提问和自学时再看，不需要一次读完。
+
+大一上最容易踩的坑是每门课都只收藏资料，但没有形成自己的复习顺序。Wiki 的课程页一般先看“课程介绍 / 推荐阅读顺序”，再点进课件、练习题或往年题。
+
+## 数学课怎么搭配看
+
+数学课之间有明显衔接，但不需要一开始就追求全都学深。
+
+- [高等数学A上](courses/calculus-a-1.md) 和 [高等数学A下](courses/calculus-a-2.md)：适合作为连续的微积分训练线，重点是概念、计算熟练度和题型。
+- [线性代数](courses/linear-algebra.md)：适合和高数并行补，后续自动控制、机器学习、图像处理都会反复用到。
+- [离散数学](courses/discrete-math.md)：更偏计算机数学基础，适合在有一定数学阅读习惯后按逻辑、集合、图论、组合计数分块学。
+- [概率论与数理统计](courses/probability-statistics.md)：建议把公式、模型和题型放在一起看，后续机器学习会继续用到。
+- [大学物理](courses/college-physics.md)：更强调把高数工具用于物理问题，复习时优先看课件例题，再看往年题。
+
+如果时间紧，期末前不要从拓展书开始。先确认当年老师讲授范围，再看课程页推荐的课件、练习题和往年题。
+
+## 编程课怎么入门
+
+编程资料建议按“能写出来”而不是“看过很多教程”来衡量。
+
+1. [高级语言程序设计2-1](courses/advanced-programming-2-1.md)：先把 C++ 基础、作业题和机试题写熟。课程页里已经区分了能力线和考试线。
+2. [数据结构](courses/data-structures.md)：当前资料主要是题目回忆和往年题入口，还不是系统教程。适合用来了解考试题型变化，不适合替代教材和代码练习。
+3. [机器学习](courses/machine-learning.md)：目前主要是外部实验代码仓库入口。做实验时先看外部仓库，再回到 Wiki 看资料边界。
+4. [学海无涯](courses/study-skills.md)：遇到技术提问、LaTeX、编程能力提升等问题时再查。
+
+编程课最重要的是自己写一遍。实验报告、代码和题解可以帮助理解思路，但不能直接照搬提交。
+
+## 专业课什么时候开始准备
+
+专业课不一定要很早刷题，但可以提前建立方向感。
+
+- [机器学习](courses/machine-learning.md)：目前 Wiki 只做轻量入口，主要指向外部实验报告和代码仓库。想提前准备，可以先补线代、概率统计和基础编程。
+- [机器视觉技术](courses/machine-vision.md)：已经是较完整的精修页，适合用来了解计算机视觉方向的课程内容、实验和课程设计资料。
+- [自动化与智能科学概论](courses/intro-automation-intelligent-science.md)：目前是自动生成页，可以作为专业方向入口，后续还需要继续精修。
+- [数据结构](courses/data-structures.md)：虽然资料薄，但它对后续算法和工程能力很关键，建议平时用教材和代码练习补足。
+
+如果只是大一新生，专业课可以先“知道入口在哪里”，不用急着把所有 PDF 和代码看完。
+
+## 期末周怎么从 Wiki 找资料
+
+期末周不要从首页乱点，按下面这个顺序会更稳：
+
+1. 先打开 [课程索引](courses/index.md)，进入对应课程页。
+2. 先看课程页开头的“课程介绍”“推荐阅读顺序”或“使用建议”。
+3. 再点课件、练习题、往年题、实验报告或外部代码仓库。
+4. 对照当年老师通知和课程群要求，确认范围有没有变化。
+5. 最后回到 [使用指南](usage.md)，确认资料边界和学术诚信提醒。
+
+对数学课，优先看课件、练习题和往年题。对编程课，优先写题和跑代码。对实验课，优先理解任务要求和实现思路，再参考报告或代码。
+
+## 不要踩的坑
+
+- 不要把往年题当作唯一复习范围。题型会变，老师要求也会变。
+- 不要直接照抄实验报告、课程设计代码、作业答案或论文材料。
+- 不要把个人经验当官方要求。课程页里的经验只能帮助判断优先级，最终以当年老师和官方平台为准。
+- 不要只收藏资料不整理路线。每门课至少明确“先看什么、用什么练、期末怎么查漏”。
+- 心理健康、升学、长期规划类资料只能作为参考，遇到具体问题要找可靠的人或专业资源。
+
+## 继续怎么用这个 Wiki
+
+- 想按课程找资料：看 [课程索引](courses/index.md)。
+- 想知道资料能不能用、怎么贡献：看 [使用指南](usage.md)。
+- 想补基础：从 [高等数学A上](courses/calculus-a-1.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md) 开始。
+- 想看专业方向：从 [机器学习](courses/machine-learning.md) 和 [机器视觉技术](courses/machine-vision.md) 开始。
+- 想看学习方法和生存资料：看 [学海无涯](courses/study-skills.md) 和 [痴人喃喃](courses/mental-health-notes.md)。
 """
 
 
@@ -660,6 +752,7 @@ def generate_mkdocs(order: list[str]) -> str:
         "nav:\n",
         "  - 首页: index.md\n",
         "  - 使用指南: usage.md\n",
+        "  - 新生路线: freshman-guide.md\n",
         "  - 课程索引:\n",
         "      - 总览: courses/index.md\n",
     ]
@@ -697,6 +790,7 @@ def main() -> None:
 
     (COURSES_DIR / "index.md").write_text(generate_index(rows_by_course, order), encoding="utf-8", newline="\n")
     (DOCS_DIR / "index.md").write_text(generate_home(), encoding="utf-8", newline="\n")
+    (DOCS_DIR / "freshman-guide.md").write_text(generate_freshman_guide(), encoding="utf-8", newline="\n")
     (REPO_ROOT / "mkdocs.yml").write_text(generate_mkdocs(order), encoding="utf-8", newline="\n")
 
     generated = len(rows) - len([row for row in rows if page_name(row.course) in PROTECTED_SLUGS])
