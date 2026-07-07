@@ -1,71 +1,39 @@
 # 大学物理
 
-## 课程介绍
+## 课程 / 栏目介绍
 
-> 主要参考：`大学物理/REAMME.md`
+> 主要参考：`大学物理/REAMME.md`、`大学物理/课件/README.md`、`大学物理/往年真题/README.md`。注意根 README 文件名在仓库中拼作 `REAMME.md`。
 
-### 课程概览
+大学物理把高等数学中的微积分工具用到力学、电磁学等物理体系中，根 README 将课程概括为：更复杂的运动问题、刚体力学，以及“场”的概念和性质分析。
 
-- 大学物理要将微积分的工具应用于整个物理体系当中，从而解决更复杂的运动问题
-- 更加深入的探讨运动问题，从质点动力学做铺垫，引入刚体力学
-- 更加深入的探讨场的概念，分析场的性质
+这个目录的资料并不少，但入口比较薄：核心资料集中在 `课件` 和 `往年真题` 两个目录。根 README 对备考的提醒也很明确，PPT 上的例题优先级很高，往年题更适合作为题型补充。
 
-### 学习书籍
+## 推荐阅读顺序
 
-- 关于课本：吴百诗 科学出版社
-- 课本的优点：
-- 整体架构非常完善，几乎所有学习中需要讨论的知识点都有涵盖；
-
-### 电磁学
-
-- 油管上的Lectures by Walter Lewin. They will make you ♥ Physics.，老教授讲课带着做实验，非常直观清楚，而且很有意思，对于学习拓展和兴趣培养都有很大的帮助。
-- 可汗学院的讲解视频: 针对特定问题给出细致的解释
-- youtube: Alexander (fufaev.org),他的系列：Baiscs of Electromagenetism、Basic Maths for Physics、Advance Maths for Physicists都非常好
-
-### 力学
-
-- MIT 8.01SC Classical Mechanics, Fall 2016 视频很简短3-5分钟一个，体系完整，讲授清晰，非常适合平时理解概念和期末救命（如果你某个概念忘了的话）
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/REAMME.md)：`大学物理/REAMME.md`：先看课程概览、书籍推荐、网课推荐和考核提醒。
+- [课件](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E8%AF%BE%E4%BB%B6)：`大学物理/课件`：以 PPT 例题为复习主线。
+- [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`大学物理/往年真题`：作为题型和难度参考。
 
 ## 仓库资料与链接
 
-- 原始目录：[大学物理/](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86)（`大学物理/`）
-- 资料完整度：`资料多但入口薄弱`
-- README 状态：`缺少 README`
-- 文件数量：`28`
-- 主要类型：`pdf:24`; `md:3`; `zip:1`
-
-### 顶层目录
-
-- [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`大学物理/往年真题/`
-- [课件](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E8%AF%BE%E4%BB%B6)：`大学物理/课件/`
-
-### 代表文件
-
-- 当前没有可直接列出的顶层代表文件。
-
-## README 维护提示
-
-- `大学物理/往年真题/README.md`：简短 README，82 字符
-- `大学物理/课件/README.md`：占位 README，11 字符
+- [原始目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86)：`大学物理`：大学物理资料入口。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/REAMME.md)：`大学物理/REAMME.md`：课程说明入口。
+- [课件](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E8%AF%BE%E4%BB%B6)：`大学物理/课件`：课件和例题资料。
+- [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`大学物理/往年真题`：往年题资料。
 
 ## 使用建议
 
-- 当前入口说明偏弱，建议先从资料目录和文件名判断内容类型。
-- 本页只依据真实 README 和目录结构整理，不补写没有来源的学习经验。
-- 复习时先用课件确认本年度讲授范围，再看题目或报告类资料。
-- 往年题和回忆题适合熟悉题型，不建议当作唯一复习范围。
-- 涉及作业、答案、报告或论文的资料只适合学习参考，不能直接照抄提交。
-- 本页以客观索引为主，后续应优先补充可靠的一手课程经验。
+- 复习时优先看课件和 PPT 例题；仓库 README 明确提醒课件例题重要。
+- 往年题难收集，更适合用来熟悉题型和固定知识点，不建议替代 PPT 复习。
+- 根 README 提到成绩构成为平时 20% 加期末 80%，但不同年份和老师要求可能变化，实际以当年通知为准。
+- 想补理解可以看 README 中提到的费曼物理学讲义、Walter Lewin、Khan Academy、MIT 8.01SC 等资源；期末前仍要回到本年课件范围。
 
 ## 待补充
 
-- 补充课程简介、适用年份和任课老师差异。
-- 补充推荐阅读顺序和考核方式。
-- 为原目录补一份可用 README。
-- 补充资料说明，标明哪些文件适合复习、哪些只适合作参考。
-- 优先补齐 Wiki 页面中的学习建议和资料边界。
-- 处理 `analysis/readme_issues.csv` 中记录的空、占位或过短 README。
+本页只根据 README、目录名和文件类型整理导航。课件、往年题和复习经验仅供学习参考，不代表当年考试范围；不要把往年题或他人资料当作唯一复习依据。
 
 ## 资料边界
 
-本页只做资料导航和客观说明。PDF、DOCX、PPTX、图片、压缩包等原始资料不在 Wiki 中搬运；涉及作业、答案、实验报告、论文或个人材料的内容仅供学习参考，不得照抄、倒卖或违规使用。不同年份老师要求可能变化，请以当年课程要求为准。
+- 可继续补充不同老师对应的课件范围和适用年份。
+- 可把力学、电磁学、刚体、场等主题拆成章节路线。
+- `课件` 和 `往年真题` 子目录的 README 仍较短，后续可补更具体的使用说明。

@@ -1,52 +1,44 @@
 # 痴人喃喃
 
-## 课程介绍
+## 课程 / 栏目介绍
 
-> 主要参考：`痴人喃喃/readme.md`
+> 主要参考：`痴人喃喃/readme.md` 和顶层资料文件名。根 README 仅说明“收录一些文章”。
 
-当前 README 状态为 `占位 README`，可提取的课程介绍有限。本页暂以真实目录和资料链接为主，后续适合补充课程简介、学习路线、考核方式和适用年份。
+痴人喃喃是一个文章和手册归档栏目，内容覆盖心理健康、抑郁科普、大学生活、生存手册、培养方案与学习环境反思等。
+
+这个栏目不适合作为课程资料使用，更像是给同学在压力、迷茫或需要理解他人处境时的阅读入口。由于涉及心理健康，本页只做资料导航，不提供诊断或治疗建议。
+
+## 推荐阅读顺序
+
+- [上海交通大学学生生存手册](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%AD%A6%E7%94%9F%E7%94%9F%E5%AD%98%E6%89%8B%E5%86%8C.pdf)：`痴人喃喃/上海交通大学学生生存手册.pdf`：先看大学生活和生存经验类材料。
+- [走进抑郁症 抑郁科普手册](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E8%B5%B0%E8%BF%9B%E6%8A%91%E9%83%81%E7%97%87%20%E6%8A%91%E9%83%81%E7%A7%91%E6%99%AE%E6%89%8B%E5%86%8C.pdf)：`痴人喃喃/走进抑郁症 抑郁科普手册.pdf`：需要了解抑郁相关基础科普时看。
+- [不要对抑郁症同学说的5句话](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E4%B8%8D%E8%A6%81%E5%AF%B9%E6%8A%91%E9%83%81%E7%97%87%E5%90%8C%E5%AD%A6%E8%AF%B4%E7%9A%845%E5%8F%A5%E8%AF%9D.pdf)：`痴人喃喃/不要对抑郁症同学说的5句话.pdf`：想理解如何支持身边同学时看。
+- [关于抗抑郁药物使用的常见疑问与应对](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E5%85%B3%E4%BA%8E%E6%8A%97%E6%8A%91%E9%83%81%E8%8D%AF%E7%89%A9%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B8%B8%E8%A7%81%E7%96%91%E9%97%AE%E4%B8%8E%E5%BA%94%E5%AF%B9.pdf)：`痴人喃喃/关于抗抑郁药物使用的常见疑问与应对.pdf`：只作科普入口，具体用药必须咨询医生。
 
 ## 仓库资料与链接
 
-- 原始目录：[痴人喃喃/](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83)（`痴人喃喃/`）
-- 资料完整度：`资料多但入口薄弱`
-- README 状态：`占位 README`
-- 文件数量：`16`
-- 主要类型：`pdf:14`; `md:1`; `docx:1`
-
-### 顶层目录
-
-- 当前没有顶层子目录。
-
-### 代表文件
-
-- [一个北大非高考状元的抗不过抑郁史.pdf](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E4%B8%80%E4%B8%AA%E5%8C%97%E5%A4%A7%E9%9D%9E%E9%AB%98%E8%80%83%E7%8A%B6%E5%85%83%E7%9A%84%E6%8A%97%E4%B8%8D%E8%BF%87%E6%8A%91%E9%83%81%E5%8F%B2.pdf)：`痴人喃喃/一个北大非高考状元的抗不过抑郁史.pdf`
-- [一个北大高考状元的抗抑郁史.pdf](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E4%B8%80%E4%B8%AA%E5%8C%97%E5%A4%A7%E9%AB%98%E8%80%83%E7%8A%B6%E5%85%83%E7%9A%84%E6%8A%97%E6%8A%91%E9%83%81%E5%8F%B2.pdf)：`痴人喃喃/一个北大高考状元的抗抑郁史.pdf`
-- [上海交通大学学生生存手册.pdf](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%AD%A6%E7%94%9F%E7%94%9F%E5%AD%98%E6%89%8B%E5%86%8C.pdf)：`痴人喃喃/上海交通大学学生生存手册.pdf`
-- [不要对抑郁症同学说的5句话.pdf](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E4%B8%8D%E8%A6%81%E5%AF%B9%E6%8A%91%E9%83%81%E7%97%87%E5%90%8C%E5%AD%A6%E8%AF%B4%E7%9A%845%E5%8F%A5%E8%AF%9D.pdf)：`痴人喃喃/不要对抑郁症同学说的5句话.pdf`
-- [关于抗抑郁药物使用的常见疑问与应对.pdf](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E5%85%B3%E4%BA%8E%E6%8A%97%E6%8A%91%E9%83%81%E8%8D%AF%E7%89%A9%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B8%B8%E8%A7%81%E7%96%91%E9%97%AE%E4%B8%8E%E5%BA%94%E5%AF%B9.pdf)：`痴人喃喃/关于抗抑郁药物使用的常见疑问与应对.pdf`
-- [大学生不快乐，关键是能走的路越来越少.pdf](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E5%A4%A7%E5%AD%A6%E7%94%9F%E4%B8%8D%E5%BF%AB%E4%B9%90%EF%BC%8C%E5%85%B3%E9%94%AE%E6%98%AF%E8%83%BD%E8%B5%B0%E7%9A%84%E8%B7%AF%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%B0%91.pdf)：`痴人喃喃/大学生不快乐，关键是能走的路越来越少.pdf`
-- [我亦集·走到本科边上.pdf](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E6%88%91%E4%BA%A6%E9%9B%86%C2%B7%E8%B5%B0%E5%88%B0%E6%9C%AC%E7%A7%91%E8%BE%B9%E4%B8%8A.pdf)：`痴人喃喃/我亦集·走到本科边上.pdf`
-- [我的潜能发展手册-初版-20210824.docx](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E6%88%91%E7%9A%84%E6%BD%9C%E8%83%BD%E5%8F%91%E5%B1%95%E6%89%8B%E5%86%8C-%E5%88%9D%E7%89%88-20210824.docx)：`痴人喃喃/我的潜能发展手册-初版-20210824.docx`
-
-## README 维护提示
-
-- `痴人喃喃/readme.md`：占位 README，7 字符
+- [原始目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83)：`痴人喃喃`：文章和手册资料入口。
+- [上海交通大学学生生存手册](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E5%AD%A6%E7%94%9F%E7%94%9F%E5%AD%98%E6%89%8B%E5%86%8C.pdf)：`痴人喃喃/上海交通大学学生生存手册.pdf`：大学生活参考。
+- [走进抑郁症 抑郁科普手册](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E8%B5%B0%E8%BF%9B%E6%8A%91%E9%83%81%E7%97%87%20%E6%8A%91%E9%83%81%E7%A7%91%E6%99%AE%E6%89%8B%E5%86%8C.pdf)：`痴人喃喃/走进抑郁症 抑郁科普手册.pdf`：抑郁科普资料。
+- [不要对抑郁症同学说的5句话](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E4%B8%8D%E8%A6%81%E5%AF%B9%E6%8A%91%E9%83%81%E7%97%87%E5%90%8C%E5%AD%A6%E8%AF%B4%E7%9A%845%E5%8F%A5%E8%AF%9D.pdf)：`痴人喃喃/不要对抑郁症同学说的5句话.pdf`：同伴支持相关资料。
+- [关于抗抑郁药物使用的常见疑问与应对](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E5%85%B3%E4%BA%8E%E6%8A%97%E6%8A%91%E9%83%81%E8%8D%AF%E7%89%A9%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B8%B8%E8%A7%81%E7%96%91%E9%97%AE%E4%B8%8E%E5%BA%94%E5%AF%B9.pdf)：`痴人喃喃/关于抗抑郁药物使用的常见疑问与应对.pdf`：药物科普资料。
+- [大学生不快乐，关键是能走的路越来越少](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E5%A4%A7%E5%AD%A6%E7%94%9F%E4%B8%8D%E5%BF%AB%E4%B9%90%EF%BC%8C%E5%85%B3%E9%94%AE%E6%98%AF%E8%83%BD%E8%B5%B0%E7%9A%84%E8%B7%AF%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%B0%91.pdf)：`痴人喃喃/大学生不快乐，关键是能走的路越来越少.pdf`：大学生活反思类文章。
+- [清华 cs 培养方案](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E6%B8%85%E5%8D%8Ecs%E5%9F%B9%E5%85%BB%E6%96%B9%E6%A1%88.pdf)：`痴人喃喃/清华cs培养方案.pdf`：培养方案参考。
+- [浅谈清华学风、课程内卷、特奖与其他](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E7%97%B4%E4%BA%BA%E5%96%83%E5%96%83/%E6%B5%85%E8%B0%88%E6%B8%85%E5%8D%8E%E5%AD%A6%E9%A3%8E%E3%80%81%E8%AF%BE%E7%A8%8B%E5%86%85%E5%8D%B7%E3%80%81%E7%89%B9%E5%A5%96%E4%B8%8E%E5%85%B6%E4%BB%96.pdf)：`痴人喃喃/浅谈清华学风、课程内卷、特奖与其他.pdf`：学习环境反思。
 
 ## 使用建议
 
-- 当前入口说明偏弱，建议先从资料目录和文件名判断内容类型。
-- 本页只依据真实 README 和目录结构整理，不补写没有来源的学习经验。
-- 本页以客观索引为主，后续应优先补充可靠的一手课程经验。
+- 这不是课程页，不建议按目录顺序硬读；根据当下问题选择资料。
+- 涉及心理健康和药物内容时，只能作为科普阅读，不能替代专业医生、心理咨询师或学校心理中心的帮助。
+- 如果自己或身边同学处在急性危险中，应优先联系可信赖的人、学校支持系统或当地紧急服务。
+- 生存手册、培养方案和环境反思类文章适合打开视野，但不一定适用于南开或当前年份。
 
 ## 待补充
 
-- 补充课程简介、适用年份和任课老师差异。
-- 补充推荐阅读顺序和考核方式。
-- 补充资料说明，标明哪些文件适合复习、哪些只适合作参考。
-- 优先补齐 Wiki 页面中的学习建议和资料边界。
-- 处理 `analysis/readme_issues.csv` 中记录的空、占位或过短 README。
+本页只做文章导航，不提供医疗、心理咨询、药物或危机干预建议。心理健康相关材料请谨慎阅读和使用，必要时寻求专业帮助；文章观点不代表仓库或 Wiki 立场。
 
 ## 资料边界
 
-本页只做资料导航和客观说明。PDF、DOCX、PPTX、图片、压缩包等原始资料不在 Wiki 中搬运；涉及作业、答案、实验报告、论文或个人材料的内容仅供学习参考，不得照抄、倒卖或违规使用。不同年份老师要求可能变化，请以当年课程要求为准。
+- 可以继续给每篇文章补一行“适合什么时候看”。
+- 可将心理科普、大学生活、专业培养、学习环境反思分成四类。
+- 如后续公开展示，建议补更明确的心理健康求助边界和校内资源链接。

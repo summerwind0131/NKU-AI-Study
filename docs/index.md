@@ -7,8 +7,8 @@
 
 ## 这份 Wiki 想解决什么
 
-- 让新同学快速知道每门课有哪些资料、应该先看什么。
-- 把零散 README、课件、往年题和实验代码组织成稳定入口。
+- 让新同学快速知道每门课有哪类资料、应该先看什么。
+- 把零散 README、课件、往年题、实验代码和专题资料组织成稳定入口。
 - 记录真实学习体验：哪些内容值得重点复习，哪些资料只适合作参考。
 - 保留资料边界：不承诺高分，不鼓励照抄，不替代当年老师要求。
 
@@ -22,11 +22,13 @@
 
 - 想看精修样例：先看 [机器视觉技术](courses/machine-vision.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md)。
 - 想补大一基础课：继续看 [离散数学](courses/discrete-math.md)、[高等数学A上](courses/calculus-a-1.md)、[高等数学A下](courses/calculus-a-2.md)、[概率论与数理统计](courses/probability-statistics.md)。
+- 想找薄弱入口的资料导航：看 [大学物理](courses/college-physics.md)、[数据结构](courses/data-structures.md)、[机器学习](courses/machine-learning.md)。
+- 想看学习方法和心理/生存资料：看 [学海无涯](courses/study-skills.md)、[痴人喃喃](courses/mental-health-notes.md)。
 - 想了解使用边界：先看 [使用指南](usage.md)。
 
 ## 待补充重点
 
-入口薄弱但资料不少的栏目包括 `大学物理`、`数据结构`、`学海无涯`、`痴人喃喃`、`机器学习`。这些页面目前以 README 和目录结构为基础，后续适合继续补充学习路线、适用年份和资料说明。
+当前已经补强了第一批课程页和第二批入口页。后续可继续补 `中国近现代史纲要`、`升学`、`运筹学` 等入口较薄页面，也可以把 `大学物理`、`数据结构`、`机器学习` 继续向“章节路线”和“适用年份”方向细化。
 
 ## 本地预览
 
