@@ -25,12 +25,13 @@
 - 想看精修样例：先看 [机器视觉技术](courses/machine-vision.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md)。
 - 想补大一基础课：继续看 [离散数学](courses/discrete-math.md)、[高等数学A上](courses/calculus-a-1.md)、[高等数学A下](courses/calculus-a-2.md)、[概率论与数理统计](courses/probability-statistics.md)。
 - 想找薄弱入口的资料导航：看 [大学物理](courses/college-physics.md)、[数据结构](courses/data-structures.md)、[机器学习](courses/machine-learning.md)。
+- 想看第三批补强入口：看 [自动化与智能科学概论](courses/intro-automation-intelligent-science.md)、[大物实验报告](courses/physics-experiments.md)、[中国近现代史纲要](courses/modern-chinese-history.md)、[运筹学](courses/operations-research.md)、[升学](courses/further-study.md)。
 - 想看学习方法和心理/生存资料：看 [学海无涯](courses/study-skills.md)、[痴人喃喃](courses/mental-health-notes.md)。
 - 想了解使用边界：先看 [使用指南](usage.md)。
 
 ## 待补充重点
 
-当前已经补强了第一批课程页、第二批入口页，并新增了新生路线。后续可继续补 `中国近现代史纲要`、`升学`、`运筹学` 等入口较薄页面，也可以把新生路线扩展成“大一上 / 大一下 / 大二以后”的分年级路线。
+当前已经补强了第一批课程页、第二批入口页、第三批入口页，并新增了新生路线。后续可继续补 `马克思主义原理`、`思想道德与法治`、`电路基础` 等页面，也可以把新生路线扩展成“大一上 / 大一下 / 大二以后”的分年级路线。
 
 ## 本地预览
 
