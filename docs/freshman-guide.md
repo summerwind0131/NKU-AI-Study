@@ -32,6 +32,7 @@
 - [离散数学](courses/discrete-math.md)：更偏计算机数学基础，适合在有一定数学阅读习惯后按逻辑、集合、图论、组合计数分块学。
 - [概率论与数理统计](courses/probability-statistics.md)：建议把公式、模型和题型放在一起看，后续机器学习会继续用到。
 - [大学物理](courses/college-physics.md)：更强调把高数工具用于物理问题，复习时优先看课件例题，再看往年题。
+- [微分方程与复变函数](courses/differential-equations-complex-functions.md)：适合在高数和线代之后继续学习，也是自动控制原理的重要数学准备。
 
 如果时间紧，期末前不要从拓展书开始。先确认当年老师讲授范围，再看课程页推荐的课件、练习题和往年题。
 
@@ -40,9 +41,10 @@
 编程资料建议按“能写出来”而不是“看过很多教程”来衡量。
 
 1. [高级语言程序设计2-1](courses/advanced-programming-2-1.md)：先把 C++ 基础、作业题和机试题写熟。课程页里已经区分了能力线和考试线。
-2. [数据结构](courses/data-structures.md)：当前资料主要是题目回忆和往年题入口，还不是系统教程。适合用来了解考试题型变化，不适合替代教材和代码练习。
-3. [机器学习](courses/machine-learning.md)：目前主要是外部实验代码仓库入口。做实验时先看外部仓库，再回到 Wiki 看资料边界。
-4. [学海无涯](courses/study-skills.md)：遇到技术提问、LaTeX、编程能力提升等问题时再查。
+2. [高级语言程序设计2-2](courses/advanced-programming-2-2.md)：继续练习类、继承、多态、STL 和输入输出流，并分别准备笔试、机试和大作业。
+3. [数据结构](courses/data-structures.md)：当前资料主要是题目回忆和往年题入口，还不是系统教程。适合用来了解考试题型变化，不适合替代教材和代码练习。
+4. [机器学习](courses/machine-learning.md)：目前主要是外部实验代码仓库入口。做实验时先看外部仓库，再回到 Wiki 看资料边界。
+5. [学海无涯](courses/study-skills.md)：遇到技术提问、LaTeX、编程能力提升等问题时再查。
 
 编程课最重要的是自己写一遍。实验报告、代码和题解可以帮助理解思路，但不能直接照搬提交。
 
@@ -53,6 +55,7 @@
 - [机器学习](courses/machine-learning.md)：目前 Wiki 只做轻量入口，主要指向外部实验报告和代码仓库。想提前准备，可以先补线代、概率统计和基础编程。
 - [机器视觉技术](courses/machine-vision.md)：已经是较完整的精修页，适合用来了解计算机视觉方向的课程内容、实验和课程设计资料。
 - [自动化与智能科学概论](courses/intro-automation-intelligent-science.md)：已补强为论文/作业型课程入口，适合提前了解专业方向和课程写作要求。
+- [电路基础](courses/circuit-basics.md)：适合在进入自动化方向课程前建立基本电路分析方法，先理解方法主线，再用课件和样卷练习。
 - [数据结构](courses/data-structures.md)：虽然资料薄，但它对后续算法和工程能力很关键，建议平时用教材和代码练习补足。
 
 如果只是大一新生，专业课可以先“知道入口在哪里”，不用急着把所有 PDF 和代码看完。
@@ -81,6 +84,6 @@
 
 - 想按课程找资料：看 [课程索引](courses/index.md)。
 - 想知道资料能不能用、怎么贡献：看 [使用指南](usage.md)。
-- 想补基础：从 [高等数学A上](courses/calculus-a-1.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md) 开始。
+- 想补基础：从 [高等数学A上](courses/calculus-a-1.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md) 开始，再进入 [微分方程与复变函数](courses/differential-equations-complex-functions.md) 和 [高级语言程序设计2-2](courses/advanced-programming-2-2.md)。
 - 想看专业方向：从 [机器学习](courses/machine-learning.md) 和 [机器视觉技术](courses/machine-vision.md) 开始。
 - 想看学习方法和生存资料：看 [学海无涯](courses/study-skills.md) 和 [痴人喃喃](courses/mental-health-notes.md)。

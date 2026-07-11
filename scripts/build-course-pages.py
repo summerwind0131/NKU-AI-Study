@@ -34,6 +34,12 @@ CURATED_SLUGS = {
     "intro-automation-intelligent-science",
     "further-study",
     "physics-experiments",
+    "marxism-principles",
+    "ideology-morality-law",
+    "circuit-basics",
+    "advanced-programming-2-2",
+    "college-chinese",
+    "differential-equations-complex-functions",
 }
 PROTECTED_SLUGS = set(CURATED_SLUGS)
 TODO_SLUGS: set[str] = set()
@@ -521,7 +527,8 @@ def generate_index(rows_by_course: dict[str, CourseRow], order: list[str]) -> st
         "- 第一批课程精修：`机器视觉技术`、`线性代数`、`高级语言程序设计2-1`、`离散数学`、`高等数学A上`、`高等数学A下`、`概率论与数理统计`。\n",
         "- 第二批入口补强：`大学物理`、`数据结构`、`机器学习`、`学海无涯`、`痴人喃喃`。\n",
         "- 第三批入口补强：`中国近现代史纲要`、`运筹学`、`自动化与智能科学概论`、`升学`、`大物实验报告`。\n",
-        "- 后续可继续补强：`马克思主义原理`、`思想道德与法治`、`电路基础`、`高级语言程序设计2-2` 等页面。\n",
+        "- 第四批课程精修：`马克思主义原理`、`思想道德与法治`、`电路基础`、`高级语言程序设计2-2`、`大学语文`、`微分方程与复变函数`。\n",
+        "- 后续可继续补强：`军事理论`、`英语口语与写作`、`公能实践课` 等页面。\n",
         "\n## 维护说明\n\n",
         "课程页由 `scripts/build-course-pages.py` 根据 `analysis/course_index.csv`、`analysis/readme_issues.csv` 和 `_remote_nku_ai_study` 生成。`整理状态` 为 `精修` 的页面是人工整理页，脚本会跳过这些文件以避免覆盖。\n",
     ])
@@ -557,12 +564,13 @@ def generate_home() -> str:
 - 想补大一基础课：继续看 [离散数学](courses/discrete-math.md)、[高等数学A上](courses/calculus-a-1.md)、[高等数学A下](courses/calculus-a-2.md)、[概率论与数理统计](courses/probability-statistics.md)。
 - 想找薄弱入口的资料导航：看 [大学物理](courses/college-physics.md)、[数据结构](courses/data-structures.md)、[机器学习](courses/machine-learning.md)。
 - 想看第三批补强入口：看 [自动化与智能科学概论](courses/intro-automation-intelligent-science.md)、[大物实验报告](courses/physics-experiments.md)、[中国近现代史纲要](courses/modern-chinese-history.md)、[运筹学](courses/operations-research.md)、[升学](courses/further-study.md)。
+- 想看第四批课程精修：看 [电路基础](courses/circuit-basics.md)、[高级语言程序设计2-2](courses/advanced-programming-2-2.md)、[微分方程与复变函数](courses/differential-equations-complex-functions.md)、[马克思主义原理](courses/marxism-principles.md)、[思想道德与法治](courses/ideology-morality-law.md)、[大学语文](courses/college-chinese.md)。
 - 想看学习方法和心理/生存资料：看 [学海无涯](courses/study-skills.md)、[痴人喃喃](courses/mental-health-notes.md)。
 - 想了解使用边界：先看 [使用指南](usage.md)。
 
 ## 待补充重点
 
-当前已经补强了第一批课程页、第二批入口页、第三批入口页，并新增了新生路线。后续可继续补 `马克思主义原理`、`思想道德与法治`、`电路基础` 等页面，也可以把新生路线扩展成“大一上 / 大一下 / 大二以后”的分年级路线。
+当前已经完成四批课程页补强，并新增了新生路线。后续可继续补 `军事理论`、`英语口语与写作`、`公能实践课` 等入口，也可以新增“期末周速查”或把新生路线扩展成“大一上 / 大一下 / 大二以后”的分年级路线。
 
 ## 本地预览
 
@@ -635,6 +643,7 @@ def generate_freshman_guide() -> str:
 - [离散数学](courses/discrete-math.md)：更偏计算机数学基础，适合在有一定数学阅读习惯后按逻辑、集合、图论、组合计数分块学。
 - [概率论与数理统计](courses/probability-statistics.md)：建议把公式、模型和题型放在一起看，后续机器学习会继续用到。
 - [大学物理](courses/college-physics.md)：更强调把高数工具用于物理问题，复习时优先看课件例题，再看往年题。
+- [微分方程与复变函数](courses/differential-equations-complex-functions.md)：适合在高数和线代之后继续学习，也是自动控制原理的重要数学准备。
 
 如果时间紧，期末前不要从拓展书开始。先确认当年老师讲授范围，再看课程页推荐的课件、练习题和往年题。
 
@@ -643,9 +652,10 @@ def generate_freshman_guide() -> str:
 编程资料建议按“能写出来”而不是“看过很多教程”来衡量。
 
 1. [高级语言程序设计2-1](courses/advanced-programming-2-1.md)：先把 C++ 基础、作业题和机试题写熟。课程页里已经区分了能力线和考试线。
-2. [数据结构](courses/data-structures.md)：当前资料主要是题目回忆和往年题入口，还不是系统教程。适合用来了解考试题型变化，不适合替代教材和代码练习。
-3. [机器学习](courses/machine-learning.md)：目前主要是外部实验代码仓库入口。做实验时先看外部仓库，再回到 Wiki 看资料边界。
-4. [学海无涯](courses/study-skills.md)：遇到技术提问、LaTeX、编程能力提升等问题时再查。
+2. [高级语言程序设计2-2](courses/advanced-programming-2-2.md)：继续练习类、继承、多态、STL 和输入输出流，并分别准备笔试、机试和大作业。
+3. [数据结构](courses/data-structures.md)：当前资料主要是题目回忆和往年题入口，还不是系统教程。适合用来了解考试题型变化，不适合替代教材和代码练习。
+4. [机器学习](courses/machine-learning.md)：目前主要是外部实验代码仓库入口。做实验时先看外部仓库，再回到 Wiki 看资料边界。
+5. [学海无涯](courses/study-skills.md)：遇到技术提问、LaTeX、编程能力提升等问题时再查。
 
 编程课最重要的是自己写一遍。实验报告、代码和题解可以帮助理解思路，但不能直接照搬提交。
 
@@ -656,6 +666,7 @@ def generate_freshman_guide() -> str:
 - [机器学习](courses/machine-learning.md)：目前 Wiki 只做轻量入口，主要指向外部实验报告和代码仓库。想提前准备，可以先补线代、概率统计和基础编程。
 - [机器视觉技术](courses/machine-vision.md)：已经是较完整的精修页，适合用来了解计算机视觉方向的课程内容、实验和课程设计资料。
 - [自动化与智能科学概论](courses/intro-automation-intelligent-science.md)：已补强为论文/作业型课程入口，适合提前了解专业方向和课程写作要求。
+- [电路基础](courses/circuit-basics.md)：适合在进入自动化方向课程前建立基本电路分析方法，先理解方法主线，再用课件和样卷练习。
 - [数据结构](courses/data-structures.md)：虽然资料薄，但它对后续算法和工程能力很关键，建议平时用教材和代码练习补足。
 
 如果只是大一新生，专业课可以先“知道入口在哪里”，不用急着把所有 PDF 和代码看完。
@@ -684,7 +695,7 @@ def generate_freshman_guide() -> str:
 
 - 想按课程找资料：看 [课程索引](courses/index.md)。
 - 想知道资料能不能用、怎么贡献：看 [使用指南](usage.md)。
-- 想补基础：从 [高等数学A上](courses/calculus-a-1.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md) 开始。
+- 想补基础：从 [高等数学A上](courses/calculus-a-1.md)、[线性代数](courses/linear-algebra.md)、[高级语言程序设计2-1](courses/advanced-programming-2-1.md) 开始，再进入 [微分方程与复变函数](courses/differential-equations-complex-functions.md) 和 [高级语言程序设计2-2](courses/advanced-programming-2-2.md)。
 - 想看专业方向：从 [机器学习](courses/machine-learning.md) 和 [机器视觉技术](courses/machine-vision.md) 开始。
 - 想看学习方法和生存资料：看 [学海无涯](courses/study-skills.md) 和 [痴人喃喃](courses/mental-health-notes.md)。
 """
