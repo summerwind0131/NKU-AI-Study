@@ -1,5 +1,14 @@
 # 高等数学A下
 
+## 课程速览
+
+| 项目 | 信息 |
+| --- | --- |
+| 资料完整度 | 较完整 |
+| README 状态 | 较完整 README |
+| 文件数量 | 8 |
+| 主要类型 | `pdf:5`；`md:3` |
+
 ## 课程介绍
 
 > 主要参考：`高等数学A下/README.md` 与仓库顶层目录。Wiki 只做导航和经验整理，不展开 PDF、DOCX、PPTX 内容。
@@ -8,13 +17,6 @@
 
 A 下的内容更立体，三重积分、曲线曲面积分、级数等模块容易因为概念多而混乱。建议先用课内范围建立框架，再用练习题和往年题训练熟练度。
 
-## 推荐阅读顺序
-
-- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/README.md)：`高等数学A下/README.md`：先看课程范围、网课建议和备考建议。
-- [练习题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E7%BB%83%E4%B9%A0%E9%A2%98)：`高等数学A下/练习题`：平时刷题和期末训练入口。
-- [南开往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E5%8D%97%E5%BC%80%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`高等数学A下/南开往年真题`：期末前熟悉题型。
-- [高等数学下总结](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%8B%E6%80%BB%E7%BB%93_by%20sfy.pdf)：`高等数学A下/高等数学下总结_by sfy.pdf`：顶层总结资料。
-
 ## 仓库资料与链接
 
 - 原始目录：[高等数学A下](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B)：`高等数学A下/`
@@ -22,6 +24,13 @@ A 下的内容更立体，三重积分、曲线曲面积分、级数等模块容
 - [练习题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E7%BB%83%E4%B9%A0%E9%A2%98)：`高等数学A下/练习题`：刷题资料入口。
 - [高等数学下总结_by sfy](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%8B%E6%80%BB%E7%BB%93_by%20sfy.pdf)：`高等数学A下/高等数学下总结_by sfy.pdf`：总结类代表文件。
 - [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/README.md)：`高等数学A下/README.md`：课程说明入口。
+
+## 推荐阅读顺序
+
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/README.md)：`高等数学A下/README.md`：先看课程范围、网课建议和备考建议。
+- [练习题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E7%BB%83%E4%B9%A0%E9%A2%98)：`高等数学A下/练习题`：平时刷题和期末训练入口。
+- [南开往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E5%8D%97%E5%BC%80%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`高等数学A下/南开往年真题`：期末前熟悉题型。
+- [高等数学下总结](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8B/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%8B%E6%80%BB%E7%BB%93_by%20sfy.pdf)：`高等数学A下/高等数学下总结_by sfy.pdf`：顶层总结资料。
 
 ## 备考 / 作业提醒
 

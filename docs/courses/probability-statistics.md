@@ -1,5 +1,14 @@
 # 概率论与数理统计
 
+## 课程速览
+
+| 项目 | 信息 |
+| --- | --- |
+| 资料完整度 | 较完整 |
+| README 状态 | 较完整 README |
+| 文件数量 | 37 |
+| 主要类型 | `pdf:29`；`md:3`；`doc:3`；`docx:2` |
+
 ## 课程介绍
 
 > 主要参考：`概率论与数理统计/README.md` 与仓库顶层目录。Wiki 只做导航和经验整理，不展开 PDF、DOCX、PPTX 内容。
@@ -8,13 +17,6 @@
 
 README 判断这门课期末难度不算高，但公式、积分计算、作业正确率和计算器使用都很实际。想稳妥复习，应该先建立公式和题型框架，再用作业题、往年题和 PPT 检查细节。
 
-## 推荐阅读顺序
-
-- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/README.md)：`概率论与数理统计/README.md`：先看课程概览、考核方式和注意事项。
-- [课程教学大纲](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/49.%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E7%8E%8B%E8%B6%85__20250305094946462.%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E7%8E%8B%E8%B6%85.docx)：`概率论与数理统计/49.南开大学本科课程教学大纲-概率论与数理统计-王超__20250305094946462.南开大学本科课程教学大纲-概率论与数理统计-王超.docx`：用于确认课程要求。
-- [作业题答案](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E4%BD%9C%E4%B8%9A%E9%A2%98%E7%AD%94%E6%A1%88)：`概率论与数理统计/作业题答案`：完成作业后校对。
-- [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`概率论与数理统计/往年真题`：期末题型和计算量参考。
-
 ## 仓库资料与链接
 
 - 原始目录：[概率论与数理统计](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1)：`概率论与数理统计/`
@@ -22,6 +24,13 @@ README 判断这门课期末难度不算高，但公式、积分计算、作业�
 - [作业题答案](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E4%BD%9C%E4%B8%9A%E9%A2%98%E7%AD%94%E6%A1%88)：`概率论与数理统计/作业题答案`：作业校对入口。
 - [课程教学大纲](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/49.%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E7%8E%8B%E8%B6%85__20250305094946462.%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E7%8E%8B%E8%B6%85.docx)：`概率论与数理统计/49.南开大学本科课程教学大纲-概率论与数理统计-王超__20250305094946462.南开大学本科课程教学大纲-概率论与数理统计-王超.docx`：顶层代表文件。
 - [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/README.md)：`概率论与数理统计/README.md`：课程说明入口。
+
+## 推荐阅读顺序
+
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/README.md)：`概率论与数理统计/README.md`：先看课程概览、考核方式和注意事项。
+- [课程教学大纲](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/49.%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E7%8E%8B%E8%B6%85__20250305094946462.%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E6%9C%AC%E7%A7%91%E8%AF%BE%E7%A8%8B%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-%E7%8E%8B%E8%B6%85.docx)：`概率论与数理统计/49.南开大学本科课程教学大纲-概率论与数理统计-王超__20250305094946462.南开大学本科课程教学大纲-概率论与数理统计-王超.docx`：用于确认课程要求。
+- [作业题答案](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E4%BD%9C%E4%B8%9A%E9%A2%98%E7%AD%94%E6%A1%88)：`概率论与数理统计/作业题答案`：完成作业后校对。
+- [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`概率论与数理统计/往年真题`：期末题型和计算量参考。
 
 ## 备考 / 作业提醒
 

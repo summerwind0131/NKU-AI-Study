@@ -423,19 +423,29 @@ def generate_intro_section(course: str, row: CourseRow, readme_path: str | None,
     return "".join(lines).rstrip() + "\n"
 
 
+def generate_quick_info_section(row: CourseRow) -> str:
+    extensions = parse_semicolon_list(row.extensions)
+    main_types = "；".join(f"`{item}`" for item in extensions[:5]) or "未知"
+    return "".join(
+        [
+            "## 课程速览\n\n",
+            "| 项目 | 信息 |\n",
+            "| --- | --- |\n",
+            f"| 资料完整度 | {row.label or '未知'} |\n",
+            f"| README 状态 | {status_cn(row.readme_status)} |\n",
+            f"| 文件数量 | {row.file_count or '未知'} |\n",
+            f"| 主要类型 | {main_types} |\n",
+        ]
+    )
+
+
 def generate_resource_section(row: CourseRow, dirs: list[str], files: list[str]) -> str:
     course = row.course
     notable_files = [f for f in files if Path(f).name.lower() not in README_NAMES][:8]
-    extensions = parse_semicolon_list(row.extensions)
     features = parse_features(row.readme_features)
 
     lines = ["\n## 仓库资料与链接\n\n"]
     lines.append(f"- 原始目录：{markdown_link(course + '/', course, 'tree')}（`{course}/`）\n")
-    lines.append(f"- 资料完整度：`{row.label or '未知'}`\n")
-    lines.append(f"- README 状态：`{status_cn(row.readme_status)}`\n")
-    lines.append(f"- 文件数量：`{row.file_count or '未知'}`\n")
-    if extensions:
-        lines.append(f"- 主要类型：{'; '.join(f'`{item}`' for item in extensions)}\n")
     if features:
         lines.append(f"- 已识别内容要素：{'; '.join(f'`{item}`' for item in features)}\n")
 
@@ -477,6 +487,8 @@ def generate_course_page(row: CourseRow, issues: list[dict[str, str]] | None = N
         todos.append("处理 `analysis/readme_issues.csv` 中记录的空、占位或过短 README。")
 
     lines: list[str] = [f"# {course}\n\n"]
+    lines.append(generate_quick_info_section(row))
+    lines.append("\n")
     lines.append(generate_intro_section(course, row, readme_path, readme_text))
     lines.append(generate_resource_section(row, dirs, files))
     lines.append(generate_issue_section(issues))

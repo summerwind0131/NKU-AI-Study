@@ -1,5 +1,14 @@
 # 升学
 
+## 课程速览
+
+| 项目 | 信息 |
+| --- | --- |
+| 资料完整度 | 资料型归档 |
+| README 状态 | 占位 README |
+| 文件数量 | 3 |
+| 主要类型 | `md:2`；`pdf:1` |
+
 ## 课程 / 栏目介绍
 
 > 主要参考：`升学/readme.md`、`升学/保研/readme.md` 和顶层文件名。
@@ -8,18 +17,18 @@
 
 因此本页只做入口整理，不写实时政策、不判断个人路径，也不把往年经验包装成当前规则。升学政策、名额、流程、时间线和材料要求每年都可能变化，必须以学院、学校和目标项目的官方通知为准。
 
-## 推荐阅读顺序
-
-1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/readme.md)：`升学/readme.md`，了解栏目定位。
-2. [保研 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/%E4%BF%9D%E7%A0%94/readme.md)：`升学/保研/readme.md`，当前仍是占位说明。
-3. [新老生交流会保研分享](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/%E4%BF%9D%E7%A0%94/%E6%96%B0%E8%80%81%E7%94%9F%E4%BA%A4%E6%B5%81%E4%BC%9A-%E4%BF%9D%E7%A0%94%E5%88%86%E4%BA%AB-Murf%20.pdf)：`升学/保研/新老生交流会-保研分享-Murf .pdf`，作为经验分享材料阅读。
-
 ## 仓库资料与链接
 
 - [原始目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%8D%87%E5%AD%A6)：`升学/`
 - [保研目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%8D%87%E5%AD%A6/%E4%BF%9D%E7%A0%94)：`升学/保研/`
 - 文件数量：`3`
 - 主要类型：`md:2`; `pdf:1`
+
+## 推荐阅读顺序
+
+1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/readme.md)：`升学/readme.md`，了解栏目定位。
+2. [保研 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/%E4%BF%9D%E7%A0%94/readme.md)：`升学/保研/readme.md`，当前仍是占位说明。
+3. [新老生交流会保研分享](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/%E4%BF%9D%E7%A0%94/%E6%96%B0%E8%80%81%E7%94%9F%E4%BA%A4%E6%B5%81%E4%BC%9A-%E4%BF%9D%E7%A0%94%E5%88%86%E4%BA%AB-Murf%20.pdf)：`升学/保研/新老生交流会-保研分享-Murf .pdf`，作为经验分享材料阅读。
 
 ## 使用建议
 
@@ -28,15 +37,15 @@
 - 涉及排名、名额、资格、夏令营、预推免、出国申请和项目选择时，必须重新查最新官方通知。
 - 如果后续补资料，建议优先补“适用年份”“贡献者背景”“资料类型”和“是否仍可能过期”。
 
+## 待补充
+
+- 补充保研、考研、出国等不同路径的资料入口。
+- 为每份分享材料标注适用年份和主要主题。
+- 增加官方信息源清单，但不在本页维护实时政策结论。
+
 ## 资料边界
 
 !!! warning "升学信息会过期"
     升学资料强依赖年份、政策和个人背景。本页不能替代学院通知、学校文件、目标院校公告或导师沟通。
 
 经验分享只适合参考，不应照搬个人陈述、简历、邮件、套磁内容或申请材料。
-
-## 待补充
-
-- 补充保研、考研、出国等不同路径的资料入口。
-- 为每份分享材料标注适用年份和主要主题。
-- 增加官方信息源清单，但不在本页维护实时政策结论。

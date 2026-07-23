@@ -1,5 +1,14 @@
 # 大物实验报告
 
+## 课程速览
+
+| 项目 | 信息 |
+| --- | --- |
+| 资料完整度 | 较完整 |
+| README 状态 | 可用 README |
+| 文件数量 | 45 |
+| 主要类型 | `pdf:26`；`docx:12`；`md:4`；`opju:1`；`xlsx:1` |
+
 ## 课程 / 栏目介绍
 
 > 主要参考：`大物实验报告/README.md`、子目录名、代表文件名和 `analysis/course_index.csv`。
@@ -7,14 +16,6 @@
 大物实验报告目录收集了大学物理实验相关的报告、预习题答案和数据文件。根 README 的核心提醒是：课前预习题和实验报告都会计入成绩，报告评分会关注有效数字、公式推导、计算过程，以及老师或助教提到的注意事项。
 
 这个页面是高风险资料入口：它能帮助你理解报告格式、实验项目和书写细节，但不能替代自己的实验记录、数据处理和报告写作。README 中有一些非常口语化的个人表达，本页不把不规范的数据处理方式当作建议；实验数据应按课程要求真实记录、规范处理。
-
-## 推荐阅读顺序
-
-1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/README.md)：`大物实验报告/README.md`，先看报告和预习题的评分提醒。
-2. [大物实验预习题答案](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E9%A2%84%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88)：`大物实验报告/大物实验预习题答案/`，只用于预习核对和理解。
-3. [fyr 的实验报告目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/fyr%E7%9A%84%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A)：`大物实验报告/fyr的实验报告/`，参考报告组织形式。
-4. [wzw 的实验报告目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/wzw%E7%9A%84%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A)：`大物实验报告/wzw的实验报告/`，参考不同写法和文件格式。
-5. 顶层报告 PDF：优先看不含个人信息的代表报告文件，了解常见实验项目。
 
 ## 仓库资料与链接
 
@@ -42,6 +43,14 @@
 - [牛顿环](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A_%E7%89%9B%E9%A1%BF%E7%8E%AF.pdf)：`大物实验报告/南开大学大物实验报告_牛顿环.pdf`
 - [衍射光栅](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A_%E8%A1%8D%E5%B0%84%E5%85%89%E6%A0%85.pdf)：`大物实验报告/南开大学大物实验报告_衍射光栅.pdf`
 
+## 推荐阅读顺序
+
+1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/README.md)：`大物实验报告/README.md`，先看报告和预习题的评分提醒。
+2. [大物实验预习题答案](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E9%A2%84%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88)：`大物实验报告/大物实验预习题答案/`，只用于预习核对和理解。
+3. [fyr 的实验报告目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/fyr%E7%9A%84%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A)：`大物实验报告/fyr的实验报告/`，参考报告组织形式。
+4. [wzw 的实验报告目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/wzw%E7%9A%84%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A)：`大物实验报告/wzw的实验报告/`，参考不同写法和文件格式。
+5. 顶层报告 PDF：优先看不含个人信息的代表报告文件，了解常见实验项目。
+
 ## 使用建议
 
 - 课前先看实验要求和预习题，报告写作时再参考 README 中提到的有效数字、公式推导、代入计算过程和老师/助教提醒。
@@ -49,15 +58,15 @@
 - 数据文件和报告样例不能替代自己的实验记录。数据处理应符合课程要求，异常数据也应按老师要求说明。
 - 如果同一实验有多个样例，可以对比它们的格式差异，但最终报告必须基于自己的实验过程。
 
+## 待补充
+
+- 为每个实验项目补“适合参考的报告结构”和“常见注意点”。
+- 子目录 README 目前为空或占位，后续可补资料来源、适用年份和隐私边界。
+- 可增加“如何写规范实验报告”的通用说明，但不放可直接提交的模板文本。
+
 ## 资料边界
 
 !!! warning "高风险资料"
     实验报告、预习题答案、数据文件和个人材料只能用于学习参考。不得直接改名提交，不得照抄，不得泄露或滥用学长学姐个人信息。
 
 本页不搬运 PDF、DOCX、XLSX、OPJU 或压缩包内容，只做导航。不同年份实验项目、助教要求和评分细则可能变化，请以当年要求为准。
-
-## 待补充
-
-- 为每个实验项目补“适合参考的报告结构”和“常见注意点”。
-- 子目录 README 目前为空或占位，后续可补资料来源、适用年份和隐私边界。
-- 可增加“如何写规范实验报告”的通用说明，但不放可直接提交的模板文本。
