@@ -1,0 +1,2456 @@
+% 使用 XeLaTeX 编译；默认生成含答案版。
+% 若需生成练习版，请在下一行取消注释后编译：
+% \def\PracticeEdition{1}
+\documentclass[UTF8,openany,oneside,zihao=-4,fontset=windows]{ctexbook}
+\setmainfont{DejaVu Serif}
+\setmonofont{DejaVu Sans Mono}
+\usepackage[a4paper,top=2.3cm,bottom=2.3cm,left=2.35cm,right=2.35cm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{array,booktabs,longtable,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+\usepackage{fvextra}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{microtype}
+
+\definecolor{MVBlue}{HTML}{1F4E79}
+\definecolor{MVLight}{HTML}{EDF4FA}
+\definecolor{MVGold}{HTML}{C58A18}
+\definecolor{MVGray}{HTML}{58636D}
+\definecolor{MVCode}{HTML}{F5F7F9}
+
+\hypersetup{colorlinks=true,linkcolor=MVBlue,urlcolor=MVBlue,pdfauthor={NKU AI Study},pdftitle={机器视觉技术练习题合集},pdfsubject={机器视觉技术复习题}}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\linespread{1.18}
+\setlist{nosep,leftmargin=2.2em}
+
+\newif\ifshowsolutions
+\ifdefined\PracticeEdition
+  \showsolutionsfalse
+\else
+  \showsolutionstrue
+\fi
+
+\ctexset{
+  chapter={format=\huge\bfseries\color{MVBlue},number=\chinese{chapter},name={第,编},beforeskip=0pt,afterskip=1.2em},
+  section={format=\Large\bfseries\color{MVBlue},beforeskip=1.3em,afterskip=0.65em},
+  subsection={format=\large\bfseries\color{MVGray}}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 机器视觉技术练习题合集}
+\fancyhead[R]{\small\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.45pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\EditionName}{\ifshowsolutions 含答案版\else 练习版\fi}
+\newcommand{\ChapterIntro}[1]{%
+  \begin{tcolorbox}[colback=MVLight,colframe=MVBlue!50,boxrule=0.5pt,arc=1.5mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]
+  \small #1
+  \end{tcolorbox}
+}
+\newcommand{\Question}[2]{%
+  \par\Needspace{4\baselineskip}\medskip
+  \noindent\textbf{\color{MVBlue}#1}\quad #2\par
+}
+\newenvironment{choices}{\begin{enumerate}[label=\Alph*.,itemsep=0.15em,topsep=0.25em,leftmargin=3em]}{\end{enumerate}}
+\newenvironment{AnswerBox}{\begin{tcolorbox}[breakable,colback=MVLight,colframe=MVBlue!45,title={参考答案},fonttitle=\bfseries,boxrule=0.55pt,arc=1.5mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm]}{\end{tcolorbox}}
+\newcommand{\PracticeSpace}[1]{\ifshowsolutions\else\par\vspace{#1}\par\fi}
+\DefineVerbatimEnvironment{CodeBlock}{Verbatim}{fontsize=\small,breaklines=true,breakanywhere=true,frame=single,framesep=3mm,rulecolor=\color{MVBlue!35},formatcom=\color{black}}
+\pretocmd{\section}{\Needspace{8\baselineskip}}{}{}
+
+\begin{document}
+\frontmatter
+\begin{titlepage}
+  \centering
+  \vspace*{2.0cm}
+  {\color{MVBlue}\rule{0.82\textwidth}{1.2pt}}\\[1.3cm]
+  {\fontsize{30pt}{38pt}\selectfont\bfseries 机器视觉技术\\[0.35em]练习题合集\par}
+  \vspace{0.9cm}
+  {\Large\color{MVGold}\EditionName\par}
+  \vspace{1.2cm}
+  {\large 模拟练习卷 · 深度学习专项 · Faster R-CNN专项\par}
+  \vfill
+  {\color{MVBlue}\rule{0.82\textwidth}{1.2pt}}\\[0.8cm]
+  {\large NKU AI Study\\[0.4em]\today\par}
+\end{titlepage}
+\tableofcontents
+\mainmatter
+\chapter{机器视觉技术模拟练习卷 (一)}
+\ChapterIntro{本卷满分100分。建议先完成练习，再对照答案复盘知识点与计算过程。}
+\section{一、选择题 (10题，每题2分)}
+\Question{1.}{一幅大小为 M×N 的灰度图像共有 L 个灰度级，其直方图 h(k) 表示}
+\begin{choices}
+\item 灰度值为 k 的像素位置
+\item 灰度值为 k 的像素数量
+\item 图像中所有像素的平均灰度
+\item 相邻像素之间的灰度差
+\end{choices}
+\Question{2.}{以下关于图像采样和量化的说法，正确的是}
+\begin{choices}
+\item 采样决定灰度级数量，量化决定空间分辨率
+\item 采样和量化都只影响空间分辨率
+\item 采样决定空间分辨率，量化决定灰度分辨率
+\item 量化级数越少，图像灰度变化越平滑
+\end{choices}
+\Question{3.}{对椒盐噪声具有较好抑制作用，并且能够较好保留边缘的滤波器是}
+\begin{choices}
+\item 均值滤波器
+\item 高斯滤波器
+\item 中值滤波器
+\item 拉普拉斯滤波器
+\end{choices}
+\Question{4.}{Canny边缘检测中，非极大值抑制的主要作用是}
+\begin{choices}
+\item 增强图像对比度
+\item 将较宽的边缘细化为单像素边缘
+\item 消除所有弱边缘
+\item 对图像进行高斯平滑
+\end{choices}
+\Question{5.}{对二值图像先进行腐蚀，再进行膨胀，得到的形态学运算是}
+\begin{choices}
+\item 闭运算
+\item 开运算
+\item 顶帽运算
+\item 边界提取
+\end{choices}
+\Question{6.}{SIFT特征具有尺度不变性的主要原因是}
+\begin{choices}
+\item 使用了灰度直方图
+\item 在高斯尺度空间中检测极值点
+\item 使用了非极大值抑制
+\item 对描述子进行了二值化
+\end{choices}
+\Question{7.}{HOG特征在方向直方图中累加的通常是}
+\begin{choices}
+\item 像素数量
+\item 像素灰度值
+\item 梯度幅值
+\item 像素坐标
+\end{choices}
+\Question{8.}{在Hough直线检测中，图像空间中的一个边缘点，在参数空间中对应}
+\begin{choices}
+\item 一个点
+\item 一条曲线
+\item 一个矩形区域
+\item 一条固定直线
+\end{choices}
+\Question{9.}{输入特征图大小为 32×32×3，使用16个 3×3 卷积核，步长为1，填充为1，则输出特征图大小为}
+\begin{choices}
+\item 30×30×16
+\item 32×32×16
+\item 32×32×3
+\item 34×34×16
+\end{choices}
+\Question{10.}{Faster R-CNN中，ROI Pooling的主要作用是}
+\begin{choices}
+\item 生成候选框
+\item 将不同大小的候选区域转换为固定大小的特征
+\item 计算Anchor与真实框的IoU
+\item 删除重叠候选框
+\end{choices}
+\section{二、判断题 (5题，每题2分)}
+\Question{1.}{均值滤波属于非线性滤波，中值滤波属于线性滤波。}
+\par\noindent\hfill（\hspace{2em}）\par
+\Question{2.}{Canny边缘检测中的双阈值操作，可以根据强边缘连接情况保留部分弱边缘。}
+\par\noindent\hfill（\hspace{2em}）\par
+\Question{3.}{图像经过旋转后，SIFT关键点的主方向也会相应改变，因此其描述子仍能保持较好的旋转不变性。}
+\par\noindent\hfill（\hspace{2em}）\par
+\Question{4.}{HOG特征通常直接对整幅图像的梯度直方图进行一次归一化，不需要划分Cell和Block。}
+\par\noindent\hfill（\hspace{2em}）\par
+\Question{5.}{ResNet中的残差连接可以缓解深层网络的退化问题，并有利于梯度传播。}
+\par\noindent\hfill（\hspace{2em}）\par
+\section{三、简答题 (5题，每题6分)}
+\Question{1.}{简述线性滤波和非线性滤波的区别，并分别举出两个典型滤波器。}
+\PracticeSpace{2.4cm}
+\Question{2.}{简述Canny边缘检测的主要步骤。}
+\par\noindent\textbf{要求写出以下内容：}
+\par\noindent\textbullet\quad 图像平滑；
+\par\noindent\textbullet\quad 梯度计算；
+\par\noindent\textbullet\quad 非极大值抑制；
+\par\noindent\textbullet\quad 双阈值检测；
+\par 边缘连接。
+\PracticeSpace{2.4cm}
+\Question{3.}{简述SIFT特征检测具有尺度不变性和旋转不变性的原因。}
+\PracticeSpace{2.4cm}
+\Question{4.}{简述HOG特征的生成步骤，并说明为什么方向直方图中累加的是梯度幅值，而不是像素数量。}
+\PracticeSpace{2.4cm}
+\Question{5.}{简述ResNet残差结构的基本思想，并说明恒等映射为什么有利于深层网络训练。}
+\PracticeSpace{2.4cm}
+\section{四、解答题 (2题，每题10分)}
+\Question{1.}{卷积运算与边缘检测}
+\par 给定图像区域
+\[
+I = \begin{bmatrix}
+1 & 1 & 1 \\
+1 & 5 & 5 \\
+1 & 5 & 9
+\end{bmatrix}
+\]
+\par 以及水平方向Sobel算子
+\[
+G_x = \begin{bmatrix}
+-1 & -2 & -1 \\
+0 & 0 & 0 \\
+1 & 2 & 1
+\end{bmatrix}
+\]
+\par 垂直方向Sobel算子
+\[
+G_y = \begin{bmatrix}
+-1 & 0 & 1 \\
+-2 & 0 & 2 \\
+-1 & 0 & 1
+\end{bmatrix}
+\]
+\par\noindent\textbf{回答：}
+\par\noindent\textbullet\quad 计算该区域中心位置的 g\_x 和 g\_y；
+\par 计算梯度幅值
+\begin{center}\small\ttfamily M = sqrt(g\_x\textasciicircum{}2 + g\_y\textasciicircum{}2)\end{center}
+\par 计算梯度方向
+\begin{center}\small\ttfamily θ = atan2(g\_y, g\_x)\end{center}
+\par 说明该位置更可能属于水平方向边缘还是垂直方向边缘。
+\PracticeSpace{4.2cm}
+\Question{2.}{卷积神经网络尺寸与参数计算}
+\par\noindent\textbf{某卷积神经网络的一部分如下：}
+\par 输入：32 × 32 × 3
+\par\noindent\textbf{Conv1：}
+\par 卷积核大小 3 × 3
+\par 输出通道数 16
+\begin{center}\small\ttfamily stride = 1 padding = 1\end{center}
+\par\noindent\textbf{MaxPool：}
+\par 窗口大小 2 × 2
+\par stride = 2
+\par\noindent\textbf{Conv2：}
+\par 卷积核大小 3 × 3
+\par 输出通道数 32
+\begin{center}\small\ttfamily stride = 1 padding = 0\end{center}
+\par\noindent\textbf{回答：}
+\par\noindent\textbullet\quad Conv1输出特征图尺寸；
+\par\noindent\textbullet\quad Conv1可学习参数数量，包含偏置；
+\par\noindent\textbullet\quad MaxPool输出特征图尺寸；
+\par\noindent\textbullet\quad Conv2输出特征图尺寸；
+\par Conv2可学习参数数量，包含偏置。
+\par\noindent\textbf{卷积输出尺寸公式为：}
+\begin{center}\small\ttfamily H\_out = floor((H\_in + 2P - K)/S) + 1\end{center}
+\PracticeSpace{4.2cm}
+\section{五、程序题 (2题，每题10分)}
+\Question{1.}{OpenCV非线性滤波程序题}
+\par 使用C++和OpenCV编写函数，对输入灰度图像进行 3×3 中值滤波。
+\par\noindent\textbf{要求：}
+\par\noindent\textbullet\quad 不允许直接调用 cv::medianBlur；
+\par\noindent\textbullet\quad 对每个非边界像素，取其 3×3 邻域中的9个灰度值；
+\par\noindent\textbullet\quad 将9个灰度值排序；
+\par\noindent\textbullet\quad 使用中间值作为输出；
+\par 边界像素直接复制原图像值。
+\par\noindent\textbf{函数形式：}
+\begin{CodeBlock}
+cv::Mat myMedianFilter(const cv::Mat& src);
+\end{CodeBlock}
+\PracticeSpace{5.5cm}
+\Question{2.}{PyTorch残差模块程序题}
+\par 使用PyTorch编写一个ResNet基本残差模块 BasicBlock。
+\par\noindent\textbf{要求：}
+\par\noindent\textbullet\quad 包含两个 3×3 卷积层；
+\par\noindent\textbullet\quad 每个卷积层后使用BatchNorm；
+\par\noindent\textbullet\quad 第一个卷积层后使用ReLU；
+\par\noindent\textbullet\quad 将卷积结果与输入恒等映射相加；
+\par\noindent\textbullet\quad 相加之后再次使用ReLU；
+\par 当输入通道和输出通道不同时，使用 1×1 卷积调整维度。
+\par\noindent\textbf{函数框架：}
+\begin{CodeBlock}
+class BasicBlock(nn.Module):
+    def __init__(self, in_channels, out_channels, stride=1):
+        pass
+
+    def forward(self, x):
+        pass
+\end{CodeBlock}
+\PracticeSpace{5.5cm}
+\ifshowsolutions
+\clearpage
+\section{参考答案}
+\section{一、选择题答案}
+\par 题号\quad 答案\quad 核心知识点
+\par 1\quad B\quad 直方图统计灰度频数
+\par 2\quad C\quad 采样决定空间，量化决定灰度
+\par 3\quad C\quad 中值滤波抑制椒盐噪声
+\par 4\quad B\quad 非极大值抑制细化边缘
+\par 5\quad B\quad 先腐蚀后膨胀为开运算
+\par 6\quad B\quad 高斯尺度空间
+\par 7\quad C\quad 梯度幅值加权投票
+\par 8\quad B\quad 一个图像点对应参数空间中的曲线
+\par 9\quad B\quad 填充后尺寸不变
+\par 10\quad B\quad 不同ROI转为固定尺寸
+\section{二、判断题答案}
+\par 错误。均值滤波是线性滤波，中值滤波是非线性滤波。
+\par 正确。与强边缘连通的弱边缘可以被保留。
+\par 正确。SIFT以关键点主方向作为描述子的参考方向。
+\par 错误。HOG要划分Cell和Block，并进行局部归一化。
+\par 正确。
+\section{三、简答题参考要点}
+\Question{1.}{线性滤波与非线性滤波}
+\par\noindent\textbf{线性滤波的输出是邻域像素的线性加权和，可以用卷积表示，例如：}
+\par\noindent\textbullet\quad 均值滤波；
+\par 高斯滤波。
+\par\noindent\textbf{非线性滤波的输出不能写成邻域像素的固定线性加权和，例如：}
+\par\noindent\textbullet\quad 中值滤波；
+\par\noindent\textbullet\quad 最大值滤波；
+\par 最小值滤波。
+\par 中值滤波对椒盐噪声效果好，并且比均值滤波更容易保留边缘。
+\Question{2.}{Canny边缘检测步骤}
+\par\noindent\textbullet\quad 使用高斯滤波消除噪声；
+\par\noindent\textbullet\quad 计算图像在水平和垂直方向上的梯度；
+\par\noindent\textbullet\quad 计算梯度幅值和梯度方向；
+\par\noindent\textbullet\quad 沿梯度方向进行非极大值抑制，使边缘变细；
+\par\noindent\textbullet\quad 使用高、低双阈值区分强边缘、弱边缘和非边缘；
+\par 根据连通性保留与强边缘相连的弱边缘。
+\Question{3.}{SIFT的不变性}
+\par **尺度不变性：**SIFT建立高斯尺度空间，并在不同尺度的DoG图像中检测极值点。同一目标缩放后，仍可在相应尺度找到相同关键点。
+\par **旋转不变性：**SIFT根据关键点邻域梯度方向直方图确定主方向，并以主方向作为描述子参考方向。因此图像旋转时，参考方向也随之旋转。
+\Question{4.}{HOG生成步骤}
+\par\noindent\textbullet\quad 对输入图像进行归一化或Gamma校正；
+\par\noindent\textbullet\quad 计算每个像素的梯度幅值和梯度方向；
+\par\noindent\textbullet\quad 将图像划分为多个Cell；
+\par\noindent\textbullet\quad 在每个Cell中建立梯度方向直方图；
+\par\noindent\textbullet\quad 将若干相邻Cell组成Block；
+\par\noindent\textbullet\quad 对Block中的特征进行归一化；
+\par 连接所有Block特征形成HOG描述子。
+\par 方向直方图中使用梯度幅值作为投票权重，是因为梯度越大的像素通常对应越明显的边缘，应当对特征贡献更大。
+\Question{5.}{ResNet基本思想}
+\par 普通网络直接学习目标映射 H(x)，ResNet改为学习残差：
+\par F(x)=H(x)−x
+\par\noindent\textbf{于是网络输出为：}
+\par y=F(x)+x
+\par 当增加的网络层没有学习到有效特征时，只需要使 F(x)≈0，整个模块就接近恒等映射，不会明显破坏原有特征。
+\par 跳跃连接还为梯度提供了更直接的传播路径，可以缓解梯度消失和网络退化问题。
+\section{四、解答题答案}
+\Question{1.}{Sobel计算}
+\par 计算 g
+\begin{center}\small\ttfamily g\_x = (-1)×1 + 0×1 + 1×1 + (-2)×1 + 0×5 + 2×5 + (-1)×1 + 0×5 + 1×9 = 16\end{center}
+\par 计算 g
+\begin{center}\small\ttfamily g\_y = (-1)×1 + (-2)×1 + (-1)×1 + 0 + 1×1 + 2×5 + 1×9 = 16\end{center}
+\par 梯度幅值
+\begin{center}\small\ttfamily M = sqrt(16\textasciicircum{}2 + 16\textasciicircum{}2) = 16 sqrt(2) ≈ 22.63\end{center}
+\par 梯度方向
+\begin{center}\small\ttfamily θ = atan2(g\_y, g\_x)\end{center}
+\par 梯度方向为 45
+\par ∘
+\par ，说明该位置亮度变化同时包含明显的水平变化和垂直变化，属于斜向边缘，而不是纯水平或纯垂直边缘。
+\par 注意：梯度方向与边缘延伸方向垂直。
+\Question{2.}{CNN计算}
+\par Conv1输出尺寸
+\begin{center}\small\ttfamily H\_out = (32 + 2×1 - 3)/1 + 1 = 32\end{center}
+\par\noindent\textbf{因此：}
+\par 32×32×16
+\par Conv1参数量
+\par\noindent\textbf{每个卷积核参数：}
+\par 3×3×3
+\par\noindent\textbf{共有16个卷积核，并且每个卷积核有一个偏置：}
+\par (3×3×3+1)×16=28×16=448
+\par 池化后尺寸
+\par 16×16×16
+\par Conv2输出尺寸
+\begin{center}\small\ttfamily H\_out = (16 - 3)/1 + 1 = 14\end{center}
+\par\noindent\textbf{因此：}
+\par 14×14×32
+\par Conv2参数量
+\begin{center}\small\ttfamily (3×3×16+1)×32 =145×32=4640\end{center}
+\section{五、程序题参考答案}
+\Question{1.}{手写中值滤波}
+\begin{CodeBlock}
+#include <opencv2/opencv.hpp>
+#include <algorithm>
+#include <stdexcept>
+#include <vector>
+
+cv::Mat myMedianFilter(const cv::Mat& src)
+{
+    if (src.empty()) {
+        throw std::invalid_argument("输入图像不能为空");
+    }
+
+    if (src.type() != CV_8UC1) {
+        throw std::invalid_argument("输入图像必须是8位单通道灰度图像");
+    }
+
+    cv::Mat dst = src.clone();
+
+    for (int i = 1; i < src.rows - 1; ++i) {
+        for (int j = 1; j < src.cols - 1; ++j) {
+            std::vector<uchar> values;
+            values.reserve(9);
+
+            for (int di = -1; di <= 1; ++di) {
+                for (int dj = -1; dj <= 1; ++dj) {
+                    values.push_back(
+                        src.at<uchar>(i + di, j + dj)
+                    );
+                }
+            }
+
+            std::sort(values.begin(), values.end());
+
+            // 排序后第5个元素，即下标4
+            dst.at<uchar>(i, j) = values[4];
+        }
+    }
+
+    return dst;
+}
+\end{CodeBlock}
+\par int main()
+\par \{
+\begin{CodeBlock}
+    cv::Mat image =
+        cv::imread("input.png", cv::IMREAD_GRAYSCALE);
+
+    if (image.empty()) {
+        return -1;
+    }
+
+    cv::Mat result = myMedianFilter(image);
+
+    cv::imshow("Original", image);
+    cv::imshow("Median Filter", result);
+    cv::waitKey(0);
+
+    return 0;
+}
+\end{CodeBlock}
+\par\noindent\textbf{核心语句是：}
+\begin{CodeBlock}
+std::sort(values.begin(), values.end());
+dst.at<uchar>(i, j) = values[4];
+\end{CodeBlock}
+\par 因为9个数字排序后，中值是下标为4的元素。
+\Question{2.}{ResNet基本残差模块}
+\begin{CodeBlock}
+import torch
+import torch.nn as nn
+
+class BasicBlock(nn.Module):
+    def __init__(
+        self,
+        in_channels: int,
+        out_channels: int,
+        stride: int = 1
+    ):
+        super().__init__()
+
+        self.conv1 = nn.Conv2d(
+            in_channels,
+            out_channels,
+            kernel_size=3,
+            stride=stride,
+            padding=1,
+            bias=False
+        )
+
+        self.bn1 = nn.BatchNorm2d(out_channels)
+        self.relu = nn.ReLU(inplace=True)
+
+        self.conv2 = nn.Conv2d(
+            out_channels,
+            out_channels,
+            kernel_size=3,
+            stride=1,
+            padding=1,
+            bias=False
+        )
+
+        self.bn2 = nn.BatchNorm2d(out_channels)
+
+        # 输入、输出尺寸不一致时调整恒等分支
+        if stride != 1 or in_channels != out_channels:
+            self.shortcut = nn.Sequential(
+                nn.Conv2d(
+                    in_channels,
+                    out_channels,
+                    kernel_size=1,
+                    stride=stride,
+                    bias=False
+                ),
+                nn.BatchNorm2d(out_channels)
+            )
+        else:
+            self.shortcut = nn.Identity()
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        identity = self.shortcut(x)
+
+        out = self.conv1(x)
+        out = self.bn1(out)
+        out = self.relu(out)
+
+        out = self.conv2(out)
+        out = self.bn2(out)
+
+        out = out + identity
+        out = self.relu(out)
+
+        return out
+
+if __name__ == "__main__":
+    x = torch.randn(4, 64, 32, 32)
+
+    block = BasicBlock(
+        in_channels=64,
+        out_channels=128,
+        stride=2
+    )
+
+    y = block(x)
+
+    print("输入尺寸：", x.shape)
+    print("输出尺寸：", y.shape)
+\end{CodeBlock}
+\par\noindent\textbf{输出尺寸为：}
+\par 输入尺寸：torch.Size([4, 64, 32, 32])
+\par 输出尺寸：torch.Size([4, 128, 16, 16])
+\par\noindent\textbf{其中 1×1 卷积同时完成：}
+\par\noindent\textbullet\quad 通道数由64变为128；
+\par\noindent\textbullet\quad 空间尺寸由 32×32 变为 16×16；
+\par 保证恒等分支能够与主分支相加。
+\fi
+\chapter{机器视觉技术模拟练习卷 (二)}
+\ChapterIntro{本卷满分100分。建议先完成练习，再对照答案复盘知识点与计算过程。}
+\section{一、选择题 (10题，每题2分)}
+\Question{1.}{一幅8位灰度图像最多可以表示的灰度级数量为}
+\begin{choices}
+\item 8
+\item 16
+\item 255
+\item 256
+\end{choices}
+\Question{2.}{关于图像直方图，下列说法错误的是}
+\begin{choices}
+\item 直方图能够反映图像中各灰度级的像素数量
+\item 直方图可以反映图像整体的明暗分布
+\item 直方图完整保留了像素的空间位置信息
+\item 两幅不同的图像可能具有相同的直方图
+\end{choices}
+\Question{3.}{与均值滤波相比，高斯滤波的主要特点是}
+\begin{choices}
+\item 所有邻域像素权重完全相同
+\item 距离中心越近的像素通常权重越大
+\item 属于非线性滤波
+\item 主要用于检测直线
+\end{choices}
+\Question{4.}{拉普拉斯算子进行边缘检测时，对噪声比较敏感，主要原因是}
+\begin{choices}
+\item 拉普拉斯算子只计算图像平均值
+\item 拉普拉斯算子属于二阶微分算子
+\item 拉普拉斯算子不能用于灰度图像
+\item 拉普拉斯算子不包含卷积运算
+\end{choices}
+\Question{5.}{对二值图像先进行膨胀，再进行腐蚀，称为}
+\begin{choices}
+\item 开运算
+\item 闭运算
+\item 边界提取
+\item 骨架提取
+\end{choices}
+\Question{6.}{SIFT算法在检测尺度空间极值点后，需要删除低对比度关键点，主要是为了}
+\begin{choices}
+\item 减少不稳定关键点
+\item 增大图像尺寸
+\item 保证所有关键点位于边缘
+\item 将彩色图像转换为灰度图像
+\end{choices}
+\Question{7.}{HOG特征中，对相邻若干Cell组成的Block进行归一化，主要目的是}
+\begin{choices}
+\item 增加图像的空间尺寸
+\item 减小光照和局部对比度变化的影响
+\item 将梯度方向变成灰度值
+\item 删除所有弱梯度
+\end{choices}
+\Question{8.}{Hough直线变换通常采用的直线参数方程是}
+\begin{choices}
+\item y=kx+b
+\item x²+y²=r²
+\item ρ=xcosθ+ysinθ
+\item y=ax²+bx+c
+\end{choices}
+\Question{9.}{输入特征图大小为 28×28×3，使用6个 5×5 卷积核，步长为1，不填充。输出特征图尺寸和可学习参数量分别为}
+\begin{choices}
+\item 24×24×6，456
+\item 28×28×6，450
+\item 24×24×3，456
+\item 32×32×6，450
+\end{choices}
+\par 假设每个卷积核包含一个偏置参数。
+\Question{10.}{U-Net中编码器与解码器之间使用跳跃连接的主要作用是}
+\begin{choices}
+\item 删除浅层特征
+\item 融合浅层定位信息和深层语义信息
+\item 生成目标检测Anchor
+\item 将所有特征图压缩为一维向量
+\end{choices}
+\section{二、判断题 (5题，每题2分)}
+\Question{1.}{图像的曼哈顿距离 D}
+\par 4
+\par 一定不小于棋盘距离 D
+\par 8
+\par 。
+\par\noindent\hfill（\hspace{2em}）\par
+\Question{2.}{高斯滤波可以在完全不损失任何边缘信息的情况下去除所有噪声。}
+\par\noindent\hfill（\hspace{2em}）\par
+\Question{3.}{对同一二值图像进行膨胀时，结构元素越大，前景区域通常扩张得越明显。}
+\par\noindent\hfill（\hspace{2em}）\par
+\Question{4.}{SIFT算法中的DoG图像可以由相邻尺度的高斯平滑图像相减得到。}
+\par\noindent\hfill（\hspace{2em}）\par
+\Question{5.}{Faster R-CNN中的RPN需要判断Anchor是否包含目标，并对候选框位置进行回归。}
+\par\noindent\hfill（\hspace{2em}）\par
+\section{三、简答题 (5题，每题6分)}
+\Question{1.}{简述图像采样和量化的含义，并分别说明采样不足和量化级数不足可能造成的现象。}
+\PracticeSpace{2.4cm}
+\Question{2.}{为什么在进行边缘检测之前，通常需要先对图像进行平滑处理？}
+\par 要求结合微分运算和图像噪声进行说明。
+\PracticeSpace{2.4cm}
+\Question{3.}{简述二值图像开运算和闭运算的执行顺序及主要作用。}
+\PracticeSpace{2.4cm}
+\Question{4.}{简述HOG特征的基本生成过程，并说明Cell和Block分别起什么作用。}
+\PracticeSpace{2.4cm}
+\Question{5.}{简述Faster R-CNN的基本检测流程，并说明Anchor、RPN和ROI Pooling分别承担什么作用。}
+\PracticeSpace{2.4cm}
+\section{四、解答题 (2题，每题10分)}
+\Question{1.}{二值形态学与Hough变换}
+\par\noindent\textbf{（1）} 二值形态学计算
+\par 给定二值图像
+\[
+I = \begin{bmatrix}
+0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 1 & 1 & 1 & 0 \\
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0
+\end{bmatrix}
+\]
+\par 结构元素为
+\[
+B = \begin{bmatrix}
+0 & 1 & 0 \\
+1 & 1 & 1 \\
+0 & 1 & 0
+\end{bmatrix}
+\]
+\par 结构元素的原点位于中心，图像外部像素视为0。
+\par\noindent\textbf{计算：}
+\par\noindent\textbullet\quad 图像 I 被 B 膨胀后的结果；
+\par 图像 I 被 B 腐蚀后的结果。
+\par\noindent\textbf{（2）} Hough直线检测
+\par\noindent\textbf{图像中存在以下6个边缘点：}
+\par (1,1),(2,2),(3,3),(2,0),(2,1),(2,3)
+\par 采用Hough直线方程
+\par ρ=xcosθ+ysinθ
+\par\noindent\textbf{只考虑以下两个角度：}
+\begin{center}\small\ttfamily θ=0° ,θ=135°\end{center}
+\par\noindent\textbf{回答：}
+\par 当 θ=0
+\par ∘
+\par 时，哪个 ρ 值获得的票数最多？
+\par 当 θ=135
+\par ∘
+\par 时，哪个 ρ 值获得的票数最多？
+\par 写出检测到的两条直线。
+\PracticeSpace{4.2cm}
+\Question{2.}{CNN特征尺寸与参数计算}
+\par\noindent\textbf{某卷积神经网络结构如下：}
+\par 输入图像：64 × 64 × 3
+\par\noindent\textbf{Conv1：}
+\par 卷积核大小：5 × 5
+\par 输出通道数：8
+\begin{center}\small\ttfamily stride = 2 padding = 2\end{center}
+\par\noindent\textbf{MaxPool：}
+\par 窗口大小：2 × 2
+\par stride = 2
+\par\noindent\textbf{Conv2：}
+\par 卷积核大小：3 × 3
+\par 输出通道数：16
+\begin{center}\small\ttfamily stride = 1 padding = 1\end{center}
+\par Flatten
+\par\noindent\textbf{全连接层：}
+\par 输出神经元数量为10
+\par\noindent\textbf{回答：}
+\par\noindent\textbullet\quad Conv1输出特征图尺寸；
+\par\noindent\textbullet\quad Conv1参数量，包含偏置；
+\par\noindent\textbullet\quad MaxPool输出特征图尺寸；
+\par\noindent\textbullet\quad Conv2输出特征图尺寸；
+\par\noindent\textbullet\quad Conv2参数量，包含偏置；
+\par\noindent\textbullet\quad 全连接层参数量；
+\par 整个网络中上述可学习参数总数。
+\par\noindent\textbf{卷积输出尺寸公式为：}
+\begin{center}\small\ttfamily H\_out = floor((H\_in + 2P - K)/S) + 1\end{center}
+\PracticeSpace{4.2cm}
+\section{五、程序题 (2题，每题10分)}
+\Question{1.}{OpenCV最大值滤波}
+\par 使用C++和OpenCV编写一个 3×3 最大值滤波函数。
+\par 最大值滤波的定义为：对于每个像素，取其 3×3 邻域内的最大灰度值作为输出。
+\par\noindent\textbf{要求：}
+\par\noindent\textbullet\quad 不允许调用 cv::dilate；
+\par\noindent\textbullet\quad 不允许调用其他现成最大值滤波函数；
+\par\noindent\textbullet\quad 输入为8位单通道灰度图像；
+\par\noindent\textbullet\quad 对非边界像素遍历 3×3 邻域；
+\par 边界像素直接复制原图像值。
+\par\noindent\textbf{函数形式如下：}
+\begin{CodeBlock}
+cv::Mat maxFilter3x3(const cv::Mat& src);
+\end{CodeBlock}
+\PracticeSpace{5.5cm}
+\Question{2.}{PyTorch简化U-Net}
+\par 使用PyTorch编写一个简化的U-Net网络。
+\par\noindent\textbf{网络结构如下：}
+\par 输入图像
+\begin{CodeBlock}
+    ↓
+\end{CodeBlock}
+\par DoubleConv：3 → 64
+\begin{CodeBlock}
+    ↓
+\end{CodeBlock}
+\par 最大池化
+\begin{CodeBlock}
+    ↓
+\end{CodeBlock}
+\par DoubleConv：64 → 128
+\begin{CodeBlock}
+    ↓
+\end{CodeBlock}
+\par 转置卷积上采样：128 → 64
+\begin{CodeBlock}
+    ↓
+\end{CodeBlock}
+\par 与编码器对应特征拼接
+\begin{CodeBlock}
+    ↓
+\end{CodeBlock}
+\par DoubleConv：128 → 64
+\begin{CodeBlock}
+    ↓
+\end{CodeBlock}
+\par 1 × 1卷积输出分类结果
+\par\noindent\textbf{要求：}
+\par\noindent\textbullet\quad DoubleConv包含两个 3×3 卷积；
+\par\noindent\textbullet\quad 每个卷积后使用BatchNorm和ReLU；
+\par\noindent\textbullet\quad 使用最大池化完成下采样；
+\par\noindent\textbullet\quad 使用转置卷积完成上采样；
+\par\noindent\textbullet\quad 使用 torch.cat 实现跳跃连接；
+\par 最后一层使用 1×1 卷积输出 num\_classes 个通道。
+\PracticeSpace{5.5cm}
+\ifshowsolutions
+\clearpage
+\section{参考答案}
+\section{一、选择题答案}
+\par 题号\quad 答案\quad 知识点
+\par 1\quad D\quad 8位图像有 2
+\par 8
+\par =256 个灰度级
+\par 2\quad C\quad 直方图不包含空间位置信息
+\par 3\quad B\quad 高斯核中心权重大
+\par 4\quad B\quad 二阶微分对噪声敏感
+\par 5\quad B\quad 先膨胀后腐蚀是闭运算
+\par 6\quad A\quad 删除低对比度不稳定点
+\par 7\quad B\quad 减小光照和对比度影响
+\par 8\quad C\quad Hough直线极坐标形式
+\par 9\quad A\quad 尺寸与参数量计算
+\par 10\quad B\quad 融合浅层与深层特征
+\par 第9题计算
+\par\noindent\textbf{输出尺寸：}
+\begin{center}\small\ttfamily H\_out = floor((H\_in + 2P - K)/S) + 1\end{center}
+\par\noindent\textbf{所以输出为：}
+\par 24×24×6
+\par\noindent\textbf{参数量：}
+\begin{center}\small\ttfamily (5×5×3+1)×6 =76×6=456\end{center}
+\section{二、判断题答案}
+\par 正确
+\par\noindent\textbf{对于两个像素间坐标差 (Δx,Δy)：}
+\begin{center}\small\ttfamily D\_4\end{center}
+\par =∣Δx∣+∣Δy∣
+\begin{center}\small\ttfamily D\_8\end{center}
+\par =max(∣Δx∣,∣Δy∣)
+\par\noindent\textbf{因此：}
+\begin{center}\small\ttfamily D\_4 ≥D\_8\end{center}
+\par 错误。平滑噪声的同时通常也会使部分边缘变模糊。
+\par 正确。较大的结构元素通常会使前景扩张范围更大。
+\par 正确。DoG是相邻高斯尺度图像之差。
+\par 正确。RPN包含前景与背景分类以及边界框回归。
+\section{三、简答题参考答案}
+\Question{1.}{采样和量化}
+\par 采样是将连续图像的空间坐标离散化，决定图像的空间分辨率。
+\par\noindent\textbf{采样点过少可能出现：}
+\par\noindent\textbullet\quad 图像细节丢失；
+\par\noindent\textbullet\quad 锯齿；
+\par 混叠现象。
+\par 量化是将连续的亮度或颜色值离散为有限个等级，决定灰度分辨率。
+\par\noindent\textbf{量化级数过少可能出现：}
+\par\noindent\textbullet\quad 灰度层次减少；
+\par\noindent\textbullet\quad 平滑区域出现假轮廓；
+\par 图像色阶不连续。
+\Question{2.}{边缘检测前进行平滑的原因}
+\par 边缘检测通常需要进行一阶或二阶微分，而微分运算会放大图像中的高频成分。
+\par 图像噪声通常也属于高频成分，因此直接进行微分可能产生大量虚假边缘。
+\par\noindent\textbf{先采用高斯滤波等方法进行平滑，可以：}
+\par\noindent\textbullet\quad 抑制噪声；
+\par\noindent\textbullet\quad 减少虚假梯度；
+\par 提高边缘检测的稳定性。
+\par 但是平滑过强也会使真实边缘变得模糊，因此需要在去噪和保留边缘之间进行权衡。
+\Question{3.}{开运算和闭运算}
+\par 开运算
+\par\noindent\textbf{先腐蚀，后膨胀：}
+\par A∘B=(A⊖B)⊕B
+\par\noindent\textbf{主要作用：}
+\par\noindent\textbullet\quad 删除较小的前景噪声；
+\par\noindent\textbullet\quad 断开细小连接；
+\par 平滑物体外边界。
+\par 闭运算
+\par\noindent\textbf{先膨胀，后腐蚀：}
+\par A∙B=(A⊕B)⊖B
+\par\noindent\textbf{主要作用：}
+\par\noindent\textbullet\quad 填补较小的内部孔洞；
+\par\noindent\textbullet\quad 连接相邻目标；
+\par 弥合狭窄断裂。
+\Question{4.}{HOG特征生成过程}
+\par\noindent\textbullet\quad 对图像进行灰度化或Gamma归一化；
+\par\noindent\textbullet\quad 计算每个像素的水平和垂直梯度；
+\par\noindent\textbullet\quad 得到梯度幅值和梯度方向；
+\par\noindent\textbullet\quad 将图像划分成多个Cell；
+\par\noindent\textbullet\quad 在每个Cell中建立梯度方向直方图；
+\par\noindent\textbullet\quad 将相邻Cell组成Block；
+\par\noindent\textbullet\quad 对Block中的特征向量进行归一化；
+\par 拼接所有Block特征得到最终HOG描述子。
+\par Cell的作用
+\par Cell用于统计局部区域内的边缘方向分布。
+\par Block的作用
+\par Block对相邻Cell的特征进行局部归一化，从而减小光照、阴影和局部对比度变化的影响。
+\Question{5.}{Faster R-CNN基本流程}
+\par\noindent\textbullet\quad 输入图像经过卷积网络，得到共享特征图；
+\par\noindent\textbullet\quad RPN在特征图上生成并筛选候选区域；
+\par\noindent\textbullet\quad 将候选区域映射到共享特征图；
+\par\noindent\textbullet\quad ROI Pooling将不同大小的候选区域转换为固定大小的特征；
+\par\noindent\textbullet\quad 全连接网络对候选区域进行分类和边界框回归；
+\par 使用非极大值抑制得到最终检测结果。
+\par Anchor
+\par Anchor是在特征图每个位置预设的不同比例和尺寸的参考框。
+\par RPN
+\par\noindent\textbf{RPN负责：}
+\par\noindent\textbullet\quad 判断Anchor是前景还是背景；
+\par\noindent\textbullet\quad 预测Anchor到真实目标框的坐标偏移；
+\par 生成候选区域。
+\par ROI Pooling
+\par ROI Pooling将不同大小的候选区域变成固定大小的特征，以便输入后续全连接层。
+\section{四、解答题参考答案}
+\Question{1.}{二值形态学与Hough变换}
+\par\noindent\textbf{（1）} 膨胀结果
+\par 结构元素包含中心及其上、下、左、右位置。
+\par\noindent\textbf{每个前景像素都会向四个方向扩张一个像素，因此：}
+\[
+I\oplus B = \begin{bmatrix}
+0 & 1 & 1 & 0 & 0 \\
+1 & 1 & 1 & 1 & 0 \\
+1 & 1 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 & 0 \\
+0 & 0 & 1 & 0 & 0
+\end{bmatrix}
+\]
+\par 腐蚀结果
+\par 只有当某个像素及其上、下、左、右位置全部为1时，该像素才会在腐蚀结果中保留。
+\par\noindent\textbf{因此：}
+\[
+I\ominus B = \begin{bmatrix}
+0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0
+\end{bmatrix}
+\]
+\par\noindent\textbf{（2）} Hough变换
+\par 当 θ=0
+\par ∘
+\par\noindent\textbf{因为：}
+\begin{center}\small\ttfamily cos0° =1,sin0° =0\end{center}
+\par\noindent\textbf{所以：}
+\par ρ=x
+\par\noindent\textbf{各点对应的 ρ 为：}
+\par 1,2,3,2,2,2
+\par\noindent\textbf{其中：}
+\par ρ=2
+\par 获得4票，票数最多。
+\par\noindent\textbf{对应直线：}
+\par x=2
+\par 当 θ=135
+\begin{center}\small\ttfamily cos135° = -sqrt(2)/2，sin135° = sqrt(2)/2\end{center}
+\par\noindent\textbf{因此：}
+\begin{center}\small\ttfamily ρ = (sqrt(2)/2)(y - x)\end{center}
+\par\noindent\textbf{对于点：}
+\par (1,1),(2,2),(3,3)
+\par\noindent\textbf{均有：}
+\par ρ=0
+\par 因此 ρ=0 获得3票。
+\par\noindent\textbf{对应直线：}
+\par 0=−x+y
+\par\noindent\textbf{即：}
+\par y=x
+\par\noindent\textbf{最终检测到的两条直线为：}
+\begin{center}\small\ttfamily x=2 y=x\end{center}
+\Question{2.}{CNN尺寸和参数计算}
+\par\noindent\textbf{（1）} Conv1输出尺寸
+\begin{center}\small\ttfamily H\_out = floor((64 + 2×2 - 5)/2) + 1 = 32\end{center}
+\par\noindent\textbf{因此输出特征图为：}
+\par 32×32×8
+\par\noindent\textbf{（2）} Conv1参数量
+\par\noindent\textbf{每个卷积核连接3个输入通道：}
+\par 5×5×3=75
+\par 加一个偏置，共76个参数。
+\par\noindent\textbf{一共有8个卷积核：}
+\begin{center}\small\ttfamily (5×5×3+1)×8 = 76×8 = 608\end{center}
+\par\noindent\textbf{（3）} MaxPool输出尺寸
+\par\noindent\textbf{池化窗口为 2×2，步长为2：}
+\par 16×16×8
+\par\noindent\textbf{（4）} Conv2输出尺寸
+\par\noindent\textbf{输入尺寸为 16×16，卷积核为3，填充为1，步长为1：}
+\begin{center}\small\ttfamily H\_out = (16 + 2×1 - 3)/1 + 1 = 16\end{center}
+\par\noindent\textbf{因此：}
+\par 16×16×16
+\par\noindent\textbf{（5）} Conv2参数量
+\par\noindent\textbf{每个卷积核参数量为：}
+\par 3×3×8+1=73
+\par\noindent\textbf{共有16个卷积核：}
+\begin{center}\small\ttfamily 73×16 = 1168\end{center}
+\par\noindent\textbf{（6）} 全连接层参数量
+\par\noindent\textbf{Flatten后的特征数量为：}
+\par 16×16×16=4096
+\par\noindent\textbf{全连接层有10个输出：}
+\begin{center}\small\ttfamily 4096×10 + 10 = 40970\end{center}
+\par\noindent\textbf{（7）} 总参数量
+\par 608+1168+40970=42746
+\par\noindent\textbf{因此总参数量为：}
+\par 42746
+\section{五、程序题参考答案}
+\Question{1.}{手写 3×3 最大值滤波}
+\begin{CodeBlock}
+#include <opencv2/opencv.hpp>
+#include <algorithm>
+#include <stdexcept>
+
+cv::Mat maxFilter3x3(const cv::Mat& src)
+{
+    if (src.empty()) {
+        throw std::invalid_argument("输入图像不能为空");
+    }
+
+    if (src.type() != CV_8UC1) {
+        throw std::invalid_argument(
+            "输入图像必须是8位单通道灰度图像"
+        );
+    }
+
+    // 边界默认复制原图像
+    cv::Mat dst = src.clone();
+
+    for (int row = 1; row < src.rows - 1; ++row) {
+        for (int col = 1; col < src.cols - 1; ++col) {
+
+            uchar maxValue = 0;
+
+            // 遍历3×3邻域
+            for (int dr = -1; dr <= 1; ++dr) {
+                for (int dc = -1; dc <= 1; ++dc) {
+                    uchar value =
+                        src.at<uchar>(row + dr, col + dc);
+
+                    maxValue = std::max(maxValue, value);
+                }
+            }
+
+            dst.at<uchar>(row, col) = maxValue;
+        }
+    }
+
+    return dst;
+}
+\end{CodeBlock}
+\par int main()
+\par \{
+\begin{CodeBlock}
+    cv::Mat src = cv::imread(
+        "input.png",
+        cv::IMREAD_GRAYSCALE
+    );
+
+    if (src.empty()) {
+        return -1;
+    }
+
+    cv::Mat dst = maxFilter3x3(src);
+
+    cv::imshow("Original", src);
+    cv::imshow("Maximum Filter", dst);
+    cv::waitKey(0);
+
+    return 0;
+}
+\end{CodeBlock}
+\par 核心逻辑
+\begin{CodeBlock}
+uchar maxValue = 0;
+
+for (int dr = -1; dr <= 1; ++dr) {
+    for (int dc = -1; dc <= 1; ++dc) {
+        maxValue = std::max(
+            maxValue,
+            src.at<uchar>(row + dr, col + dc)
+        );
+    }
+}
+\end{CodeBlock}
+\par 最大值滤波相当于灰度图像的膨胀运算，能够扩大图像中的亮区域。
+\Question{2.}{简化U-Net实现}
+\begin{CodeBlock}
+import torch
+import torch.nn as nn
+
+class DoubleConv(nn.Module):
+    """连续执行两次卷积、BN和ReLU。"""
+
+    def __init__(self, in_channels: int, out_channels: int):
+        super().__init__()
+
+        self.layers = nn.Sequential(
+            nn.Conv2d(
+                in_channels,
+                out_channels,
+                kernel_size=3,
+                padding=1,
+                bias=False
+            ),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+
+            nn.Conv2d(
+                out_channels,
+                out_channels,
+                kernel_size=3,
+                padding=1,
+                bias=False
+            ),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True)
+        )
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.layers(x)
+
+class MiniUNet(nn.Module):
+    def __init__(
+        self,
+        in_channels: int = 3,
+        num_classes: int = 2
+    ):
+        super().__init__()
+
+        # 编码器第一层
+        self.encoder1 = DoubleConv(
+            in_channels,
+            64
+        )
+
+        self.pool = nn.MaxPool2d(
+            kernel_size=2,
+            stride=2
+        )
+
+        # 编码器第二层
+        self.encoder2 = DoubleConv(
+            64,
+            128
+        )
+
+        # 上采样：通道128变为64
+        self.up = nn.ConvTranspose2d(
+            128,
+            64,
+            kernel_size=2,
+            stride=2
+        )
+
+        # 拼接后通道数为64 + 64 = 128
+        self.decoder1 = DoubleConv(
+            128,
+            64
+        )
+
+        # 输出每个像素的类别分数
+        self.output_conv = nn.Conv2d(
+            64,
+            num_classes,
+            kernel_size=1
+        )
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        # 编码器浅层特征
+        feature1 = self.encoder1(x)
+
+        # 下采样
+        x = self.pool(feature1)
+
+        # 深层特征
+        x = self.encoder2(x)
+
+        # 上采样
+        x = self.up(x)
+
+        # 跳跃连接：沿通道维拼接
+        x = torch.cat(
+            [feature1, x],
+            dim=1
+        )
+
+        # 解码器
+        x = self.decoder1(x)
+
+        # 输出分割结果
+        x = self.output_conv(x)
+
+        return x
+
+if __name__ == "__main__":
+    model = MiniUNet(
+        in_channels=3,
+        num_classes=4
+    )
+
+    image = torch.randn(
+        2,
+        3,
+        256,
+        256
+    )
+
+    output = model(image)
+
+    print("输入尺寸：", image.shape)
+    print("输出尺寸：", output.shape)
+\end{CodeBlock}
+\par\noindent\textbf{运行结果为：}
+\par 输入尺寸： torch.Size([2, 3, 256, 256])
+\par 输出尺寸： torch.Size([2, 4, 256, 256])
+\par 输出中的4个通道表示每个像素属于4个不同类别的预测分数。U-Net没有直接使用全连接层，因此能够保留图像的空间结构，实现逐像素分类。
+\fi
+\chapter{深度学习专项题库}
+\ChapterIntro{覆盖CNN组成与训练、AlexNet、VGG、GoogLeNet、ResNet、Faster R-CNN、Anchor、ROI Pooling和U-Net。}
+\section{一、问答题专项}
+\Question{1.}{简述卷积神经网络的基本组成及各部分作用}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{卷积神经网络通常由以下部分组成：}
+\par 卷积层：通过卷积核提取局部特征，例如边缘、纹理和高级语义特征。
+\par 激活函数：引入非线性，使网络能够学习复杂映射，常用ReLU。
+\par 池化层：降低特征图空间尺寸，减少计算量，提高对局部位移的鲁棒性。
+\par 归一化层：稳定特征分布，加快网络训练，例如Batch Normalization。
+\par 全连接层：将提取的特征映射为最终类别或回归结果。
+\par 输出层：根据任务输出类别概率、边界框或像素分类结果。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{2.}{卷积神经网络为什么采用局部连接和权值共享？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 局部连接是指一个输出神经元只与输入图像的局部区域连接，符合图像局部像素相关性较强的特点。
+\par 权值共享是指同一个卷积核在整幅图像上重复使用，使其能够在不同位置检测同一种特征。
+\par\noindent\textbf{二者的作用是：}
+\par\noindent\textbullet\quad 大幅减少参数量；
+\par\noindent\textbullet\quad 降低计算复杂度；
+\par\noindent\textbullet\quad 能够检测不同位置的相同特征；
+\par 使卷积具有一定的平移等变性。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{3.}{卷积层与全连接层有什么区别？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 对比项\quad 卷积层\quad 全连接层
+\par 连接方式\quad 局部连接\quad 所有输入与所有输出连接
+\par 权值使用\quad 权值共享\quad 每条连接通常有独立权重
+\par 参数量\quad 较少\quad 通常较多
+\par 是否保留空间结构\quad 保留\quad 展平后通常不保留
+\par 主要作用\quad 提取局部特征\quad 完成分类或回归
+\par 卷积层适合处理图像等具有空间结构的数据；全连接层通常用于最终决策。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{4.}{如何计算卷积层输出尺寸和参数量？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 输入特征图空间尺寸为 H
+\begin{center}\small\ttfamily H\_in × W\_in\end{center}
+\par\noindent\textbf{，卷积核大小为 K，填充为 P，步长为 S，则：}
+\begin{center}\small\ttfamily H\_out = floor((H\_in + 2P - K)/S) + 1\end{center}
+\par 宽度计算方法相同。
+\par 如果输入通道数为 C
+\par in
+\par ，输出通道数为 C
+\par out
+\par\noindent\textbf{，包含偏置时参数量为：}
+\begin{center}\small\ttfamily N = (K\_h K\_w C\_in + 1) C\_out\end{center}
+\par\noindent\textbf{不包含偏置时为：}
+\begin{center}\small\ttfamily N = K\_h K\_w C\_in C\_out\end{center}
+\par 卷积层参数量与输入图像的高、宽无关。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{5.}{池化层有什么作用？最大池化和平均池化有什么区别？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{池化层主要作用是：}
+\par\noindent\textbullet\quad 减小特征图空间尺寸；
+\par\noindent\textbullet\quad 降低计算量和存储量；
+\par\noindent\textbullet\quad 扩大后续神经元的有效感受野；
+\par 提高对局部平移和形变的鲁棒性。
+\par 最大池化取邻域最大值，更强调显著特征。
+\par 平均池化取邻域平均值，更强调区域整体信息。
+\par 普通池化层一般没有可学习参数，也通常不改变通道数。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{6.}{为什么神经网络需要激活函数？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 如果网络中只有线性变换，那么多层线性变换仍可合并成一次线性变换，增加层数并不能提高网络表达复杂非线性关系的能力。
+\par 激活函数为网络引入非线性，使其能够学习复杂的分类边界和图像特征。
+\par\noindent\textbf{常见激活函数有：}
+\par\noindent\textbullet\quad ReLU；
+\par\noindent\textbullet\quad Sigmoid；
+\par\noindent\textbullet\quad Tanh；
+\par Softmax。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{7.}{ReLU激活函数有什么特点？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{ReLU定义为：}
+\par f(x)=max(0,x)
+\par\noindent\textbf{优点：}
+\par\noindent\textbullet\quad 计算简单；
+\par\noindent\textbullet\quad 正区间梯度为1；
+\par\noindent\textbullet\quad 可以缓解梯度消失；
+\par\noindent\textbullet\quad 能产生稀疏激活；
+\par 通常比Sigmoid收敛更快。
+\par\noindent\textbf{缺点：}
+\par\noindent\textbullet\quad 当输入长期为负时，输出和梯度均为0；
+\par 可能出现“神经元死亡”问题。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{8.}{简述卷积神经网络的训练循环}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{一个标准训练循环包括：}
+\par\noindent\textbullet\quad 从数据集中读取一个批次的数据和标签；
+\par\noindent\textbullet\quad 将数据输入网络，完成前向传播；
+\par\noindent\textbullet\quad 根据预测结果和真实标签计算损失；
+\par\noindent\textbullet\quad 清空上一轮保留的梯度；
+\par\noindent\textbullet\quad 反向传播计算各参数梯度；
+\par\noindent\textbullet\quad 优化器根据梯度更新网络参数；
+\par\noindent\textbullet\quad 重复多个批次和多个Epoch；
+\par 在验证集上评估模型的泛化性能。
+\par\noindent\textbf{PyTorch中的核心顺序为：}
+\begin{CodeBlock}
+optimizer.zero_grad()
+outputs = model(inputs)
+loss = criterion(outputs, labels)
+\end{CodeBlock}
+\begin{center}\small\ttfamily loss.backward() optimizer.step()\end{center}
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{9.}{什么是过拟合？如何缓解？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 过拟合是指模型在训练集上表现很好，但在验证集或测试集上表现较差，说明模型记住了训练数据中的细节和噪声，泛化能力不足。
+\par\noindent\textbf{常用缓解方法：}
+\par\noindent\textbullet\quad 增加训练数据；
+\par\noindent\textbullet\quad 数据增强；
+\par\noindent\textbullet\quad Dropout；
+\par\noindent\textbullet\quad 权重衰减；
+\par\noindent\textbullet\quad 早停；
+\par\noindent\textbullet\quad 降低模型复杂度；
+\par\noindent\textbullet\quad Batch Normalization；
+\par 使用预训练模型。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{10.}{简述AlexNet的主要特点}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{AlexNet的主要特点包括：}
+\par\noindent\textbullet\quad 使用ReLU替代传统Sigmoid或Tanh；
+\par\noindent\textbullet\quad 使用Dropout缓解全连接层过拟合；
+\par\noindent\textbullet\quad 使用数据增强；
+\par\noindent\textbullet\quad 使用最大池化；
+\par 采用较深的卷积神经网络完成大规模图像分类。
+\par AlexNet证明了深度卷积网络在大规模视觉任务上的有效性。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{11.}{简述VGGNet的主要特点}
+\ifshowsolutions
+\begin{AnswerBox}
+\par VGGNet的核心特点是大量堆叠 3×3 小卷积核。
+\par\noindent\textbf{多个小卷积核堆叠可以：}
+\par\noindent\textbullet\quad 获得与大卷积核相近的感受野；
+\par\noindent\textbullet\quad 引入更多非线性激活；
+\par\noindent\textbullet\quad 减少部分参数；
+\par 使网络结构更加规则。
+\par 缺点是网络层数较多，全连接层参数量大，计算和存储成本较高。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{12.}{简述GoogLeNet中的Inception结构}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{Inception结构在同一层并行使用不同尺度的操作，例如：}
+\par\noindent\textbullet\quad 1×1 卷积；
+\par\noindent\textbullet\quad 3×3 卷积；
+\par\noindent\textbullet\quad 5×5 卷积；
+\par 池化。
+\par 然后将各分支输出沿通道维拼接。
+\par 其作用是同时提取不同尺度的图像特征。
+\par\noindent\textbf{其中 1×1 卷积常用于：}
+\par\noindent\textbullet\quad 调整通道数；
+\par\noindent\textbullet\quad 降低后续大卷积的计算量；
+\par 引入非线性。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{13.}{简述ResNet残差学习的基本思想}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 普通网络直接学习目标映射 H(x)，ResNet改为学习残差：
+\par F(x)=H(x)−x
+\par\noindent\textbf{因此输出为：}
+\par y=F(x)+x
+\par\noindent\textbf{如果新增网络层没有学到有效映射，只需使：}
+\par F(x)≈0
+\par 残差块就近似恒等映射，不会明显破坏原有特征。
+\par\noindent\textbf{残差连接还为梯度提供了直接传播路径，可以缓解：}
+\par\noindent\textbullet\quad 梯度消失；
+\par\noindent\textbullet\quad 深层网络退化；
+\par 深层网络难以优化的问题。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{14.}{什么是深层网络退化问题？它与过拟合是否相同？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 网络退化是指随着网络深度增加，训练误差反而升高，深层网络甚至不如浅层网络。
+\par 这并不一定是过拟合，因为退化问题中深层网络在训练集上的误差也可能更高。
+\par ResNet通过恒等映射和残差学习，使新增层至少能够接近恒等映射，从而缓解网络退化问题。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{15.}{ResNet中主分支和捷径分支尺寸不一致时怎么办？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 残差相加要求两条分支的形状完全相同。
+\par\noindent\textbf{如果通道数或空间尺寸不同，可以在捷径分支使用：}
+\par 1×1
+\par\noindent\textbf{卷积，并设置适当的步长，实现：}
+\par\noindent\textbullet\quad 通道数调整；
+\par\noindent\textbullet\quad 特征图下采样；
+\par 尺寸匹配。
+\par 之后再进行逐元素相加。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{16.}{图像分类、目标检测和图像分割有什么区别？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{图像分类：}
+\par 判断整幅图像属于哪个类别，只输出类别。
+\par\noindent\textbf{目标检测：}
+\par 同时输出图像中目标的类别和边界框位置。
+\par\noindent\textbf{图像分割：}
+\par 对每个像素进行分类，输出与输入图像空间对应的像素级结果。
+\par\noindent\textbf{因此三者输出信息从粗到细为：}
+\par 整图类别→类别＋位置→逐像素类别
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{17.}{简述R-CNN、Fast R-CNN和Faster R-CNN的区别}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{R-CNN：}
+\par\noindent\textbullet\quad 使用外部算法生成候选区域；
+\par\noindent\textbullet\quad 每个候选区域分别经过CNN；
+\par 存在大量重复卷积，速度慢。
+\par\noindent\textbf{Fast R-CNN：}
+\par\noindent\textbullet\quad 整幅图像只进行一次卷积；
+\par\noindent\textbullet\quad 候选区域映射到共享特征图；
+\par\noindent\textbullet\quad 使用ROI Pooling获得固定尺寸特征；
+\par 仍依赖外部候选框算法。
+\par\noindent\textbf{Faster R-CNN：}
+\par\noindent\textbullet\quad 使用RPN在共享特征图上生成候选区域；
+\par\noindent\textbullet\quad 候选区域生成和检测共享卷积特征；
+\par 实现近似端到端训练。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{18.}{什么是Anchor？它有什么作用？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par Anchor是在特征图每个位置预先设置的一组参考框，通常具有不同的：
+\par\noindent\textbullet\quad 尺寸；
+\par 长宽比。
+\par\noindent\textbf{对于每个Anchor，RPN预测：}
+\par\noindent\textbullet\quad 它是前景还是背景；
+\par 它相对于真实框的坐标偏移。
+\par Anchor为不同大小、不同形状的目标提供边界框回归的初始参考。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{19.}{简述RPN的作用}
+\ifshowsolutions
+\begin{AnswerBox}
+\par RPN即区域建议网络，它在主干网络输出的共享特征图上滑动，对每个Anchor进行：
+\par\noindent\textbullet\quad 前景与背景分类；
+\par 边界框位置回归。
+\par 之后根据置信度和NMS筛选候选区域，提供给后续检测头。
+\par\noindent\textbf{因此RPN的核心输出包括：}
+\par\noindent\textbullet\quad 目标性得分；
+\par\noindent\textbullet\quad 边界框偏移量；
+\par 候选区域Proposal。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{20.}{ROI Pooling的作用和基本原理是什么？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 不同候选区域的空间大小不同，而全连接层需要固定长度的输入。
+\par ROI Pooling将每个候选区域划分为固定数量的子区域，例如 7×7，并在每个子区域内进行最大池化，最终得到固定大小的特征图。
+\par\noindent\textbf{作用是：}
+\par\noindent\textbullet\quad 将不同大小的ROI转换为固定尺寸；
+\par 使其能够输入后续全连接分类和回归网络。
+\par ROI Pooling需要进行坐标取整，因此可能产生空间量化误差。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{21.}{简述U-Net的结构和工作过程}
+\ifshowsolutions
+\begin{AnswerBox}
+\par U-Net由编码器、解码器和跳跃连接组成。
+\par\noindent\textbf{编码器：}
+\par\noindent\textbullet\quad 使用卷积提取特征；
+\par\noindent\textbullet\quad 使用池化降低空间尺寸；
+\par 逐渐获得高级语义信息。
+\par\noindent\textbf{解码器：}
+\par\noindent\textbullet\quad 使用上采样或转置卷积恢复空间尺寸；
+\par 逐步生成像素级分类结果。
+\par\noindent\textbf{跳跃连接：}
+\par 将编码器对应层的浅层特征与解码器特征拼接，融合定位细节和深层语义信息。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{22.}{U-Net为什么使用跳跃连接？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{编码器经过多次池化后：}
+\par\noindent\textbullet\quad 语义信息增强；
+\par\noindent\textbullet\quad 空间分辨率降低；
+\par 目标边界和定位细节丢失。
+\par\noindent\textbf{编码器浅层特征保留了丰富的：}
+\par\noindent\textbullet\quad 边缘；
+\par\noindent\textbullet\quad 纹理；
+\par 空间位置信息。
+\par 跳跃连接将浅层定位信息与解码器的高级语义特征融合，从而提高分割边界和小目标的恢复能力。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\section{二、解答题专项}
+\Question{解答题1}{卷积输出尺寸和参数量}
+\par\noindent\textbf{输入特征图为：}
+\par 32×32×3
+\par\noindent\textbf{卷积层参数为：}
+\par\noindent\textbullet\quad 卷积核大小：5×5；
+\par\noindent\textbullet\quad 输出通道数：16；
+\par\noindent\textbullet\quad 步长：1；
+\par\noindent\textbullet\quad 填充：2；
+\par 包含偏置。
+\par 求输出特征图尺寸和参数量。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{输出高度：}
+\begin{center}\small\ttfamily H\_out = (32 + 2×2 - 5)/1 + 1 = 32\end{center}
+\par\noindent\textbf{输出宽度同样为32，输出通道数为16：}
+\par 32×32×16
+\par\noindent\textbf{每个卷积核参数量为：}
+\par 5×5×3+1=76
+\par\noindent\textbf{共有16个卷积核：}
+\par 76×16=1216
+\par\noindent\textbf{因此参数量为：}
+\par 1216
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题2}{多层CNN尺寸与参数}
+\par\noindent\textbf{网络结构如下：}
+\par 输入：64 × 64 × 3
+\par\noindent\textbf{Conv1：}
+\par 3 × 3卷积，输出通道16
+\par stride=1，padding=1
+\par\noindent\textbf{MaxPool：}
+\par 2 × 2，stride=2
+\par\noindent\textbf{Conv2：}
+\par 5 × 5卷积，输出通道32
+\par stride=1，padding=0
+\par 求各层输出尺寸以及两个卷积层的参数量，均包含偏置。
+\ifshowsolutions
+\begin{AnswerBox}
+\par Conv1
+\par\noindent\textbf{输出尺寸：}
+\begin{center}\small\ttfamily H\_out = (64 + 2 - 3)/1 + 1 = 64\end{center}
+\par\noindent\textbf{所以：}
+\par 64×64×16
+\par\noindent\textbf{参数量：}
+\begin{center}\small\ttfamily (3×3×3+1)×16 = 28×16 = 448\end{center}
+\par MaxPool
+\par\noindent\textbf{空间尺寸减半，通道数不变：}
+\par 32×32×16
+\par Conv2
+\par\noindent\textbf{输出空间尺寸：}
+\begin{center}\small\ttfamily H\_out = (32 - 5)/1 + 1 = 28\end{center}
+\par\noindent\textbf{所以：}
+\par 28×28×32
+\par\noindent\textbf{参数量：}
+\begin{center}\small\ttfamily (5×5×16+1)×32 =401×32=12832\end{center}
+\par\noindent\textbf{因此：}
+\par Conv2参数量=12832
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题3}{CNN加全连接层}
+\par\noindent\textbf{网络结构为：}
+\par 输入：28 × 28 × 1
+\par\noindent\textbf{Conv：}
+\par 5 × 5卷积，输出通道6
+\par stride=1，padding=0
+\par\noindent\textbf{MaxPool：}
+\par 2 × 2，stride=2
+\par Flatten
+\par\noindent\textbf{全连接层：}
+\par 输出10个神经元
+\par 计算各层输出尺寸和总参数量。
+\ifshowsolutions
+\begin{AnswerBox}
+\par 卷积层输出
+\par 28−5+1=24
+\par\noindent\textbf{因此：}
+\par 24×24×6
+\par\noindent\textbf{卷积参数量：}
+\par (5×5×1+1)×6=26×6=156
+\par 池化层输出
+\par 12×12×6
+\par Flatten
+\par 12×12×6=864
+\par 全连接层参数量
+\par 864×10+10=8650
+\par 总参数量
+\par 156+8650=8806
+\par\noindent\textbf{最终：}
+\par 总参数量=8806
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题4}{判断卷积参数是否计算偏置}
+\par 某卷积层输入通道为64，输出通道为128，卷积核大小为 3×3。
+\par\noindent\textbf{分别计算：}
+\par\noindent\textbullet\quad 包含偏置时的参数量；
+\par 不包含偏置时的参数量。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{卷积权重数量：}
+\par 3×3×64×128=73728
+\par\noindent\textbf{包含偏置时，每个输出通道有一个偏置：}
+\par 73728+128=73856
+\par\noindent\textbf{因此：}
+\par 无偏置
+\par 含偏置
+\begin{center}\small\ttfamily 无偏置 = 73728；含偏置 = 73856\end{center}
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题5}{残差块尺寸匹配}
+\par\noindent\textbf{残差块输入为：}
+\begin{center}\small\ttfamily x ∈ R\textasciicircum{}(N×64×56×56)\end{center}
+\par\noindent\textbf{主分支第一层为：}
+\par 3 × 3卷积
+\par 输入通道64
+\par 输出通道128
+\begin{center}\small\ttfamily stride=2 padding=1\end{center}
+\par\noindent\textbf{主分支最终保持128个通道。回答：}
+\par\noindent\textbullet\quad 主分支输出尺寸；
+\par\noindent\textbullet\quad 原输入能否直接与主分支相加；
+\par 捷径分支应如何处理。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{主分支空间尺寸：}
+\begin{center}\small\ttfamily floor((56 + 2 - 3)/2) + 1 = 28\end{center}
+\par\noindent\textbf{因此主分支输出：}
+\par N×128×28×28
+\par\noindent\textbf{原输入为：}
+\par N×64×56×56
+\par 通道数和空间尺寸均不同，不能直接相加。
+\par\noindent\textbf{捷径分支应使用：}
+\par\noindent\textbullet\quad 1×1 卷积；
+\par\noindent\textbullet\quad 输出通道数128；
+\par 步长2。
+\par\noindent\textbf{得到：}
+\par N×128×28×28
+\par 之后再与主分支相加。
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题6}{连续小卷积核的感受野}
+\par 连续使用两个步长为1的 3×3 卷积，不使用池化。
+\par 求第二层输出神经元相对于原图的感受野大小。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{第一层 3×3 卷积的感受野为：}
+\par 3×3
+\par 第二层每移动一个位置，对应第一层特征移动一个位置。第二层再使用 3×3 卷积，感受野每个方向增加2：
+\par 3+2=5
+\par\noindent\textbf{因此两个连续的 3×3 卷积对应：}
+\par 5×5
+\par 感受野。
+\par 这也是VGG使用多个小卷积核替代大卷积核的原因之一。
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题7}{Anchor数量计算}
+\par\noindent\textbf{某特征图尺寸为：}
+\par 40×30
+\par\noindent\textbf{在特征图的每个位置设置：}
+\par\noindent\textbullet\quad 3种尺度；
+\par 3种长宽比。
+\par 求Anchor总数。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{每个位置Anchor数量：}
+\par 3×3=9
+\par\noindent\textbf{特征图位置总数：}
+\par 40×30=1200
+\par\noindent\textbf{因此Anchor总数：}
+\par 1200×9=10800
+\par\noindent\textbf{所以：}
+\par 10800
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题8}{IoU计算}
+\par\noindent\textbf{预测框左上角、右下角坐标为：}
+\begin{center}\small\ttfamily B p =(1,1,5,5)\end{center}
+\par\noindent\textbf{真实框为：}
+\begin{center}\small\ttfamily B g =(3,2,7,6)\end{center}
+\par 计算IoU。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{预测框宽高：}
+\par 5−1=4,5−1=4
+\par\noindent\textbf{面积：}
+\begin{center}\small\ttfamily S\_p =16\end{center}
+\par\noindent\textbf{真实框宽高：}
+\par 7−3=4,6−2=4
+\par\noindent\textbf{面积：}
+\begin{center}\small\ttfamily S\_g =16\end{center}
+\par\noindent\textbf{交集区域左上角为：}
+\par (max(1,3),max(1,2))=(3,2)
+\par\noindent\textbf{右下角为：}
+\par (min(5,7),min(5,6))=(5,5)
+\par\noindent\textbf{交集宽高：}
+\par 5−3=2,5−2=3
+\par\noindent\textbf{交集面积：}
+\begin{center}\small\ttfamily S\_intersection =2×3=6\end{center}
+\par\noindent\textbf{并集面积：}
+\begin{center}\small\ttfamily S\_union =16+16-6=26\end{center}
+\par\noindent\textbf{因此：}
+\begin{center}\small\ttfamily IoU = 6/26 = 3/13 ≈ 0.231\end{center}
+\par\noindent\textbf{所以：}
+\par IoU≈0.231
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题9}{NMS过程}
+\par\noindent\textbf{同一类别有4个预测框：}
+\par 框\quad 置信度
+\begin{CodeBlock}
+A    0.95
+\end{CodeBlock}
+\begin{CodeBlock}
+B    0.88
+\end{CodeBlock}
+\begin{CodeBlock}
+C    0.80
+\end{CodeBlock}
+\begin{CodeBlock}
+D    0.60
+\end{CodeBlock}
+\par\noindent\textbf{已知：}
+\begin{center}\small\ttfamily IoU(A,B)=0.70 IoU(A,C)=0.20 IoU(A,D)=0.10 IoU(C,D)=0.65\end{center}
+\par NMS阈值为0.5，求最终保留的框。
+\ifshowsolutions
+\begin{AnswerBox}
+\par 首先选择置信度最高的A并保留。
+\par\noindent\textbf{B与A的IoU为：}
+\par 0.70>0.5
+\par 所以删除B。
+\par\noindent\textbf{C与A的IoU为：}
+\par 0.20<0.5
+\par 保留候选资格。
+\par\noindent\textbf{D与A的IoU为：}
+\par 0.10<0.5
+\par 也暂时保留。
+\par 接下来选择剩余框中置信度最高的C并保留。
+\par\noindent\textbf{D与C的IoU为：}
+\par 0.65>0.5
+\par 因此删除D。
+\par\noindent\textbf{最终保留：}
+\par A、C
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题10}{ROI Pooling计算}
+\par\noindent\textbf{一个ROI在特征图上对应：}
+\[
+X = \begin{bmatrix}
+1 & 5 & 7 & 2 \\
+4 & 6 & 3 & 5 \\
+2 & 8 & 9 & 1 \\
+3 & 2 & 4 & 6
+\end{bmatrix}
+\]
+\par 将其ROI Pooling为 2×2，采用最大池化，求输出。
+\ifshowsolutions
+\begin{AnswerBox}
+\par 将区域划分为4个 2×2 子区域。
+\par\noindent\textbf{左上区域：}
+\begin{center}\small\ttfamily [[1, 5], [4, 6]]\end{center}
+\par 最大值为6。
+\par\noindent\textbf{右上区域：}
+\begin{center}\small\ttfamily [[2, 8], [3, 2]]\end{center}
+\par 最大值为8。
+\par\noindent\textbf{左下区域：}
+\begin{center}\small\ttfamily [[7, 2], [3, 5]]\end{center}
+\par 最大值为7。
+\par\noindent\textbf{右下区域：}
+\begin{center}\small\ttfamily [[9, 1], [4, 6]]\end{center}
+\par 最大值为9。
+\par\noindent\textbf{所以输出为：}
+\begin{center}\small\ttfamily [[6, 7], [8, 9]]\end{center}
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题11}{U-Net尺寸与通道计算}
+\par\noindent\textbf{简化U-Net中：}
+\par 输入：3 × 256 × 256
+\par DoubleConv：3 → 64
+\par MaxPool：2 × 2，stride=2
+\par DoubleConv：64 → 128
+\par 转置卷积：128 → 64，空间尺寸扩大2倍
+\par 与编码器第一层特征拼接
+\par DoubleConv：128 → 64
+\par 1 × 1卷积：64 → 4
+\par 求各主要阶段特征尺寸。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{输入：}
+\par 3×256×256
+\par\noindent\textbf{第一层DoubleConv保持空间尺寸：}
+\par 64×256×256
+\par\noindent\textbf{MaxPool后：}
+\par 64×128×128
+\par\noindent\textbf{第二层DoubleConv：}
+\par 128×128×128
+\par\noindent\textbf{转置卷积上采样并降通道：}
+\par 64×256×256
+\par\noindent\textbf{与编码器第一层的：}
+\par 64×256×256
+\par\noindent\textbf{沿通道维拼接：}
+\par (64+64)×256×256
+\par\noindent\textbf{即：}
+\par 128×256×256
+\par\noindent\textbf{解码器DoubleConv后：}
+\par 64×256×256
+\par\noindent\textbf{最后 1×1 卷积输出：}
+\par 4×256×256
+\par 表示每个像素对应4个类别分数。
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题12}{训练代码顺序分析}
+\par\noindent\textbf{下面训练代码存在错误：}
+\begin{CodeBlock}
+for images, labels in train_loader:
+    outputs = model(images)
+    loss = criterion(outputs, labels)
+    optimizer.step()
+    loss.backward()
+    optimizer.zero_grad()
+\end{CodeBlock}
+\par 指出错误并写出正确顺序。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{原代码的问题是：}
+\par\noindent\textbullet\quad 在反向传播前调用了 optimizer.step()；
+\par\noindent\textbullet\quad 梯度还没有计算，无法正确更新参数；
+\par 清空梯度的位置不合理。
+\par\noindent\textbf{正确顺序为：}
+\begin{CodeBlock}
+for images, labels in train_loader:
+    optimizer.zero_grad()
+
+    outputs = model(images)
+    loss = criterion(outputs, labels)
+
+    loss.backward()
+    optimizer.step()
+\end{CodeBlock}
+\par\noindent\textbf{对应过程：}
+\par 梯度清零
+\par → 前向传播
+\par → 计算损失
+\par → 反向传播
+\par → 更新参数
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\section{三、综合性问答题}
+\Question{1.}{为什么传统方法需要人工设计特征，而CNN可以自动学习特征？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 传统视觉方法通常需要人工设计边缘、纹理、角点、SIFT或HOG等特征，再将特征输入分类器。
+\par\noindent\textbf{CNN通过多层卷积从数据中自动学习特征：}
+\par\noindent\textbullet\quad 浅层学习边缘和纹理；
+\par\noindent\textbullet\quad 中层学习局部形状和部件；
+\par 深层学习目标语义。
+\par 训练过程中，特征提取器和分类器根据同一损失函数共同优化，实现端到端学习。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{2.}{为什么图像分类网络不能直接完成精确图像分割？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 普通分类网络经过多次池化和下采样后，空间分辨率大幅降低，最终通常只输出整幅图像的类别。
+\par\noindent\textbf{图像分割需要恢复到原图大小，并对每个像素分类，因此需要：}
+\par\noindent\textbullet\quad 保留空间信息；
+\par\noindent\textbullet\quad 使用上采样恢复尺寸；
+\par\noindent\textbullet\quad 融合浅层定位特征；
+\par 输出与输入空间对应的特征图。
+\par U-Net正是通过编码器、解码器和跳跃连接实现这一过程。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\chapter{Faster R-CNN专项题库}
+\ChapterIntro{围绕Anchor、RPN、Proposal、ROI Pooling及其计算过程进行集中训练。}
+\section{一、Anchor 专项问答题}
+\Question{1.}{什么是 Anchor？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par Anchor是在特征图的每一个空间位置预先设置的一组参考框。
+\par\noindent\textbf{这些参考框通常具有不同的：}
+\par\noindent\textbullet\quad 尺寸；
+\par 长宽比。
+\par\noindent\textbf{RPN以Anchor为基础，预测：}
+\par\noindent\textbullet\quad 该Anchor属于前景还是背景；
+\par 该Anchor应如何平移和缩放，才能更接近真实目标框。
+\par Anchor不是最终检测框，而是边界框回归的初始参考。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{2.}{为什么需要设置多个尺度和长宽比的Anchor？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{图像中的目标可能具有不同的大小和形状，例如：}
+\par\noindent\textbullet\quad 行人通常较高、较窄；
+\par\noindent\textbullet\quad 汽车通常较宽；
+\par\noindent\textbullet\quad 远处目标较小；
+\par 近处目标较大。
+\par 在同一个特征图位置设置不同尺度和长宽比的Anchor，可以使网络覆盖更多类型的目标框，提高候选框与真实目标的初始重合程度。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{3.}{Anchor是设置在原图上，还是设置在特征图上？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par Anchor在计算上对应特征图的每个位置，但每个Anchor表示的是原始图像坐标系中的一个候选框。
+\par 例如，主干网络的总步长为16，那么特征图上相邻两个位置，在原图中大约相距16个像素。
+\par\noindent\textbf{因此：}
+\par\noindent\textbullet\quad Anchor的中心由特征图位置决定；
+\par\noindent\textbullet\quad Anchor的实际尺寸通常按照原图尺度定义；
+\par 网络预测是在特征图上完成的。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{4.}{Anchor的数量如何计算？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{若特征图大小为：}
+\par H×W
+\par\noindent\textbf{每个位置设置：}
+\par\noindent\textbullet\quad S 种尺度；
+\par R 种长宽比。
+\par\noindent\textbf{则每个位置的Anchor数为：}
+\par k=S×R
+\par\noindent\textbf{总Anchor数为：}
+\par H×W×k
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{5.}{什么是正Anchor、负Anchor和忽略Anchor？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 通常根据Anchor与真实框的IoU划分。
+\par 正Anchor
+\par\noindent\textbf{满足以下情况之一：}
+\par\noindent\textbullet\quad 与某个真实框的IoU高于正样本阈值；
+\par 是与某个真实框IoU最大的Anchor。
+\par\noindent\textbf{正Anchor用于学习：}
+\par\noindent\textbullet\quad 前景分类；
+\par 边界框回归。
+\par 负Anchor
+\par 与所有真实框的IoU都较低，视为背景，只参与前景、背景分类。
+\par 忽略Anchor
+\par IoU处于正负阈值之间，不参与当前损失计算，避免模糊样本干扰训练。
+\par 具体阈值可能因实现而不同。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{6.}{为什么与真实框IoU最大的Anchor通常要被设为正样本？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 某些真实目标可能没有任何Anchor达到规定的正样本IoU阈值。
+\par 如果只按照固定阈值划分，该目标可能完全没有正样本，网络就无法学习检测它。
+\par 因此，将与每个真实框IoU最大的Anchor设为正样本，可以保证每个真实目标至少对应一个正Anchor。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{7.}{RPN对每个Anchor输出什么？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{RPN对每个Anchor通常输出两类结果：}
+\par\noindent\textbullet\quad 目标性分类结果：判断Anchor是前景还是背景；
+\par 边界框回归结果：预测4个坐标偏移量。
+\par\noindent\textbf{边界框回归通常包括：}
+\begin{center}\small\ttfamily t\_x ,t\_y ,t\_w ,t\_h\end{center}
+\par\noindent\textbf{分别控制：}
+\par\noindent\textbullet\quad 中心横坐标移动；
+\par\noindent\textbullet\quad 中心纵坐标移动；
+\par\noindent\textbullet\quad 宽度缩放；
+\par 高度缩放。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{8.}{如果每个位置有 k 个Anchor，RPN分类分支和回归分支分别输出多少通道？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 若二分类采用每个Anchor两个分数，即前景和背景，则分类分支输出：
+\par 2k
+\par 个通道。
+\par\noindent\textbf{每个Anchor需要预测4个回归量，所以回归分支输出：}
+\par 4k
+\par 个通道。
+\par\noindent\textbf{例如每个位置有9个Anchor：}
+\par 分类输出通道=2×9=18
+\par 回归输出通道=4×9=36
+\par 有些实现使用每个Anchor一个前景分数，此时分类输出为 k 个通道。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{9.}{Anchor与Proposal有什么区别？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{Anchor：}
+\par\noindent\textbullet\quad 是预先设置的参考框；
+\par\noindent\textbullet\quad 数量很多；
+\par\noindent\textbullet\quad 位置和形状尚未根据图像内容调整；
+\par 是RPN预测的基础。
+\par\noindent\textbf{Proposal：}
+\par\noindent\textbullet\quad 是Anchor经过边界框回归调整后的候选框；
+\par\noindent\textbullet\quad 通常还经过越界裁剪、低分框删除和NMS筛选；
+\par\noindent\textbullet\quad 更接近真实目标；
+\par 被送入ROI Pooling和后续检测头。
+\par\noindent\textbf{流程为：}
+\par Anchor
+\par → RPN分类与回归
+\par → 调整后的候选框
+\par → NMS
+\par → Proposal
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{10.}{为什么RPN之后还要进行NMS？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 同一个目标附近通常会有许多相互重叠的Anchor，它们经过回归后会产生大量相似的候选框。
+\par NMS保留得分最高的候选框，并删除与其高度重叠的其他框，从而：
+\par\noindent\textbullet\quad 减少重复Proposal；
+\par\noindent\textbullet\quad 降低后续ROI处理的计算量；
+\par 保留更有代表性的候选区域。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{11.}{Anchor过多有什么优点和缺点？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{优点：}
+\par\noindent\textbullet\quad 可以覆盖更多尺度和形状的目标；
+\par\noindent\textbullet\quad 提高目标与某个Anchor获得较高IoU的概率；
+\par 有利于检测尺度差异较大的目标。
+\par\noindent\textbf{缺点：}
+\par\noindent\textbullet\quad 增加计算量和存储量；
+\par\noindent\textbullet\quad 产生大量背景负样本；
+\par\noindent\textbullet\quad 正负样本更加不平衡；
+\par 产生更多重复候选框。
+\par 因此Anchor数量需要在覆盖能力和计算成本之间平衡。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{12.}{为什么Anchor机制会造成正负样本不平衡？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 特征图上会产生大量Anchor，但图像中的真实目标数量通常较少。
+\par\noindent\textbf{因此：}
+\par\noindent\textbullet\quad 只有少数Anchor与真实框高度重合，成为正样本；
+\par 大部分Anchor都属于背景，成为负样本。
+\par 训练时通常不会使用全部Anchor，而是按照一定比例采样正负样本，例如尽量保持一定的正负样本比例。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\section{二、ROI Pooling 专项问答题}
+\Question{13.}{什么是ROI？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par ROI是Region of Interest，即感兴趣区域。
+\par 在Faster R-CNN中，ROI通常指RPN生成的Proposal映射到共享特征图后所对应的区域。
+\par\noindent\textbf{每个ROI可能具有不同的：}
+\par\noindent\textbullet\quad 高度；
+\par\noindent\textbullet\quad 宽度；
+\par 位置。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{14.}{为什么需要ROI Pooling？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par RPN产生的候选区域大小不同，但后续全连接层要求输入特征长度固定。
+\par ROI Pooling可以将任意大小的候选区域转换为固定大小的特征图，例如：
+\par 7×7
+\par 因此不同尺寸的候选框都可以送入同一个分类和边界框回归网络。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{15.}{简述ROI Pooling的基本步骤。}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 以输出 H
+\begin{center}\small\ttfamily H\_o × W\_o\end{center}
+\par\noindent\textbf{为例：}
+\par\noindent\textbullet\quad 将原图中的Proposal映射到共享特征图；
+\par\noindent\textbullet\quad 对ROI边界坐标进行量化取整；
+\par 将ROI划分为 H
+\begin{center}\small\ttfamily H\_o × W\_o\end{center}
+\par\noindent\textbullet\quad 个子区域；
+\par\noindent\textbullet\quad 在每个子区域内进行最大池化；
+\par 得到固定大小的 H
+\begin{center}\small\ttfamily H\_o × W\_o\end{center}
+\par 特征图。
+\par\noindent\textbf{若输入特征图有 C 个通道，最终输出为：}
+\begin{center}\small\ttfamily C × H\_o × W\_o\end{center}
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{16.}{ROI Pooling是否把整个ROI缩放成固定大小？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 从效果上看，它把不同大小的ROI转换为固定大小特征，但实现时不是简单地直接缩放图像。
+\par\noindent\textbf{ROI Pooling通常是：}
+\par\noindent\textbullet\quad 将ROI划分为固定数量的网格；
+\par\noindent\textbullet\quad 每个网格内进行最大池化；
+\par 每个网格产生一个输出值。
+\par 因此，它本质上是分块最大池化。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{17.}{ROI Pooling为什么使用共享特征图？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 如果每个候选框都单独通过CNN，会产生大量重复卷积计算，这是R-CNN速度慢的主要原因之一。
+\par\noindent\textbf{Fast R-CNN和Faster R-CNN采用：}
+\par\noindent\textbullet\quad 整幅图像只经过一次主干网络；
+\par 所有ROI都从同一个共享特征图中提取特征。
+\par 这样可以显著减少重复计算，提高检测速度。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{18.}{ROI Pooling的输出尺寸由什么决定？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par ROI Pooling的输出空间尺寸由预先指定的池化目标大小决定，例如：
+\par 7×7
+\par 而不是由输入ROI本身的大小决定。
+\par 如果共享特征图通道数为 C，则无论输入ROI大小如何，输出始终为：
+\par C×7×7
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{19.}{ROI Pooling会改变通道数吗？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par 通常不会。
+\par ROI Pooling只对每个通道中的空间区域分别进行池化，因此：
+\par\noindent\textbullet\quad 输入有 C 个通道；
+\par 输出仍有 C 个通道。
+\par 它改变的是空间尺寸，而不是通道数。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{20.}{ROI Pooling的主要缺点是什么？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{ROI Pooling需要对：}
+\par\noindent\textbullet\quad ROI边界坐标；
+\par 子区域边界坐标
+\par 进行取整量化。
+\par 这种取整会导致ROI与原始目标之间出现空间偏移，产生量化误差。
+\par 对于普通目标检测问题影响可能较小，但对于需要精确像素定位的任务，例如实例分割，影响会更加明显。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{21.}{ROI Pooling和ROI Align有什么区别？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par ROI Pooling
+\par\noindent\textbullet\quad 对ROI边界取整；
+\par\noindent\textbullet\quad 对分块边界取整；
+\par\noindent\textbullet\quad 每个区域进行最大池化；
+\par 存在明显量化误差。
+\par ROI Align
+\par\noindent\textbullet\quad 不进行粗糙取整；
+\par\noindent\textbullet\quad 在浮点坐标位置进行采样；
+\par\noindent\textbullet\quad 使用双线性插值计算特征值；
+\par 空间对齐更加准确。
+\par ROI Align常用于Mask R-CNN等对空间定位精度要求较高的网络。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{22.}{ROI Pooling与普通最大池化有什么区别？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{普通最大池化：}
+\par\noindent\textbullet\quad 对整张特征图使用固定大小的滑动窗口；
+\par\noindent\textbullet\quad 各位置采用相同池化规则；
+\par 输出大小由窗口、步长和输入尺寸决定。
+\par\noindent\textbf{ROI Pooling：}
+\par\noindent\textbullet\quad 每次只处理一个ROI；
+\par\noindent\textbullet\quad ROI大小可以不同；
+\par\noindent\textbullet\quad 根据ROI大小动态划分子区域；
+\par 所有ROI最终得到相同的输出尺寸。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{23.}{ROI Pooling与SPP有什么联系和区别？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{共同点：}
+\par\noindent\textbullet\quad 都可以将不同大小的输入区域转换为固定长度特征；
+\par 都使用空间分块和池化。
+\par\noindent\textbf{区别：}
+\par\noindent\textbf{SPP：}
+\par\noindent\textbullet\quad 通常使用多个空间尺度；
+\par\noindent\textbullet\quad 例如 1×1、2×2、4×4；
+\par 将多尺度池化结果拼接。
+\par\noindent\textbf{ROI Pooling：}
+\par\noindent\textbullet\quad 针对每个候选区域；
+\par\noindent\textbullet\quad 通常池化为单一固定尺寸，如 7×7；
+\par 主要应用于Fast R-CNN和Faster R-CNN。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\section{三、综合问答题}
+\Question{24.}{简述Faster R-CNN从输入图像到最终检测结果的完整流程。}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbullet\quad 输入图像经过主干卷积网络，得到共享特征图；
+\par\noindent\textbullet\quad RPN在共享特征图的每个位置设置多个Anchor；
+\par\noindent\textbullet\quad RPN对Anchor进行前景、背景分类和边界框回归；
+\par\noindent\textbullet\quad 将调整后的候选框进行裁剪、筛选和NMS，得到Proposal；
+\par\noindent\textbullet\quad 将Proposal映射到共享特征图；
+\par\noindent\textbullet\quad 使用ROI Pooling将不同大小的ROI转换为固定大小特征；
+\par\noindent\textbullet\quad 检测头对每个ROI进行目标类别分类；
+\par\noindent\textbullet\quad 检测头进一步进行边界框回归；
+\par 使用置信度筛选和NMS得到最终检测结果。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{25.}{Anchor、RPN、Proposal和ROI Pooling之间是什么关系？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{它们之间的关系为：}
+\par 特征图每个位置生成Anchor
+\par → RPN判断前景/背景并预测坐标偏移
+\par → Anchor经过回归和NMS形成Proposal
+\par → Proposal映射到共享特征图成为ROI
+\par → ROI Pooling提取固定大小特征
+\par → 分类与边界框精修
+\par Anchor是初始参考框，RPN负责筛选和调整Anchor，Proposal是RPN输出的候选框，ROI Pooling负责提取固定尺寸的候选区域特征。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{26.}{Faster R-CNN为什么被称为两阶段检测器？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{第一阶段是RPN：}
+\par\noindent\textbullet\quad 判断哪些区域可能包含目标；
+\par 生成Proposal。
+\par\noindent\textbf{第二阶段是检测头：}
+\par\noindent\textbullet\quad 对每个Proposal进行具体类别分类；
+\par 对边界框进一步精修。
+\par\noindent\textbf{因此：}
+\par 第一阶段：产生候选区域
+\par 第二阶段：分类和精确定位
+\par 所以Faster R-CNN属于两阶段目标检测器。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{27.}{RPN的“二分类”和最终检测头的“多分类”有什么区别？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{RPN只关心Anchor中是否存在某种目标，因此进行：}
+\par 前景与背景二分类
+\par 它不需要判断目标具体是人、车还是动物。
+\par 最终检测头需要判断Proposal属于哪个具体类别，因此进行：
+\par 背景＋多个目标类别的多分类
+\par 例如检测20类目标时，检测头通常输出21类，包括20个目标类和1个背景类。
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\Question{28.}{Faster R-CNN为什么需要进行两次边界框回归？}
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{第一次回归由RPN完成：}
+\par\noindent\textbullet\quad 从粗糙Anchor得到较好的Proposal；
+\par 目标是找到可能存在物体的区域。
+\par\noindent\textbf{第二次回归由检测头完成：}
+\par\noindent\textbullet\quad 在已获得的Proposal基础上进一步精修；
+\par 通常结合具体类别信息得到更准确的最终框。
+\par\noindent\textbf{因此两次回归分别负责：}
+\par 粗定位→精确定位
+\end{AnswerBox}
+\else
+\PracticeSpace{2.4cm}
+\fi
+\section{四、计算与解答题}
+\Question{解答题1}{Anchor数量计算}
+\par\noindent\textbf{某共享特征图大小为：}
+\par 50×40
+\par 每个位置设置3种尺度和3种长宽比。
+\par 求Anchor总数。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{每个位置的Anchor数量为：}
+\par 3×3=9
+\par\noindent\textbf{特征图位置数量为：}
+\par 50×40=2000
+\par\noindent\textbf{总Anchor数：}
+\par 2000×9=18000
+\par\noindent\textbf{因此：}
+\par 18000
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题2}{RPN输出通道数}
+\par 特征图每个位置设置9个Anchor。
+\par\noindent\textbf{假设：}
+\par\noindent\textbullet\quad 分类分支对每个Anchor输出前景、背景两个分数；
+\par 回归分支对每个Anchor输出4个偏移量。
+\par 求两个分支输出通道数。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{分类分支：}
+\par 2×9=18
+\par\noindent\textbf{回归分支：}
+\par 4×9=36
+\par\noindent\textbf{所以：}
+\par 分类分支18通道，回归分支36通道
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题3}{Anchor回归计算}
+\par\noindent\textbf{某Anchor为：}
+\begin{center}\small\ttfamily (x\_a ,y\_a ,w\_a ,h\_a )=(40,50,20,10)\end{center}
+\par\noindent\textbf{RPN预测：}
+\begin{center}\small\ttfamily t\_x =0.2,t\_y =-0.1,t\_w =ln1.5,t\_h =ln2\end{center}
+\par\noindent\textbf{采用：}
+\begin{center}\small\ttfamily x = x\_a + t\_x w\_a，y = y\_a + t\_y h\_a，w = w\_a exp(t\_w)，h = h\_a exp(t\_h)\end{center}
+\par 求调整后的候选框。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{中心横坐标：}
+\par x=40+0.2×20=44
+\par\noindent\textbf{中心纵坐标：}
+\par y=50−0.1×10=49
+\par\noindent\textbf{宽度：}
+\begin{center}\small\ttfamily w = 20 exp(ln 1.5) = 20×1.5 = 30\end{center}
+\par\noindent\textbf{高度：}
+\begin{center}\small\ttfamily h = 10 exp(ln 2) = 10×2 = 20\end{center}
+\par\noindent\textbf{所以：}
+\par (x,y,w,h)=(44,49,30,20)
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题4}{Anchor正负样本判断}
+\par\noindent\textbf{某Anchor与三个真实框的IoU分别为：}
+\par 0.20,0.72,0.35
+\par\noindent\textbf{规定：}
+\par\noindent\textbullet\quad 最大IoU不小于0.7为正样本；
+\par\noindent\textbullet\quad 最大IoU小于0.3为负样本；
+\par 其余忽略。
+\par 判断该Anchor类别。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{该Anchor的最大IoU为：}
+\par max(0.20,0.72,0.35)=0.72
+\par\noindent\textbf{因为：}
+\par 0.72≥0.7
+\par 所以该Anchor为正样本。
+\par 正Anchor
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题5}{ROI Pooling计算}
+\par\noindent\textbf{某ROI对应的特征区域为：}
+\[
+X = \begin{bmatrix}
+1 & 5 & 2 & 4 \\
+3 & 6 & 7 & 1 \\
+2 & 1 & 9 & 5 \\
+4 & 8 & 3 & 6
+\end{bmatrix}
+\]
+\par 将其ROI Pooling为 2×2，采用最大池化。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{左上区域：}
+\begin{center}\small\ttfamily [[1, 5], [3, 6]]\end{center}
+\par 最大值为6。
+\par\noindent\textbf{右上区域：}
+\begin{center}\small\ttfamily [[2, 1], [4, 8]]\end{center}
+\par 最大值为8。
+\par\noindent\textbf{左下区域：}
+\begin{center}\small\ttfamily [[2, 4], [7, 1]]\end{center}
+\par 最大值为7。
+\par\noindent\textbf{右下区域：}
+\begin{center}\small\ttfamily [[9, 5], [3, 6]]\end{center}
+\par 最大值为9。
+\par\noindent\textbf{所以输出为：}
+\begin{center}\small\ttfamily [[6, 7], [8, 9]]\end{center}
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\Question{解答题6}{ROI Pooling输出尺寸}
+\par 共享特征图通道数为256，对一个任意大小的ROI执行 7×7 ROI Pooling。
+\par 求输出特征图尺寸以及展平后的特征数量。
+\ifshowsolutions
+\begin{AnswerBox}
+\par\noindent\textbf{ROI Pooling不改变通道数，所以输出为：}
+\par 256×7×7
+\par\noindent\textbf{展平后的特征数量为：}
+\par 256×7×7=12544
+\par\noindent\textbf{所以：}
+\par 12544
+\end{AnswerBox}
+\else
+\PracticeSpace{4.2cm}
+\fi
+\backmatter
+\chapter*{使用说明}
+\addcontentsline{toc}{chapter}{使用说明}
+本合集根据给定复习材料整理。练习版隐藏参考答案，含答案版保留完整答案与计算过程；两版题号和章节结构一致。
+\end{document}

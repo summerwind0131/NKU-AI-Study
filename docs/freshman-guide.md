@@ -43,7 +43,7 @@
 1. [高级语言程序设计2-1](courses/advanced-programming-2-1.md)：先把 C++ 基础、作业题和机试题写熟。课程页里已经区分了能力线和考试线。
 2. [高级语言程序设计2-2](courses/advanced-programming-2-2.md)：继续练习类、继承、多态、STL 和输入输出流，并分别准备笔试、机试和大作业。
 3. [数据结构](courses/data-structures.md)：当前资料主要是题目回忆和往年题入口，还不是系统教程。适合用来了解考试题型变化，不适合替代教材和代码练习。
-4. [机器学习](courses/machine-learning.md)：目前主要是外部实验代码仓库入口。做实验时先看外部仓库，再回到 Wiki 看资料边界。
+4. [机器学习](courses/machine-learning.md)：做实验时可以参考外部仓库，再回到 Wiki 看资料。
 5. [学海无涯](courses/study-skills.md)：遇到技术提问、LaTeX、编程能力提升等问题时再查。
 
 编程课最重要的是自己写一遍。实验报告、代码和题解可以帮助理解思路，但不能直接照搬提交。
