@@ -11,7 +11,7 @@
 
 ## 课程介绍
 
-> 主要参考：`微分方程与复变函数/readme.md`、目录和文件名。课程范围与考试经验来自仓库 README，实际安排请以当年教师通知为准。
+> 主要参考：`微分方程与复变函数/README.md`、目录和文件名。课程范围与考试经验来自仓库 README，实际安排请以当年教师通知为准。
 
 这门课由常微分方程和复变函数两部分组成。README 记录的范围分别是中山大学版《常微分方程》1 至 6 章、四川大学版《复变函数》1 至 6 章，并提醒教材中画星内容通常不是主要讲授和考查范围。仓库课件也按两条内容线并行组织。
 
@@ -28,7 +28,7 @@
 
 ## 推荐阅读顺序
 
-1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/readme.md)：先确认课程范围、教材、基础要求和个人考试经验。
+1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/README.md)：先确认课程范围、教材、基础要求和个人考试经验。
 2. [课件](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E8%AF%BE%E4%BB%B6)：分别沿常微分方程和复变函数两条线按章节学习，不要混用同章编号。
 3. 教材和配套习题：用中山大学版《常微分方程》、四川大学版《复变函数》补证明、例题和作业。
 4. [往年试题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%BE%80%E5%B9%B4%E8%AF%95%E9%A2%98)：完成课程复习后再用旧卷、复习 PPT 和考点总结查漏。

@@ -11,7 +11,7 @@
 
 ## 课程 / 栏目介绍
 
-> 主要参考：`升学/readme.md`、`升学/保研/readme.md` 和顶层文件名。
+> 主要参考：`升学/README.md`、`升学/保研/README.md` 和顶层文件名。
 
 升学不是课程页，而是保研、出国等信息的资料型归档栏目。根 README 目前只说明这里会记录相关信息，且仍在完善中；当前仓库中可见的实体资料主要是保研分享 PDF。
 
@@ -26,8 +26,8 @@
 
 ## 推荐阅读顺序
 
-1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/readme.md)：`升学/readme.md`，了解栏目定位。
-2. [保研 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/%E4%BF%9D%E7%A0%94/readme.md)：`升学/保研/readme.md`，当前仍是占位说明。
+1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/README.md)：`升学/README.md`，了解栏目定位。
+2. [保研 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/%E4%BF%9D%E7%A0%94/README.md)：`升学/保研/README.md`，当前仍是占位说明。
 3. [新老生交流会保研分享](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%8D%87%E5%AD%A6/%E4%BF%9D%E7%A0%94/%E6%96%B0%E8%80%81%E7%94%9F%E4%BA%A4%E6%B5%81%E4%BC%9A-%E4%BF%9D%E7%A0%94%E5%88%86%E4%BA%AB-Murf%20.pdf)：`升学/保研/新老生交流会-保研分享-Murf .pdf`，作为经验分享材料阅读。
 
 ## 使用建议

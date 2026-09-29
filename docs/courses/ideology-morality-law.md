@@ -11,7 +11,7 @@
 
 ## 课程介绍
 
-> 主要参考：`思想道德与法治/readme.md`、目录和文件名。根 README 信息较少，因此本页只做客观资料导航，不补写未经仓库材料支持的课程经验。
+> 主要参考：`思想道德与法治/README.md`、目录和文件名。根 README 信息较少，因此本页只做客观资料导航，不补写未经仓库材料支持的课程经验。
 
 当前仓库主要提供课程重点高亮、按某一届重点整理的背诵材料、2021 版学习笔记，以及推荐书目和考核要求。README 只留下了简短的课程描述和两条教师评价，没有完整课程范围、考核比例或适用年份。
 
@@ -28,7 +28,7 @@
 
 ## 推荐阅读顺序
 
-1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB/readme.md)：了解仓库现有的简短个人评价，同时注意信息不足。
+1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB/README.md)：了解仓库现有的简短个人评价，同时注意信息不足。
 2. [推荐书目与考核要求](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB/%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%9B%AE%2B%E8%80%83%E6%A0%B8%E8%A6%81%E6%B1%82.pdf)：先查看该文件记录的要求，再与当年课程通知核对。
 3. [2021 版学习笔记](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB/%E6%80%9D%E6%B3%952021%E7%89%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.docx)：用于建立章节框架，但必须留意教材版本差异。
 4. [重点高亮资料](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB/%E6%80%9D%E4%BF%AE%28%E5%85%A8%E9%83%A8%EF%BC%8C%E9%87%8D%E7%82%B9%E9%AB%98%E4%BA%AE%29.pdf)和背诵整理：最后用于查漏，不直接替代课堂重点。

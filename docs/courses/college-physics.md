@@ -5,13 +5,13 @@
 | 项目 | 信息 |
 | --- | --- |
 | 资料完整度 | 资料多但入口薄弱 |
-| README 状态 | 缺少 README |
+| README 状态 | 可用 README |
 | 文件数量 | 28 |
 | 主要类型 | `pdf:24`；`md:3`；`zip:1` |
 
 ## 课程 / 栏目介绍
 
-> 主要参考：`大学物理/REAMME.md`、`大学物理/课件/README.md`、`大学物理/往年真题/README.md`。注意根 README 文件名在仓库中拼作 `REAMME.md`。
+> 主要参考：`大学物理/README.md`、`大学物理/课件/README.md`、`大学物理/往年真题/README.md`。
 
 大学物理把高等数学中的微积分工具用到力学、电磁学等物理体系中，根 README 将课程概括为：更复杂的运动问题、刚体力学，以及“场”的概念和性质分析。
 
@@ -20,13 +20,13 @@
 ## 仓库资料与链接
 
 - [原始目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86)：`大学物理`：大学物理资料入口。
-- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/REAMME.md)：`大学物理/REAMME.md`：课程说明入口。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/README.md)：`大学物理/README.md`：课程说明入口。
 - [课件](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E8%AF%BE%E4%BB%B6)：`大学物理/课件`：课件和例题资料。
 - [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`大学物理/往年真题`：往年题资料。
 
 ## 推荐阅读顺序
 
-- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/REAMME.md)：`大学物理/REAMME.md`：先看课程概览、书籍推荐、网课推荐和考核提醒。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/README.md)：`大学物理/README.md`：先看课程概览、书籍推荐、网课推荐和考核提醒。
 - [课件](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E8%AF%BE%E4%BB%B6)：`大学物理/课件`：以 PPT 例题为复习主线。
 - [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`大学物理/往年真题`：作为题型和难度参考。
 

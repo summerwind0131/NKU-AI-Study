@@ -11,7 +11,7 @@
 
 ## 课程介绍
 
-> 主要参考：`高等数学A上/readme.md` 与仓库顶层目录。Wiki 只做导航和经验整理，不展开 PDF、DOCX、PPTX 内容。
+> 主要参考：`高等数学A上/README.md` 与仓库顶层目录。Wiki 只做导航和经验整理，不展开 PDF、DOCX、PPTX 内容。
 
 高等数学A上主要学习一元函数微分学、一元函数积分学和微分方程。根 README 明确提醒，近些年考核难度有上升趋势，尤其体现在中档题比例和计算量上。
 
@@ -29,7 +29,7 @@
 
 ## 推荐阅读顺序
 
-- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8A/readme.md)：`高等数学A上/readme.md`：先看课程范围、备考建议和老师评价。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8A/README.md)：`高等数学A上/README.md`：先看课程范围、备考建议和老师评价。
 - [教材](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8A/%E6%95%99%E6%9D%90)：`高等数学A上/教材`：课本和讲义资料入口。
 - [练习题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8A/%E7%BB%83%E4%B9%A0%E9%A2%98)：`高等数学A上/练习题`：平时练习和专题训练。
 - [往年真题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6A%E4%B8%8A/%E5%BE%80%E5%B9%B4%E7%9C%9F%E9%A2%98)：`高等数学A上/往年真题`：期末前熟悉南开题型。
