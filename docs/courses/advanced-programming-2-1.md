@@ -11,7 +11,7 @@
 
 ## 课程介绍
 
-> 主要参考：`高级语言程序设计2-1/readme.md` 与仓库顶层目录。Wiki 只做导航和经验整理，不展开 PDF、DOCX、PPTX 内容。
+> 主要参考：`高级语言程序设计2-1/README.md` 与仓库顶层目录。Wiki 只做导航和经验整理，不展开 PDF、DOCX、PPTX 内容。
 
 高级语言程序设计2-1 是信息工科大类同学常见的第一门编程课，主要学习 C++ 基础。根 README 对这门课的判断很明确：学校考核和真实编程能力并不完全等价，想学好 C++ 需要多写代码，而想拿期末分还要重视 PPT、雨课堂题和机试题型。
 
@@ -30,7 +30,7 @@
 
 ## 推荐阅读顺序
 
-- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12-1/readme.md)：`高级语言程序设计2-1/readme.md`：先看课程定位、考核方式和学习方法。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12-1/README.md)：`高级语言程序设计2-1/README.md`：先看课程定位、考核方式和学习方法。
 - [PPT](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12-1/PPT)：`高级语言程序设计2-1/PPT`：笔试细节和课内知识点入口。
 - [上机题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12-1/%E4%B8%8A%E6%9C%BA%E9%A2%98)：`高级语言程序设计2-1/上机题`：机试和平时练习的主要入口。
 - [笔试题](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A12-1/%E7%AC%94%E8%AF%95%E9%A2%98)：`高级语言程序设计2-1/笔试题`：期末笔试复习入口。

@@ -79,11 +79,15 @@ nav:
       - "机器学习": courses/machine-learning.md
       - "机器视觉技术": courses/machine-vision.md
       - "概率论与数理统计": courses/probability-statistics.md
+      - "模拟电子技术": courses/analog-electronics.md
+      - "毛中特": courses/mao-thought.md
       - "电路基础": courses/circuit-basics.md
       - "痴人喃喃": courses/mental-health-notes.md
       - "离散数学": courses/discrete-math.md
+      - "算法设计与分析": courses/algorithm-design.md
       - "线性代数": courses/linear-algebra.md
       - "自动化与智能科学概论": courses/intro-automation-intelligent-science.md
+      - "自动控制原理": courses/automatic-control.md
       - "英语口语与写作": courses/english-speaking-writing.md
       - "运筹学": courses/operations-research.md
       - "马克思主义原理": courses/marxism-principles.md

@@ -40,6 +40,10 @@ CURATED_SLUGS = {
     "advanced-programming-2-2",
     "college-chinese",
     "differential-equations-complex-functions",
+    "analog-electronics",
+    "mao-thought",
+    "algorithm-design",
+    "automatic-control",
 }
 PROTECTED_SLUGS = set(CURATED_SLUGS)
 TODO_SLUGS: set[str] = set()

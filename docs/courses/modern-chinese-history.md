@@ -11,7 +11,7 @@
 
 ## 课程 / 栏目介绍
 
-> 主要参考：`中国近现代史纲要/Readme.md`、顶层文件名和 `analysis/course_index.csv`。根 README 当前为空，本页不补写没有来源的课程经验。
+> 主要参考：`中国近现代史纲要/README.md`、顶层文件名和 `analysis/course_index.csv`。根 README 当前为空，本页不补写没有来源的课程经验。
 
 这个目录目前更像一组期末复习资料入口，而不是完整课程指南。仓库里能看到的资料集中在 2026 回忆题、课后习题答案、复习梳理、复习总结和真题文档。
 
@@ -20,7 +20,7 @@
 ## 仓库资料与链接
 
 - [原始目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E4%B8%AD%E5%9B%BD%E8%BF%91%E7%8E%B0%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81)：`中国近现代史纲要/`
-- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E4%B8%AD%E5%9B%BD%E8%BF%91%E7%8E%B0%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81/Readme.md)：`中国近现代史纲要/Readme.md`，当前为空。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E4%B8%AD%E5%9B%BD%E8%BF%91%E7%8E%B0%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81/README.md)：`中国近现代史纲要/README.md`，当前为空。
 - 文件数量：`6`
 - 主要类型：`pdf:2`; `md:2`; `docx:2`
 - 顶层子目录：当前没有顶层子目录。

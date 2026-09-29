@@ -11,7 +11,7 @@
 
 ## 课程 / 栏目介绍
 
-> 主要参考：`机器学习/readme.md`、`机器学习/实验报告/README.md`，以及外部代码仓库 `summerwind0131/nku_machine_learning`。
+> 主要参考：`机器学习/README.md`、`机器学习/实验报告/README.md`，以及外部代码仓库 `summerwind0131/nku_machine_learning`。
 
 机器学习页目前是轻量入口：本仓库只保留 README 和实验报告目录，根 README 明确说明实验报告及代码在外部仓库 `summerwind0131/nku_machine_learning`。
 
@@ -20,13 +20,13 @@
 ## 仓库资料与链接
 
 - [原始目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0)：`机器学习`：机器学习资料入口。
-- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/readme.md)：`机器学习/readme.md`：外部仓库说明。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/README.md)：`机器学习/README.md`：外部仓库说明。
 - [实验报告](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A)：`机器学习/实验报告`：本仓库实验报告目录。
 - [nku_machine_learning](https://github.com/summerwind0131/nku_machine_learning)：外部实验报告和代码仓库。
 
 ## 推荐阅读顺序
 
-- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/readme.md)：`机器学习/readme.md`：先确认外部仓库入口。
+- [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/README.md)：`机器学习/README.md`：先确认外部仓库入口。
 - [外部代码仓库](https://github.com/summerwind0131/nku_machine_learning)：summerwind0131/nku_machine_learning：查看实验报告和代码。
 - [实验报告目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A)：`机器学习/实验报告`：本仓库中的实验报告入口，目前 README 为空。
 

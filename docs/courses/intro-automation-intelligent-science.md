@@ -11,7 +11,7 @@
 
 ## 课程 / 栏目介绍
 
-> 主要参考：`自动化与智能科学概论/readme.md`、`作业/`、`教材/` 和现有分析 CSV。
+> 主要参考：`自动化与智能科学概论/README.md`、`作业/`、`教材/` 和现有分析 CSV。
 
 根 README 把这门课定位为了解智能科学和自动化主要研究内容、培养文献搜索整理与写作能力的课程。页面也记录了 2026 年更新：成绩结构曾调整为作业成绩为主、平时签到为辅，作业成绩在小雅课程中可见。不同年份要求可能变化，实际仍以当年老师说明为准。
 
@@ -41,7 +41,7 @@
 
 ## 推荐阅读顺序
 
-1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E6%99%BA%E8%83%BD%E7%A7%91%E5%AD%A6%E6%A6%82%E8%AE%BA/readme.md)：`自动化与智能科学概论/readme.md`，先看课程概览、考核方式、学习方法和心得体会。
+1. [根 README](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E6%99%BA%E8%83%BD%E7%A7%91%E5%AD%A6%E6%A6%82%E8%AE%BA/README.md)：`自动化与智能科学概论/README.md`，先看课程概览、考核方式、学习方法和心得体会。
 2. [教材目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E6%99%BA%E8%83%BD%E7%A7%91%E5%AD%A6%E6%A6%82%E8%AE%BA/%E6%95%99%E6%9D%90)：`自动化与智能科学概论/教材/`，了解课程覆盖的专业方向。
 3. [第一部分教材](https://github.com/summerwind0131/NKU-AI-Study/blob/main/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E6%99%BA%E8%83%BD%E7%A7%91%E5%AD%A6%E6%A6%82%E8%AE%BA/%E6%95%99%E6%9D%90/%E3%80%8A%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E6%99%BA%E8%83%BD%E7%A7%91%E5%AD%A6%E6%A6%82%E8%AE%BA%E3%80%8B%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%2020240914%E4%BF%AE%E8%AE%A2%20%E7%B5%A62024%E8%AF%BE%E7%A8%8B.pdf)：`自动化与智能科学概论/教材/《自动化与智能科学概论》第一部分 20240914修订 給2024课程.pdf`，作为总入口。
 4. [作业目录](https://github.com/summerwind0131/NKU-AI-Study/tree/main/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E6%99%BA%E8%83%BD%E7%A7%91%E5%AD%A6%E6%A6%82%E8%AE%BA/%E4%BD%9C%E4%B8%9A)：`自动化与智能科学概论/作业/`，只用于理解题目形式和写作要求。
