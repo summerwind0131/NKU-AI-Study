@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/github/issues/summerwind0131/NKU-AI-Study?style=flat-square&color=yellow">
   <img src="https://img.shields.io/github/issues-pr/summerwind0131/NKU-AI-Study?style=flat-square&color=orange">
   <img src="https://img.shields.io/github/last-commit/summerwind0131/NKU-AI-Study?style=flat-square&color=red">
-  <img src="https://img.shields.io/github/license/summerwind0131/NKU-AI-Study?style=flat-square&color=lightgrey">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square"></a>
 </p>
 
 ---
@@ -28,6 +28,7 @@
 - [🤝 如何贡献](#-如何贡献)
 - [📬 联系方式](#-联系方式)
 - [📖 Wiki 本地预览](#-wiki-本地预览)
+- [📜 许可证](#-许可证)
 
 ---
 ## 📘 仓库简介
@@ -86,6 +87,8 @@
 或直接联系仓库维护者（见联系方式）
 我们会尽快进行 Review。
 
+向本仓库提交内容，即表示你同意以 [CC BY-NC-SA 4.0](LICENSE) 协议授权你贡献的原创内容；请不要提交你没有权利分享的资料。
+
 ---
 ## 📬 联系方式
 
@@ -139,6 +142,17 @@ python -m venv .venv
 ```powershell
 .\.venv\Scripts\python.exe -m mkdocs build --strict
 ```
+
+---
+## 📜 许可证
+
+本仓库中由贡献者**原创**的内容（包括学习经验、课程 README、Wiki 页面、个人笔记、提纲、考试回忆、实验报告与代码等）采用 [知识共享 署名-非商业性使用-相同方式共享 4.0 国际许可协议（CC BY-NC-SA 4.0）](LICENSE) 授权。你可以在遵守以下条件的前提下自由复制、分享和改编：
+
+- **署名**：注明来源（本仓库链接）及原作者；
+- **非商业性使用**：不得用于任何商业目的，包括倒卖资料；
+- **相同方式共享**：基于本仓库内容改编的作品须以相同协议发布。
+
+**请注意**：仓库中收录的课件、教材、试卷、公开课讲义、文章等第三方资料，其版权归原作者或原出版方所有，**不在上述许可范围内**，仅供个人学习参考。如果你是相关资料的权利人并希望删除，请通过 issue 或邮件联系维护者，我们会尽快处理。
 
 ---
 ## ⚠ 声明
