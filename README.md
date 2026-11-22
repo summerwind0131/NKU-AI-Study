@@ -146,6 +146,16 @@ python -m venv .venv
 ```
 
 ---
+## ⭐ Star 历史
+
+<a href="https://www.star-history.com/?repos=summerwind0131%2FNKU-AI-Study&amp;type=date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=summerwind0131%2Fnku-ai-study&amp;type=date&amp;theme=dark" />
+    <img alt="NKU-AI-Study Star 历史" src="https://api.star-history.com/chart?repos=summerwind0131%2Fnku-ai-study&amp;type=date" />
+  </picture>
+</a>
+
+---
 ## 📜 许可证
 
 本仓库中由贡献者**原创**的内容（包括学习经验、课程 README、Wiki 页面、个人笔记、提纲、考试回忆、实验报告与代码等）采用 [知识共享 署名-非商业性使用-相同方式共享 4.0 国际许可协议（CC BY-NC-SA 4.0）](LICENSE) 授权。你可以在遵守以下条件的前提下自由复制、分享和改编：
